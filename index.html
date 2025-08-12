@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div id="nav-inner">
+        <img src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg" class="logo" alt="logo" title="Logo">
+
+        <ul class="nav-links">
+            <li><a href="#" title="Pricing">Pricing</a></li>
+            <li><a href="#" title="About Us">About Us</a></li>
+            <li><a href="#" title="Blog">Blog</a></li>
+            <li><a href="#" title="Contact US">Contact Us</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+            <a href="#" title="Login" class="login">Log In</a>
+            <a href="#" title="Get Started" class="get-started">Get Started</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#">Pricing</a>
+    <a href="#">About Us</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact Us</a>
+    <a href="#" class="login">Log In</a>
+    <a href="#" class="get-started">Get Started</a>
+</div>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});
+</script>
+<!-- Hero Section -->
+ 
+<div class="hero">
+    <h1>Your Words. Your Book. Your Way.</h1>
+    <p>Everything you need to publish your book professionally, from proofreading, design, printing, and distribution in one intuitive platform.</p>
+    <button>Get Started →</button>
+
+    <div class="book-section">
+        <img src="https://cdn.spines.com/wp-content/uploads/2025/04/laptop-1.png" class="center-laptop" alt="Laptop">
+    </div>
+
+    <div class="reviews">
+        <img src="https://cdn.spines.com/wp-content/uploads/2025/04/reviews-avatars-2.jpg" alt="User">
+        <span><b> Excellent</b> <span class="stars">★★★★★</span><br><p> based on 1,500+ reviews</p></span>
+    </div>
+</div>
+
+<!-- Counting Box -->
+ 
+
+<div class="counting-container">
+  <div class="counting-box" id="counting-box-1">
+    <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" class="counting-image" alt="Books">
+    <div class="counting-number" id="counting-number-1">0</div>
+    <div class="counting-text">Books published</div>
+  </div>
+
+  <div class="counting-box" id="counting-box-2">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="counting-image" alt="Authors">
+    <div class="counting-number" id="counting-number-2">0</div>
+    <div class="counting-text">Authors published a second book with us</div>
+  </div>
+
+  <div class="counting-box" id="counting-box-3">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" class="counting-image" alt="Growth">
+    <div class="counting-number" id="counting-number-3">0</div>
+    <div class="counting-text">Annual growth in royalty payout</div>
+  </div>
+</div>
+
+<script>
+function animateCounter(id, target, speed = 20, suffix = '') {
+  let count = 0;
+  const element = document.getElementById(id);
+
+  const updateCounter = () => {
+    if (count < target) {
+      count += Math.ceil(target / 100);
+      if (count > target) count = target;
+      element.textContent = count + suffix;
+      setTimeout(updateCounter, speed);
+    }
+  };
+  updateCounter();
+}
+
+animateCounter("counting-number-1", 2800, 10, '+');
+animateCounter("counting-number-2", 450, 15, '+');
+animateCounter("counting-number-3", 20, 50, '%');
+</script>
+
+
+
+
+
+<section class="why-spines-section">
+    <h6 class="why-spines-subtitle">WHY SPINES</h6>
+    <h2 class="why-spines-title">Publishing Your Book Has Never Been Easier</h2>
+
+    <div class="why-spines-container">
+        <!-- Left Side Image -->
+        <div class="why-spines-left">
+            <img src="https://cdn.spines.com/wp-content/uploads/2025/04/author-with-book-600x773.jpg" alt="Publishing Image">
+        </div>
+
+        <!-- Right Side Boxes -->
+        <div class="why-spines-right">
+            <div class="why-spines-box">
+                <img src="https://img.icons8.com/?size=100&id=104236&format=png&color=000000" alt="Icon">
+                <div>
+                    <h4>High-Quality Printing</h4>
+                    <p>We provide professional-grade printing services for all types of books.</p>
+                </div>
+            </div>
+            <div class="why-spines-box">
+                <img src="https://img.icons8.com/?size=100&id=UZ8avdaYEfVm&format=png&color=000000" alt="Icon">
+                <div>
+                    <h4>Wide Distribution</h4>
+                    <p>Reach a global audience with our wide distribution channels.</p>
+                </div>
+            </div>
+            <div class="why-spines-box">
+                <img src="https://img.icons8.com/?size=100&id=nvT0uhH8wkrg&format=png&color=000000" alt="Icon">
+                <div>
+                    <h4>Author Support</h4>
+                    <p>Our team is here to guide you through every step of the process.</p>
+                </div>
+            </div>
+            <div class="why-spines-box">
+                <img src="https://img.icons8.com/?size=100&id=XsvEZR0h6fav&format=png&color=000000" alt="Icon">
+                <div>
+                    <h4>Flexible Publishing</h4>
+                    <p>Choose between self-publishing or traditional publishing options.</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
