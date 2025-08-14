@@ -5,53 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Responsive Navbar</title>
 <link rel="stylesheet" href="style.css">
+<!-- Jquerry -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <body>
 
 <nav>
-    <div id="nav-inner">
-        <img src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg" class="logo" alt="logo" title="Logo">
+  <div id="nav-inner">
+    <img
+      src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg"
+      class="logo"
+      alt="logo"
+      title="Logo"
+    />
 
-        <ul class="nav-links">
-            <li><a href="#" title="Pricing">Pricing</a></li>
-            <li><a href="#" title="About Us">About Us</a></li>
-            <li><a href="#" title="Blog">Blog</a></li>
-            <li><a href="#" title="Contact US">Contact Us</a></li>
-        </ul>
+    <ul class="nav-links">
+      <li><a href="#" title="Pricing">Pricing</a></li>
+      <li><a href="#" title="About Us">About Us</a></li>
+      <li><a href="#" title="Blog">Blog</a></li>
+      <li><a href="#" title="Contact US">Contact Us</a></li>
+    </ul>
 
-        <div class="auth-buttons">
-            <a href="#" title="Login" class="login">Log In</a>
-            <a href="#" title="Get Started" class="get-started">Get Started</a>
-        </div>
-
-        <!-- Hamburger Button -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <div class="auth-buttons">
+      <a href="#" title="Login" class="login">Log In</a>
+      <a href="#" title="Get Started" class="get-started">Get Started</a>
     </div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 </nav>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-    <a href="#">Pricing</a>
-    <a href="#">About Us</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact Us</a>
-    <a href="#" class="login">Log In</a>
-    <a href="#" class="get-started">Get Started</a>
+  <a href="#">Pricing</a>
+  <a href="#">About Us</a>
+  <a href="#">Blog</a>
+  <a href="#">Contact Us</a>
+  <a href="#" class="login">Log In</a>
+  <a href="#" class="get-started">Get Started</a>
 </div>
 
 <script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-});
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
 </script>
 <!-- Hero Section -->
  
@@ -311,6 +318,532 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <!-- BG Image -->
+
+<!-- MArquee -->
+ 
+<div class="marquee-container">
+  <div class="marquee" id="marquee">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/pw-logo-transparent-small.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Forbes-Black-1-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/wsj-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Startup-Rise-america-logo-black-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/SiliconANGLE-logo-1-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/fortune-1.svg" alt="">
+    <!-- duplicate images for continuous effect -->
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/pw-logo-transparent-small.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Forbes-Black-1-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/wsj-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Startup-Rise-america-logo-black-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/SiliconANGLE-logo-1-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/fortune-1.svg" alt="">
+    
+  </div>
+</div>
+
+<script>
+  // Pause on hover
+  const marquee = document.getElementById('marquee');
+  marquee.parentElement.addEventListener('mouseenter', () => {
+    marquee.style.animationPlayState = 'paused';
+  });
+  marquee.parentElement.addEventListener('mouseleave', () => {
+    marquee.style.animationPlayState = 'running';
+  });
+</script>
+
+<!-- How Its Work -->
+ 
+<section class="how-it-works">
+  <h6>HOW IT WORKS</h6>
+  <h2><span>Publish with Spines</span></h2>
+  <h2>in Just Four Simple Steps</h2>
+  <p>
+    Spines proofreads, designs covers, formats, publishes, and starts distributing your book
+    in just a couple of weeks.
+  </p>
+</section>
+
+<script>
+  // Fade in effect on scroll
+  const section = document.querySelector('.how-it-works');
+  section.classList.add('fade-in');
+  window.addEventListener('scroll', () => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      section.classList.add('show');
+    }
+  });
+</script>
+
+<!-- Steps Section -->
+ <section class="steps">
+  <!-- Navigation -->
+  <div class="step-nav">
+    <div class="active" data-step="1">
+      Step 1<br><small>Upload Your Manuscript</small>
+    </div>
+    <div data-step="2">
+      Step 2<br><small>Edit & Perfect Your Book</small>
+    </div>
+    <div data-step="3">
+      Step 3<br><small>Design Your Cover & Layout</small>
+    </div>
+    <div data-step="4">
+      Step 4<br><small>Publish & Distribute</small>
+    </div>
+  </div>
+
+  <!-- Step Content Wrapper -->
+  <div class="step-content">
+    <!-- STEP 1 -->
+    <div class="text-block step step-1">
+      <h6>Step 1</h6>
+      <h2>Upload Your Manuscript With A Few Clicks</h2>
+      <p>
+        Easily upload your manuscript using Spines’ user-friendly dashboard. Just fill in a few simple details,
+        like the book title, author’s name, and category.
+      </p>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=368&format=png&color=0cbf92" alt="Upload Icon">
+        <span>Easily upload your manuscript using Spines’ dashboard</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=57927&format=png&color=0cbf92" alt="Certificate Icon">
+        <span>Instantly receive a copyright certificate</span>
+      </div>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="image-block step step-1">
+      <img class="bg" src="https://cdn.spines.com/wp-content/uploads/2025/04/step-image-1-3.png" alt="Step 1 Illustration">
+      <img class="overlay" src="https://cdn.spines.com/wp-content/uploads/2025/04/manucripts.png" alt="Manuscripts">
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="text-block step step-2" style="display:none;">
+      <h6>Step 2</h6>
+      <h2>AI-Powered Manuscript Scans for Smarter Editing</h2>
+      <p>
+        Spines scans your manuscript using built-in AI to understand your audience, genre, and writing style.  
+        It then automatically identifies grammar mistakes and areas for improvement—making the editing process faster and smarter.
+      </p>
+      <p>
+        If needed, you can also connect with professional editors for an added layer of refinement.
+      </p>
+
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=lquM93tYtWG0&format=png&color=0cbf92" alt="AI Scan Icon">
+        <span>AI-powered manuscript scanning for style and audience insights</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=23265&format=png&color=0cbf92" alt="Grammar Check Icon">
+        <span>Automatic grammar detection and smart editing suggestions</span>
+      </div>
+
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="image-block step step-2" style="display:none;">
+      <img class="bg" src="https://cdn.spines.com/wp-content/uploads/2025/04/step-image-2-1.png" alt="Step 2 Illustration">
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="text-block step step-3" style="display:none;">
+      <h6>Step 3</h6>
+      <h2>Custom Covers Tailored to Your Book & Style</h2>
+      <p>
+        Choose from a wide range of custom-made cover designs, tailored to your book and personal style preferences.  
+        If you already have a cover, we can enhance it with our cover tool — or simply upload and use your own.
+      </p>
+      <p>
+        Customize your book’s interior formatting in real time to match your style and genre.
+      </p>
+
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=PuuKD730WqLx&format=png&color=0cbf92" alt="Custom Cover Icon">
+        <span>Wide range of custom-made cover designs to fit your style</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=undefined&format=png&color=0cbf92" alt="Interior Formatting Icon">
+        <span>Real-time customization of interior formatting</span>
+      </div>
+
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="image-block step step-3" style="display:none;">
+      <img class="bg" src="https://cdn.spines.com/wp-content/uploads/2025/04/step-image-3-1.png" alt="Step 3 Illustration">
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="text-block step step-4" style="display:none;">
+      <h6>Step 4</h6>
+      <h2>Publish Easily & Reach Readers Worldwide</h2>
+      <p>
+        Hit publish, and Spines takes care of the rest. Your book will be distributed across major platforms, reaching readers worldwide.
+      </p>
+      <p>
+        Set up automatic ad campaigns on Amazon, Facebook, and Instagram, while having your own personalized author platform to showcase and sell your book.
+      </p>
+
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=13322&format=png&color=0cbf92" alt="Publish Icon">
+        <span>One-click publishing to global platforms</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=24525&format=png&color=0cbf92" alt="Distribution Icon">
+        <span>Global distribution in digital and print formats</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=47835&format=png&color=0cbf92" alt="Ad Campaign Icon">
+        <span>Automatic ad campaigns & author platform</span>
+      </div>
+
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="image-block step step-4" style="display:none;">
+      <img class="bg" src="https://cdn.spines.com/wp-content/uploads/2025/04/step-image-4-1.png" alt="Step 4 Illustration">
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.step-nav div[data-step]').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const stepNum = tab.dataset.step;
+    document.querySelectorAll('.step-nav div').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelectorAll('.step').forEach(el => el.style.display = 'none');
+    document.querySelectorAll(`.step-${stepNum}`).forEach(el => el.style.display = '');
+  });
+});
+</script>
+
+    <!-- <div><img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-14-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg" alt="Book 1"></div> -->
+
+<!-- Carousel -->
+ <section id="review-heading-section">
+  <div class="review-heading-container">
+   
+    <h2 class="review-heading-h2"> <span class="review-heading-span">2,800+ Authors</span> Have Published <br>Their Books on Their Own</h2>
+    <p class="review-heading-p">Without any technical or design expertise.</p>
+  </div>
+</section>
+
+<div class="carousel-container">
+  <div class="carousel-track">
+    <!-- Review Cards -->
+     <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Spines can take the idea you are passionate about and facilitate bringing it into reality. Everyone was not only helpful but very encouraging in the entire creative process. I highly recommend Spines as the best publishing service available to all aspiring authors who would like to touch the world with their thoughts.
+      </p>
+      <div class="review-author">
+        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Deandre Jefferson</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+     <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Spines can take the idea you are passionate about and facilitate bringing it into reality. Everyone was not only helpful but very encouraging in the entire creative process. I highly recommend Spines as the best publishing service available to all aspiring authors who would like to touch the world with their thoughts.
+      </p>
+      <div class="review-author">
+        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Deandre Jefferson</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+     <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Spines can take the idea you are passionate about and facilitate bringing it into reality. Everyone was not only helpful but very encouraging in the entire creative process. I highly recommend Spines as the best publishing service available to all aspiring authors who would like to touch the world with their thoughts.
+      </p>
+      <div class="review-author">
+        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Deandre Jefferson</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+
+   
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    let track = $(".carousel-track");
+    let cardWidth = $(".review-card").outerWidth(true);
+    let defaultSpeed = 3000;
+    let hoverSpeed = 6000;
+    let currentSpeed = defaultSpeed;
+    let isHovering = false;
+
+    // Duplicate cards for smooth infinite effect
+    track.append(track.html());
+    track.css({ position: "relative", left: 0 });
+
+    function scrollOnce() {
+        track.animate({ left: -cardWidth }, currentSpeed, "linear", function(){
+            track.append(track.children().first());
+            track.css("left", 0);
+            scrollOnce(); // loop
+        });
+    }
+
+    // Hover events — update speed for next scroll
+    $(".carousel-container").hover(
+        function(){
+            isHovering = true;
+            currentSpeed = hoverSpeed;
+        },
+        function(){
+            isHovering = false;
+            currentSpeed = defaultSpeed;
+        }
+    );
+
+    // Start
+    scrollOnce();
+});
+</script>
+
+<!-- Blog Section -->
+ 
+<div class="blog-section">
+    <h6>Blog</h6><br>
+    <div class="blog-title">Explore Our Resources</div>
+
+    <div class="blog-cards">
+
+        <div class="blog-card">
+            <img src="https://cdn.spines.com/wp-content/uploads/2025/01/illustration-3-600x338.png" alt="Blog 1">
+            <div class="blog-content">
+                <div class="blog-heading">How Does Spines Work? A Revolution in Book Publishing</div>
+                <div class="blog-subheading">Discover how Spines is transforming the publishing world.</div>
+                <div class="blog-description">
+                    In an age of digitization and rapid technological advancements, the literary world is undergoing a transformation...
+                </div>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="https://cdn.spines.com/wp-content/uploads/2024/01/illustration-2-600x338.png" alt="Blog 2">
+            <div class="blog-content">
+                <div class="blog-heading">How to Self Publish a Book: The Ultimate Guide</div>
+                <div class="blog-subheading">Your step-by-step guide to successful self-publishing.</div>
+                <div class="blog-description">
+                    In recent years, the publishing industry has undergone a revolutionary transformation, giving authors more control...
+                </div>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="https://cdn.spines.com/wp-content/uploads/2024/08/illustration-1-600x338.png" alt="Blog 3">
+            <div class="blog-content">
+                <div class="blog-heading">The Best-Selling Book Genres and Why They Succeed</div>
+                <div class="blog-subheading">Understand what makes book genres thrive in the market.</div>
+                <div class="blog-description">
+                    Ever wonder what separates a blockbuster novel from a forgotten one gathering dust on a shelf? The secret often lies...
+                </div>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="faq-container">
+  <h2 class="faq-heading">Frequently Asked Questions</h2>
+  <p class="faq-subheading">Everything you need to know about the product and billing.</p>
+  
+  <div class="faq-item">
+    <div class="faq-question">Can I try Spines for free?</div>
+    <div class="faq-answer">
+      Yes! Anyone can sign up for a free account by clicking the “Get Started” button at the top of the page. Try out our platform tools and see how easy it is to proofread, design your cover, and publish your book with Spines.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How long will it take to publish my book with Spines?</div>
+    <div class="faq-answer">
+      With Spines, the entire publishing process typically takes around 30 days, from the moment you choose your plan until your book appears on Amazon.<br><br>
+      Keep in mind, the timeline can vary depending on your needs. If you choose to work with our professional team for additional services—like translation, line editing, illustration, ghostwriting, and more—your publishing journey may take a bit longer to ensure top-quality results.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How much does publishing with Spines cost?</div>
+    <div class="faq-answer">
+      Spines offers three standard publishing plans, as well as two specialized plans for authors focused on children’s literature. Our plans are designed to fit different publishing goals, budgets, and book formats.<br><br>
+      The cost varies depending on several factors, such as the length of your manuscript, the formats you choose to publish (eBook, audiobook, softcover, or hardcover), how much personal support you’d like along the way, and any additional services you may require.<br><br>
+      Some authors want a simple, streamlined path to get their book live on Amazon. Others want a full-service experience, including translation, multi-format publishing, and hands-on guidance from our team. Wherever you fall on that spectrum, there’s a plan built to meet you right where you are.<br><br>
+      To find the best fit for your book and your vision, explore our pricing page or connect with one of our publishing experts for personalized guidance.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What payment methods can I use?</div>
+    <div class="faq-answer">
+      We accept major credit and debit cards, PayPal, and bank transfers. Payment options may vary depending on your location.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What if I change my mind?</div>
+    <div class="faq-answer">
+      You can request a cancellation or plan change at any time. Refund eligibility depends on the stage of your publishing process and the services already provided.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Does Spines support any languages other than English?</div>
+    <div class="faq-answer">
+      Yes! We offer publishing in multiple languages and can connect you with professional translators for both fiction and non-fiction works.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How do royalties work?</div>
+    <div class="faq-answer">
+      Authors receive a percentage of each book sale, depending on the publishing plan and sales channel. You’ll have full transparency through your Spines dashboard to track your earnings in real-time.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Before uploading my manuscript to Spines' platform, what format should it be in?</div>
+    <div class="faq-answer">
+      We recommend submitting your manuscript in Microsoft Word (.docx) or PDF format. This ensures the smoothest processing and editing experience.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What other services do you offer?</div>
+    <div class="faq-answer">
+      In addition to publishing, we offer translation, editing, illustration, cover design, audiobook production, marketing campaigns, and more.
+    </div>
+  </div>
+</div>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+
+<!-- Footer -->
+ 
+<footer>
+  <div class="footer-inner">
+    <!-- Top Section -->
+    <div class="footer-top">
+        <div class="footer-col">
+            <img src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg" alt="Spines Logo" style="height:40px;">
+        </div>
+        <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Academic Publishing</a></li>
+                <li><a href="#">Free Book Review</a></li>
+                <li><a href="#">Literary Agents</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">How does Spines work?</a></li>
+                <li><a href="#">News and Media</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Text Message Consent Agreement</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Cancellation Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <p>hello@spines.com</p>
+            <p>Main: +1 (727) 497 7933</p>
+            <p>Support: +1 (561) 810-3364</p>
+            <p>1500 Gateway Blvd STE 220<br>Boynton Beach, FL 33426, USA</p>
+    </div>
+     <div class="footer-col">
+      <div class="social-icons">
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=60440&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=737373" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="footer-middle">
+        <div>
+            <span>100% hassle-free</span>
+            <p>7-day money-back guarantee</p>
+        </div>
+        <div>
+            <span>SSL Secure payment</span>
+            <p>Your information is protected by 256-bit SSL encryption</p>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <div class="payment-icons">
+            <img src="https://img.icons8.com/?size=100&id=SuYRJWCg1Sdz&format=png&color=000000" alt="Apple Pay">
+            <img src="https://img.icons8.com/?size=100&id=mbVEgwzMo6fs&format=png&color=000000" alt="Discover">
+            <img src="https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000" alt="Google Pay">
+            <img src="https://img.icons8.com/?size=100&id=So6jK8i6jddZ&format=png&color=000000" alt="American Express">
+            <img src="https://img.icons8.com/?size=100&id=13611&format=png&color=000000" alt="PayPal">
+            <img src="https://img.icons8.com/?size=100&id=dqPuxjOVdLOE&format=png&color=000000" alt="Visa">
+        </div>
+        <p>HTML Sitemap | © 2025 Spines</p>
+    </div>
+    </div>
+</footer>
 
 </body>
 </html>
