@@ -1037,24 +1037,18 @@ section.steps {
     margin-bottom: 30px;
     font-size: 1rem;
   }
-
   .faq-item {
-    background: #fff;
+    border-bottom: 1px solid #009688;
     margin-bottom: 10px;
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
   }
-
   .faq-item:hover {
     transform: scale(1.01);
   }
-
   .faq-question {
     padding: 15px 20px;
-    background: #0cbf92;
-    color: #fff;
+    color: #009688;
     cursor: pointer;
     position: relative;
     font-weight: bold;
@@ -1083,7 +1077,7 @@ section.steps {
   }
 
   .faq-item.active .faq-answer {
-    max-height: 1000px; /* large to fit long text */
+    max-height: 1000px;
     padding: 15px 20px;
   }
 
@@ -1215,11 +1209,101 @@ section.steps {
         .footer-middle {
             flex-direction: column;
         }
-        .footer-bottom {
-    gap: 10px;
-    padding: 0;
-}
+           .footer-bottom {
+        gap: 10px;
+        padding: 0;
+        width: 100%;
+    }
+    .footer-top {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-col:first-child {
+    flex: 0 0 100%;
+  }
+  .footer-col:first-child img{
+    height: auto;
+    width: 100%;
+  }
+    .footer-col:last-child {
+    flex: 0 0 100%;
+  }
+  .footer-col:not(:first-child) {
+    flex: 0 0 48%;
+    min-width: unset;
+  }
 .payment-icons img {
     height: 30px;
 }
     }
+  
+
+/* Book Carousl */
+#book-carousel-heading-container{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#book-carousel-heading-container h2{
+  font-size: 40px;
+  font-family: serif;
+  text-align: center;
+}
+#book-carousel-main-container {
+  height: 500px;
+  width: 95%;
+  padding: 40px 0;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.book-carousel-track {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.book-carousel-track img {
+  height: 95%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  filter: blur(3px) brightness(0.8);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.book-carousel-track img.book-active {
+  transform: scale(1.15);
+  z-index: 1;
+  filter: blur(0) brightness(1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.book-carousel-track img:not(.book-active):hover {
+  transform: scale(1.05);
+  filter: blur(2px) brightness(0.9);
+}
+
+@media (max-width: 768px) {
+  #book-carousel-main-container {
+    height: 350px;
+  }
+  .book-carousel-track img {
+    filter: none !important;
+    width: 100%;
+    height: auto;
+  }
+  .book-carousel-track img.book-active {
+  transform: scale(1);
+}
+#book-carousel-heading-container h2 {
+    font-size: 35px;
+}
+}

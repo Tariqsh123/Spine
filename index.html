@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Navbar</title>
+<title>Spines</title>
 <link rel="stylesheet" href="style.css">
-<!-- Jquerry -->
+<!-- JQUERRY AND SLICK CAROUSEL -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <body>
@@ -21,7 +22,7 @@
     />
 
     <ul class="nav-links">
-      <li><a href="#" title="Pricing">Pricing</a></li>
+      <li><a href="pricing.html" title="Pricing">Pricing</a></li>
       <li><a href="#" title="About Us">About Us</a></li>
       <li><a href="#" title="Blog">Blog</a></li>
       <li><a href="#" title="Contact US">Contact Us</a></li>
@@ -43,7 +44,7 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#">Pricing</a>
+  <a href="pricing.html">Pricing</a>
   <a href="#">About Us</a>
   <a href="#">Blog</a>
   <a href="#">Contact Us</a>
@@ -116,9 +117,27 @@ function animateCounter(id, target, speed = 20, suffix = '') {
   updateCounter();
 }
 
-animateCounter("counting-number-1", 2800, 10, '+');
-animateCounter("counting-number-2", 450, 15, '+');
-animateCounter("counting-number-3", 20, 50, '%');
+function startCounterWhenVisible(id, target, speed, suffix) {
+  const el = document.getElementById(id);
+  let started = false;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true; // Prevent multiple triggers
+        animateCounter(id, target, speed, suffix);
+        observer.unobserve(el); // Stop observing
+      }
+    });
+  }, { threshold: 0.5 }); // Trigger when 50% visible
+
+  observer.observe(el);
+}
+
+// Call for each counter
+startCounterWhenVisible("counting-number-1", 2800, 10, '+');
+startCounterWhenVisible("counting-number-2", 450, 15, '+');
+startCounterWhenVisible("counting-number-3", 20, 50, '%');
 </script>
 
 
@@ -521,6 +540,52 @@ document.querySelectorAll('.step-nav div[data-step]').forEach(tab => {
 </script>
 
     <!-- <div><img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-14-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg" alt="Book 1"></div> -->
+
+
+<div id="book-carousel-heading-container">
+  <h2>Your Book Deserves a Global Audience</h2>
+</div>
+
+
+<div id="book-carousel-main-container">
+  <div class="book-carousel-track">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-14-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-12-1-r4e6qi5yb9dzatyu6pzjlgzwoz2tp89l3xi4gnkf0g.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-17-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-19-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-16-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  const $track = $(".book-carousel-track");
+  let slideWidth = $track.find("img").eq(0).outerWidth(true);
+
+  function setActiveInstant() {
+    let imgs = $track.find("img");
+    imgs.removeClass("book-active");
+    imgs.eq(3).addClass("book-active");
+  }
+
+  function slideNext() {
+    // Clone first item before sliding to avoid gap
+    let $clone = $track.find("img").first().clone();
+    $track.append($clone);
+
+    setActiveInstant();
+
+    $track.animate({ marginLeft: -slideWidth }, 500, function(){
+      $track.find("img").first().remove(); // remove old first
+      $track.css("margin-left", 0);
+    });
+  }
+
+  setInterval(slideNext, 2500);
+  $track.find("img").eq(2).addClass("book-active");
+});
+</script>
 
 <!-- Carousel -->
  <section id="review-heading-section">

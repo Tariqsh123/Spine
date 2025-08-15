@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pricing.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<body>
+
+<nav>
+  <div id="nav-inner">
+    <img
+      src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg"
+      class="logo"
+      alt="logo"
+      title="Logo"
+    />
+
+    <ul class="nav-links">
+      <li><a href="pricing.html" title="Pricing">Pricing</a></li>
+      <li><a href="#" title="About Us">About Us</a></li>
+      <li><a href="#" title="Blog">Blog</a></li>
+      <li><a href="#" title="Contact US">Contact Us</a></li>
+    </ul>
+
+    <div class="auth-buttons">
+      <a href="#" title="Login" class="login">Log In</a>
+      <a href="#" title="Get Started" class="get-started">Get Started</a>
+    </div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="pricing.html">Pricing</a>
+  <a href="#">About Us</a>
+  <a href="#">Blog</a>
+  <a href="#">Contact Us</a>
+  <a href="#" class="login">Log In</a>
+  <a href="#" class="get-started">Get Started</a>
+</div>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
+</script>
+
+
+
+<!-- Pricing Work -->
+
+
+<h1 class="pricing-title">Tailored Plans to Bring Your Book to Life</h1>
+<p class="pricing-subtitle">All-inclusive packages with 7-day money-back guarantee.</p>
+
+<div class="pricing-tabs">
+    <div class="pricing-tab pricing-active">Fiction & Nonfiction</div>
+    <div class="pricing-tab">Children's Books</div>
+</div>
+
+<div class="pricing-range-box">
+    <strong>How many words does your book have?</strong>
+    <p id="pricing-wordCount">50,000 words</p>
+    <input type="range" min="1" max="3" step="1" value="2" id="pricing-wordRange">
+</div>
+
+<div class="pricing-plans">
+    <div class="pricing-plan" data-step="3">
+        <div class="pricing-plan-header">Paramount</div>
+        <div class="pricing-plan-price" id="pricing-price-paramount">$4,498 <span class="pricing-old-price">$8,999</span></div>
+        <ul class="pricing-features">
+            <li>Express Grammar & Legal Checking</li>
+            <li>Book Cover Design</li>
+            <li>Advanced Formatting</li>
+            <li>Global Distribution</li>
+        </ul>
+        <ul class="pricing-addons">
+            <li>Extra Revisions <span>Included</span></li>
+            <li>Marketing Boost <span>$299</span></li>
+            <li>Priority Support <span>Included</span></li>
+        </ul>
+        <button class="pricing-btn">Get Started</button>
+    </div>
+
+    <div class="pricing-plan" data-step="2">
+        <div class="pricing-plan-header">Signature</div>
+        <div class="pricing-plan-price" id="pricing-price-signature">$2,298 <span class="pricing-old-price">$3,999</span></div>
+        <ul class="pricing-features">
+            <li>Grammar & Legal Checking</li>
+            <li>Book Cover Design</li>
+            <li>Formatting Assistance</li>
+            <li>Worldwide Distribution</li>
+        </ul>
+        <ul class="pricing-addons">
+            <li>Extra Revisions <span>$99</span></li>
+            <li>Marketing Boost <span>$299</span></li>
+            <li>Priority Support <span>$149</span></li>
+        </ul>
+        <button class="pricing-btn">Get Started</button>
+    </div>
+
+    <div class="pricing-plan" data-step="1">
+        <div class="pricing-plan-header">Essential</div>
+        <div class="pricing-plan-price" id="pricing-price-essential">$1,198 <span class="pricing-old-price">$2,099</span></div>
+        <ul class="pricing-features">
+            <li>Grammar & Legal Checking</li>
+            <li>Formatting Assistance</li>
+            <li>Amazon Distribution</li>
+        </ul>
+        <ul class="pricing-addons">
+            <li>Extra Revisions <span>$99</span></li>
+            <li>Marketing Boost <span>$299</span></li>
+            <li>Priority Support <span>$149</span></li>
+        </ul>
+        <button class="pricing-btn">Get Started</button>
+    </div>
+</div>
+
+<script>
+    const pricingRange = document.getElementById('pricing-wordRange');
+    const pricingWordCount = document.getElementById('pricing-wordCount');
+    const plans = document.querySelectorAll('.pricing-plan');
+
+    const wordSteps = {
+        1: { words: '30,000 words', activePlan: 1 },
+        2: { words: '50,000 words', activePlan: 2 },
+        3: { words: '80,000 words', activePlan: 3 }
+    };
+
+    function updatePricing(step) {
+        pricingWordCount.textContent = wordSteps[step].words;
+        plans.forEach(plan => {
+            plan.classList.remove('pricing-active-card');
+            if (parseInt(plan.dataset.step) === step) {
+                plan.classList.add('pricing-active-card');
+            }
+        });
+    }
+
+    pricingRange.addEventListener('input', () => {
+        updatePricing(parseInt(pricingRange.value));
+    });
+
+    // Initial load
+    updatePricing(parseInt(pricingRange.value));
+</script>
+
+
+
+
+<div class="faq-container">
+  <h2 class="faq-heading">Frequently Asked Questions</h2>
+  <p class="faq-subheading">Everything you need to know about the product and billing.</p>
+  
+  <div class="faq-item">
+    <div class="faq-question">Can I try Spines for free?</div>
+    <div class="faq-answer">
+      Yes! Anyone can sign up for a free account by clicking the “Get Started” button at the top of the page. Try out our platform tools and see how easy it is to proofread, design your cover, and publish your book with Spines.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How long will it take to publish my book with Spines?</div>
+    <div class="faq-answer">
+      With Spines, the entire publishing process typically takes around 30 days, from the moment you choose your plan until your book appears on Amazon.<br><br>
+      Keep in mind, the timeline can vary depending on your needs. If you choose to work with our professional team for additional services—like translation, line editing, illustration, ghostwriting, and more—your publishing journey may take a bit longer to ensure top-quality results.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How much does publishing with Spines cost?</div>
+    <div class="faq-answer">
+      Spines offers three standard publishing plans, as well as two specialized plans for authors focused on children’s literature. Our plans are designed to fit different publishing goals, budgets, and book formats.<br><br>
+      The cost varies depending on several factors, such as the length of your manuscript, the formats you choose to publish (eBook, audiobook, softcover, or hardcover), how much personal support you’d like along the way, and any additional services you may require.<br><br>
+      Some authors want a simple, streamlined path to get their book live on Amazon. Others want a full-service experience, including translation, multi-format publishing, and hands-on guidance from our team. Wherever you fall on that spectrum, there’s a plan built to meet you right where you are.<br><br>
+      To find the best fit for your book and your vision, explore our pricing page or connect with one of our publishing experts for personalized guidance.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What payment methods can I use?</div>
+    <div class="faq-answer">
+      We accept major credit and debit cards, PayPal, and bank transfers. Payment options may vary depending on your location.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What if I change my mind?</div>
+    <div class="faq-answer">
+      You can request a cancellation or plan change at any time. Refund eligibility depends on the stage of your publishing process and the services already provided.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Does Spines support any languages other than English?</div>
+    <div class="faq-answer">
+      Yes! We offer publishing in multiple languages and can connect you with professional translators for both fiction and non-fiction works.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How do royalties work?</div>
+    <div class="faq-answer">
+      Authors receive a percentage of each book sale, depending on the publishing plan and sales channel. You’ll have full transparency through your Spines dashboard to track your earnings in real-time.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Before uploading my manuscript to Spines' platform, what format should it be in?</div>
+    <div class="faq-answer">
+      We recommend submitting your manuscript in Microsoft Word (.docx) or PDF format. This ensures the smoothest processing and editing experience.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What other services do you offer?</div>
+    <div class="faq-answer">
+      In addition to publishing, we offer translation, editing, illustration, cover design, audiobook production, marketing campaigns, and more.
+    </div>
+  </div>
+</div>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+
+<!-- Pricing Work -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+ 
+<footer>
+  <div class="footer-inner">
+    <!-- Top Section -->
+    <div class="footer-top">
+        <div class="footer-col">
+            <img src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg" alt="Spines Logo" style="height:40px;">
+        </div>
+        <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Academic Publishing</a></li>
+                <li><a href="#">Free Book Review</a></li>
+                <li><a href="#">Literary Agents</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">How does Spines work?</a></li>
+                <li><a href="#">News and Media</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Text Message Consent Agreement</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Cancellation Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <p>hello@spines.com</p>
+            <p>Main: +1 (727) 497 7933</p>
+            <p>Support: +1 (561) 810-3364</p>
+            <p>1500 Gateway Blvd STE 220<br>Boynton Beach, FL 33426, USA</p>
+    </div>
+     <div class="footer-col">
+      <div class="social-icons">
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=60440&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=737373" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="footer-middle">
+        <div>
+            <span>100% hassle-free</span>
+            <p>7-day money-back guarantee</p>
+        </div>
+        <div>
+            <span>SSL Secure payment</span>
+            <p>Your information is protected by 256-bit SSL encryption</p>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <div class="payment-icons">
+            <img src="https://img.icons8.com/?size=100&id=SuYRJWCg1Sdz&format=png&color=000000" alt="Apple Pay">
+            <img src="https://img.icons8.com/?size=100&id=mbVEgwzMo6fs&format=png&color=000000" alt="Discover">
+            <img src="https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000" alt="Google Pay">
+            <img src="https://img.icons8.com/?size=100&id=So6jK8i6jddZ&format=png&color=000000" alt="American Express">
+            <img src="https://img.icons8.com/?size=100&id=13611&format=png&color=000000" alt="PayPal">
+            <img src="https://img.icons8.com/?size=100&id=dqPuxjOVdLOE&format=png&color=000000" alt="Visa">
+        </div>
+        <p>HTML Sitemap | © 2025 Spines</p>
+    </div>
+    </div>
+</footer>
+
+</body>
+</html>
