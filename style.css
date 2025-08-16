@@ -131,8 +131,9 @@ nav {
         flex-direction: column;
         gap: 20px;
         padding: 20px;
+        padding-top: 50px;
         position: fixed;
-        top: 75px;
+        top: 50px;
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
@@ -315,6 +316,10 @@ nav {
     .center-laptop {
         height: 200px;
     }
+     .hero h1 {
+        font-size: 2rem;
+    }
+
 
     .reviews img {
         height: 30px;
@@ -327,60 +332,47 @@ nav {
   .counting-container {
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     gap: 20px;
-    overflow-x: auto;
     background-color: #FFF5F2;
-    white-space: nowrap;
+    flex-wrap: wrap;
   }
 
   .counting-box {
-    flex: 1 1 auto;
-    min-width: 0;
     border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    gap: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     transition: transform 0.3s ease;
   }
 
 
   .counting-number {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: 45px;
     font-weight: bold;
     color: #143c4c;
   }
 
   .counting-text {
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: large;
     margin-top: 8px;
     color: #555;
   }
 
-  .counting-image {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-
-  /* Force 3 boxes in one row, even on mobile */
-  @media (max-width: 600px) {
-    .counting-container {
-      gap: 10px;
-    }
-    .counting-box {
-      padding: 12px;
-    }
-    .counting-image {
-      width: 30px;
-      height: 30px;
-    }
-    .counting-text {
-    font-size: 7px;}
-
-  }
-
-
-
+.counting-image {
+  width: auto;
+  height: 30px;
+  object-fit: contain; 
+}
+  
+/* Why Spine */
 .why-spines-section {
     padding: 50px 8%;
 }
@@ -395,7 +387,7 @@ nav {
 }
 
 .why-spines-title {
-    font-size: 32px;
+    font-size: 45px;
     margin-bottom: 40px;
     text-align: center;
     font-family: serif;
@@ -473,6 +465,9 @@ nav {
     padding: 10px 30px;
 }
     .why-spines-container {
+      height: fit-content;
+      justify-content: center;
+      align-items: center;
         flex-direction: column;
         
     }
@@ -487,7 +482,7 @@ nav {
 
 /* Did You Know */
 #did-you-know-main{
-        height: 500px;
+        height: fit-content;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -597,7 +592,7 @@ nav {
     padding: 30px 10px;
 }
         .did-you-know-inner-container {
-    padding: 10px 0;
+    padding: 10px;
     height: auto;
     width: 95%;
 }
@@ -636,7 +631,11 @@ nav {
 .floating-bg img:nth-child(4) { top: 200px; right: 5%;}
 .floating-bg img:nth-child(5) { bottom: 10%; left: 10%;}
 .floating-bg img:nth-child(6) { bottom: 10%; right: 10%;}
-
+    @media (max-width:500px){
+      .floating-bg {
+        display: none;
+}
+    }
 /* MArquuee */
 
   .marquee-container {
@@ -644,7 +643,6 @@ nav {
     white-space: nowrap;
     box-sizing: border-box;
     width: 100%;
-    padding: 50px 0;
   }
 
   .marquee {
@@ -669,6 +667,12 @@ nav {
   @media (max-width: 600px) {
     .marquee img {
       height: 60px;
+      margin: 0 10px;
+    }
+  }
+  @media (max-width: 500px) {
+    .marquee img {
+      height: 40px;
       margin: 0 10px;
     }
   }
@@ -889,10 +893,11 @@ section.steps {
 
   @media (max-width: 480px) {
     
-    .review-heading-h2 {
-      font-size: 1.4rem;
+        .review-heading-h2 {
+        font-size: 2rem;
+        width: 100%;
+        padding: 0 10px;
     }
-   
     .review-heading-p {
       font-size: 0.9rem;
     }
@@ -1020,7 +1025,7 @@ section.steps {
   .faq-container {
     max-width: 900px;
     margin: auto;
-    width: 95%;
+    width: 90%;
   }
 
   .faq-heading {
@@ -1100,7 +1105,7 @@ section.steps {
     background: linear-gradient(to right, #0cbf922a, #f9fdfd);
         padding: 40px 20px 20px;
         color: #333;
-        width: 100%;
+        width: 95%;
         max-width: 1400px;
         border: 1px solid gainsboro;
         border-radius: 20px 20px 0 0;
@@ -1293,11 +1298,12 @@ section.steps {
 
 @media (max-width: 768px) {
   #book-carousel-main-container {
-    height: 350px;
+    height: fit-content;
   }
   .book-carousel-track img {
     filter: none !important;
-    width: 100%;
+    width: 90%;
+    object-fit: contain;
     height: auto;
   }
   .book-carousel-track img.book-active {
