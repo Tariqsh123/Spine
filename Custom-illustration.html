@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Illustration</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="book-cover-design.css">
+
+
+
+<body>
+<nav>
+  <div id="nav-inner">
+    <a href="index.html">
+      <img
+        src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg"
+        class="logo"
+        alt="logo"
+        title="Logo"
+      />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="pricing.html" title="Pricing">Pricing</a></li>
+      <li><a href="about.html" title="About Us">About Us</a></li>
+      <li><a href="blog.html" title="Blog">Blog</a></li>
+
+      <!-- Services Dropdown -->
+      <li class="dropdown">
+        <a href="#" class="dropbtn" title="Services">Services ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="kdp-publishing.html">KDP Publishing</a></li>
+          <li><a href="book-writing.html">Book Writing</a></li>
+          <li><a href="book-marketing.html">Book Marketing</a></li>
+          <li><a href="ghost-writing.html">Ghost Writing</a></li>
+          <li><a href="script-writing.html">Script Writing</a></li>
+          <li><a href="Audio-book.html">Audio Book</a></li>
+          <li><a href="Custom-illustration.html">Custom Illustration</a></li>
+          <li><a href="book-cover-design.html">Book Cover Design</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html" title="Contact US">Contact Us</a></li>
+    </ul>
+
+    <div class="auth-buttons">
+      <a href="get-started.html" title="Get Started" class="get-started">Get Started</a>
+    </div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="pricing.html">Pricing</a>
+  <a href="about.html">About Us</a>
+  <a href="blog.html">Blog</a>
+
+  <!-- Mobile Services Dropdown -->
+  <div class="mobile-dropdown">
+    <a href="#">Services ▾</a>
+    <div class="mobile-dropdown-content">
+      <a href="kdp-publishing.html">KDP Publishing</a>
+      <a href="book-writing.html">Book Writing</a>
+      <a href="book-marketing.html">Book Marketing</a>
+      <a href="ghost-writing.html">Ghost Writing</a>
+      <a href="script-writing.html">Script Writing</a>
+      <a href="Audio-book.html">Audio Book</a>
+      <a href="Custom-illustration.html">Custom Illustration</a>
+      <a href="book-cover-design.html">Book Cover Design</a>
+    </div>
+  </div>
+
+  <a href="contact.html">Contact Us</a>
+  <a href="get-started.html" class="get-started">Get Started</a>
+</div>
+<script>
+  const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileDropdown = document.querySelector(".mobile-dropdown");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+// Toggle mobile services dropdown
+mobileDropdown.addEventListener("click", () => {
+  mobileDropdown.classList.toggle("active");
+});
+
+</script>
+
+<!-- Pricing Work -->
+<div id="service-header-main-container">
+  <img src="https://img.pikbest.com/illustration/20240726/high-quality-natural-image-wallpaper-4k_10682199.jpg!bw700" 
+       alt="Background"
+       class="service-header-bg">
+
+<div id="service-header-inner-container">
+  <h3>SERVICES</h3>
+  <h1>Custom Illustration Services</h1>
+  <p>We create unique, high-quality illustrations tailored to your project. Our talented artists bring your ideas to life with visually captivating designs that enhance your book, story, or brand.</p>
+  <a href="get-started.html">Get Started</a>
+</div>
+
+
+
+</div>
+
+<!-- MArquee -->
+ 
+<div class="marquee-container" style="padding: 30px 0;">
+  <div class="marquee" id="marquee">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/pw-logo-transparent-small.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Forbes-Black-1-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/wsj-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Startup-Rise-america-logo-black-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/SiliconANGLE-logo-1-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/fortune-1.svg" alt="">
+    <!-- duplicate images for continuous effect -->
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/pw-logo-transparent-small.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Forbes-Black-1-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/wsj-1.svg" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Startup-Rise-america-logo-black-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/SiliconANGLE-logo-1-1.png" alt="">
+    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/fortune-1.svg" alt="">
+    
+  </div>
+</div>
+
+<script>
+  // Pause on hover
+  const marquee = document.getElementById('marquee');
+  marquee.parentElement.addEventListener('mouseenter', () => {
+    marquee.style.animationPlayState = 'paused';
+  });
+  marquee.parentElement.addEventListener('mouseleave', () => {
+    marquee.style.animationPlayState = 'running';
+  });
+</script>
+
+
+<!-- About Service Section -->
+<div id="about-services-text-container">
+    <h2>Professional Custom Illustration Services</h2>
+    <p>At Author Publishing Experts, we create unique illustrations tailored to your project’s vision. Our team of skilled artists brings your ideas to life with visually captivating designs that enhance your books, stories, or branding.</p>
+</div>
+
+<div id="about-service-card-container">
+    <!-- Box -->
+    <div id="about-service-card-box">
+        <img src="https://img.icons8.com/?size=100&id=QscFZGbEnXmL&format=png&color=000000" alt="">
+        <h3>Book & Story Illustrations</h3>
+        <p>We craft illustrations that complement your narrative, adding depth and visual appeal to engage readers and enhance storytelling.</p>
+    </div>
+    
+    <!-- Box -->
+    <div id="about-service-card-box">
+        <img src="https://img.icons8.com/?size=100&id=42749&format=png&color=000000" alt="">
+        <h3>Character Design</h3>
+        <p>Our artists develop unique characters that bring your story to life, reflecting personalities, emotions, and style consistent with your vision.</p>
+    </div>
+    
+    <!-- Box -->
+    <div id="about-service-card-box">
+        <img src=https://img.icons8.com/?size=100&id=13588&format=png&color=000000" alt="">
+        <h3>Cover Art & Concept Design</h3>
+        <p>We design captivating book covers and concept art that grab attention, convey your story, and create a memorable visual identity.</p>
+    </div>
+    
+    <!-- Box -->
+    <div id="about-service-card-box">
+        <img src="https://img.icons8.com/?size=100&id=60851&format=png&color=000000" alt="">
+        <h3>Custom Illustrations for Branding</h3>
+        <p>We provide illustrations for marketing materials, websites, and branding projects that ensure a consistent, visually appealing aesthetic for your brand.</p>
+    </div>
+    <!-- end -->
+</div>
+
+
+
+ <!-- Why Section -->
+<div id="why-services-section">
+  <div id="why-services-left-container">
+    <h2>Why Choose Us?</h2>
+    
+    <span>Skilled Professional Illustrators</span>
+    <p>Our team of talented artists brings your ideas to life with unique, high-quality illustrations that perfectly capture the essence of your project.</p>
+    
+    <span>Creative & Customized Designs</span>
+    <p>We craft illustrations tailored to your vision, ensuring each design aligns with your story, brand, or creative goals for a distinctive and memorable impact.</p>
+    
+    <span>End-to-End Illustration Services</span>
+    <p>From concept sketches and character design to full-color illustrations and cover art, we provide comprehensive services to meet all your illustration needs.</p>
+    
+    <span>Confidential & Author-Focused</span>
+    <p>We respect your creative work and maintain full confidentiality while delivering professional, original illustrations that bring your ideas to life.</p>
+    
+    <a href="get-started.html">Get Started</a>
+  </div>
+
+  <div id="why-services-right-container">
+    <img src="https://authorpublishingexperts.com/assets/images/about-info.webp" alt="Custom Illustration Services">
+  </div>
+</div>
+
+
+  <!-- Book Carousel -->
+   
+
+<div id="book-carousel-heading-container">
+  <h2>Our Custom Illustration Books</h2>
+</div>
+
+
+<div id="book-carousel-main-container" style="background: none;">
+  <div class="book-carousel-track">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-14-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-12-1-r4e6qi5yb9dzatyu6pzjlgzwoz2tp89l3xi4gnkf0g.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-17-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-19-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-16-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  const $track = $(".book-carousel-track");
+  let slideWidth = $track.find("img").eq(0).outerWidth(true);
+
+  function setActiveInstant() {
+    let imgs = $track.find("img");
+    imgs.removeClass("book-active");
+    imgs.eq(3).addClass("book-active");
+  }
+
+  function slideNext() {
+    // Clone first item before sliding to avoid gap
+    let $clone = $track.find("img").first().clone();
+    $track.append($clone);
+
+    setActiveInstant();
+
+    $track.animate({ marginLeft: -slideWidth }, 500, function(){
+      $track.find("img").first().remove(); // remove old first
+      $track.css("margin-left", 0);
+    });
+  }
+
+  setInterval(slideNext, 2500);
+  $track.find("img").eq(2).addClass("book-active");
+});
+</script>
+
+
+<!-- Form Section -->
+ <div id="services-bottom-form-section">
+  <div id="services-bottom-form-inner">
+  <div id="service-form-container">
+  <div id="support-form-container">
+    <div class="support-info">
+      <h2>Speak with Support</h2>
+      <p class="support-number">
+        <img src="https://img.icons8.com/?size=100&id=jShwZ2RCyPSO&format=png&color=0fd8a4" alt="phone">
+        +1 (561) 810-3364
+      </p>
+      <p class="support-hours">(10AM - 6PM ET Mon-Fri)</p>
+      <p class="divider">— OR —</p>
+      <h3>
+        <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=0fd8a4" alt="form">
+        Fill out the form, and we’ll get back to you:
+      </h3>
+    </div>
+
+    <form action="contact.php" method="POST" id="support-form">
+      <div class="form-row">
+        <div class="form-group">
+          <span class="icon">
+            <img src="https://img.icons8.com/?size=100&id=23264&format=png&color=0fd8a4" alt="user">
+          </span>
+          <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+          <span class="icon">
+            <img src="https://img.icons8.com/?size=20&id=23264&format=png&color=0fd8a4" alt="user">
+          </span>
+          <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <span class="icon">
+          <img src="https://img.icons8.com/?size=20&id=12580&format=png&color=0fd8a4" alt="email">
+        </span>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+
+      <div class="form-group">
+        <span class="icon">
+          <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=0fd8a4" alt="phone">
+        </span>
+        <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+      </div>
+
+      <div class="form-group">
+        <span class="icon">
+          <img src="https://img.icons8.com/?size=20&id=59823&format=png&color=0fd8a4" alt="topic">
+        </span>
+        <select id="topic" name="topic" required>
+          <option value="">Support Topic</option>
+          <option value="Account">Account Issues</option>
+          <option value="Payment">Payment & Billing</option>
+          <option value="Publishing">Publishing Help</option>
+          <option value="Technical">Technical Support</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder="Message (optional)"></textarea>
+      </div>
+
+      <div class="form-group checkbox">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent" class="consent-text">I consent to the text messages agreement</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+  </div>
+</div>
+<div id="service-form-right-image-container">
+  <img src="https://authorpublishingexperts.com/assets/images/form-img.webp" alt="">
+</div>
+  </div>
+ </div>
+<!-- Pricing Work -->
+
+
+
+
+
+
+
+
+
+<footer>
+  <div class="footer-inner">
+    <!-- Top Section -->
+    <div class="footer-top">
+        <div class="footer-col">
+            <img src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg" alt="Spines Logo" class="footer-logo">
+        </div>
+        <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Academic Publishing</a></li>
+                <li><a href="#">Free Book Review</a></li>
+                <li><a href="#">Literary Agents</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="blog.html">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="get-started.html">Get Started</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="kdp-publishing.html">KDP Publishing</a></li>
+                <li><a href="book-writing.html">Book Writing</a></li>
+                <li><a href="book-marketing.html">Book Marketing</a></li>
+                <li><a href="ghost-writing.html">Ghost Writing</a></li>
+                <li><a href="script-writing.html">Script Writing</a></li>
+                <li><a href="Audio-book.html">Audio Book</a></li>
+                <li><a href="Custom-illustration.html">Custom Illustration</a></li>
+                <li><a href="book-cover-design.html">Book Cover Design</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <p>abc@gmail.com</p>
+            <p>Main: +92 123 456 789</p>
+            <p>Support: +92 123 456 789</p>
+            <p>abc Random Street Karachi Pakistan</p>
+    </div>
+     <div class="footer-col">
+      <div class="social-icons">
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=60440&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=737373" alt="">
+        </a>
+        <a href="#">
+          <img src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=737373" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="footer-middle">
+        <div>
+            <span>100% hassle-free</span>
+            <p>7-day money-back guarantee</p>
+        </div>
+        <div>
+            <span>SSL Secure payment</span>
+            <p>Your information is protected by 256-bit SSL encryption</p>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <div class="payment-icons">
+            <img src="https://img.icons8.com/?size=100&id=SuYRJWCg1Sdz&format=png&color=000000" alt="Apple Pay">
+            <img src="https://img.icons8.com/?size=100&id=mbVEgwzMo6fs&format=png&color=000000" alt="Discover">
+            <img src="https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000" alt="Google Pay">
+            <img src="https://img.icons8.com/?size=100&id=So6jK8i6jddZ&format=png&color=000000" alt="American Express">
+            <img src="https://img.icons8.com/?size=100&id=13611&format=png&color=000000" alt="PayPal">
+            <img src="https://img.icons8.com/?size=100&id=dqPuxjOVdLOE&format=png&color=000000" alt="Visa">
+        </div>
+        <p>HTML Sitemap | © 2025 Spines</p>
+    </div>
+    </div>
+</footer>
+
+</body>
+</html>

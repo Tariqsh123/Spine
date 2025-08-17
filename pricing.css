@@ -3,7 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-    h1.pricing-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 8px; width: 100%;padding: 0 20px; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg,rgb(12, 191, 146,0.2),rgb(238, 238, 238,0.3),rgb(238, 238, 238,0.3),rgb(12, 191, 146,0.2));
+}
+
+    h1.pricing-title { text-align: center; font-size: 40px; font-family: serif; font-weight: 700; margin-bottom: 8px; width: 100%;padding: 0 20px; }
     p.pricing-subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1rem; width: 100%;padding: 0 20px; }
     /* Tabs */
     .pricing-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
@@ -55,4 +60,9 @@
 .pricing-tabs{
     gap: 5px;
 }
+}
+@media(max-width: 600px) {
+ h1.pricing-title {
+    font-size: 2rem;
+ }
 }

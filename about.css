@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg,rgb(12, 191, 146,0.2),rgb(238, 238, 238,0.3),rgb(238, 238, 238,0.3),rgb(12, 191, 146,0.2));
+}
+
 #about-main-container{
     height: fit-content;
     width: 90%;
@@ -22,7 +27,8 @@
     flex-direction: column;
 }
 #about-left h2{
-    font-size: 50px;
+    font-size: 40px;
+    font-family: serif;
     text-align: left;
 }
 #about-left p{
@@ -75,6 +81,11 @@
 
 }
 
+@media (max-width: 600px) {
+    #about-left h2{
+    font-size: 2rem;
+}
+}
 
 /* The Team */
 #the-team-heading-container{
@@ -84,7 +95,7 @@
     align-items: center;
 }
 #the-team-heading-container h2{
-    font-size: 50px;
+    font-size: 40px;
     margin: 10px 0;
     text-align: center;
     font-family: serif;
@@ -211,6 +222,6 @@
         width: 25px !important;
     }
     #the-team-heading-container h2 {
-    font-size: 40px;
+    font-size: 2rem;
 }
 }

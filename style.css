@@ -6,15 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(
-        to right,
-        rgb(15, 216, 164, 0.1),
-        rgb(255, 245, 242, 0.2),
-        rgb(255, 255, 255, 0.2),
-        rgb(255, 245, 242, 0.2),
-        rgb(255, 255, 255, 0.2),
-        rgb(15, 216, 164, 0.1)
-    );
+    background: linear-gradient(90deg,rgb(12, 191, 146,0.2),rgb(238, 238, 238,0.3),rgb(238, 238, 238,0.3),rgb(12, 191, 146,0.2));
 }
 
 nav {
@@ -70,10 +62,6 @@ nav {
     border-radius: 6px;
 }
 
-.login {
-    color: #143c4c;
-    font-weight: 600;
-}
 
 .get-started {
     border: 2px solid #0fd8a4;
@@ -562,6 +550,9 @@ nav {
         flex-direction: column;
         
     }
+    .why-spines-title{
+      font-size: 2rem;
+    }
 }
   @media (max-width: 520px) {
 .why-spines-left img {
@@ -786,7 +777,7 @@ nav {
   }
 
   section.how-it-works h2 {
-    font-size: clamp(24px, 3vw, 36px);
+    font-size: clamp(24px, 3vw, 40px);
     margin: 5px 0;
     font-weight: bold;
   }
@@ -800,7 +791,11 @@ nav {
     margin: 15px auto 0;
     line-height: 1.6;
   }
-
+  @media (max-width: 600px) {
+section.how-it-works h2 {
+  font-size: 2rem;
+  }
+  }
   /* Simple fade-in animation */
   .fade-in {
     opacity: 0;
@@ -961,7 +956,7 @@ section.steps {
 
   .review-heading-h2 {
     color: black;
-    font-size: 45px;
+    font-size: 40px;
     margin: 5px 0;
   }
 
@@ -1051,7 +1046,8 @@ section.steps {
     }
     .blog-title {
         text-align: center;
-        font-size: 28px;
+        font-size: 40px;
+        font-family: serif;
         margin-bottom: 30px;
         font-weight: bold;
     }
@@ -1110,6 +1106,14 @@ section.steps {
       color: #0cbf92;
       text-decoration: underline #0cbf92;
     }
+@media (max-width: 600px) {
+.blog-section h6{
+  font-size: 1.5rem;
+}
+.blog-title {
+  font-size: 2rem;
+}
+}
 
     /* Faq */
     
@@ -1121,12 +1125,16 @@ section.steps {
 
   .faq-heading {
     text-align: center;
-    font-size: 2rem;
+    font-size: 40px;
     color: #0cbf92;
     margin-bottom: 5px;
     font-weight: bold;
   }
-
+@media (max-width: 600px) {
+   .faq-heading {
+    font-size: 2rem;
+  }
+}
   .faq-subheading {
     text-align: center;
     color: #555;
@@ -1179,8 +1187,11 @@ section.steps {
 
   @media (max-width: 600px) {
     .faq-heading {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
+    .faq-subheading {
+    font-size: small;
+}
     .faq-question {
       font-size: 1rem;
     }
@@ -1212,6 +1223,11 @@ section.steps {
     .footer-col {
         flex: 1 1 150px;
         min-width: 150px;
+    }
+    .footer-logo{
+      height: 40px ;
+      width: auto;
+      object-fit: contain;
     }
     .footer-col h4 {
         font-weight: bold;
@@ -1313,25 +1329,33 @@ section.steps {
     .footer-top {
     flex-wrap: wrap;
     flex-direction: row;
+    gap: 14px;
     justify-content: space-between;
   }
   .footer-col:first-child {
     flex: 0 0 100%;
   }
-  .footer-col:first-child img{
-    height: auto;
-    width: 100%;
-  }
+    .footer-col:first-child img {
+        height: auto;
+        width: 300px;
+        margin: 20px 0;
+        /* margin: 0 auto; */
+    }
     .footer-col:last-child {
     flex: 0 0 100%;
   }
   .footer-col:not(:first-child) {
-    flex: 0 0 48%;
-    min-width: unset;
+    width: fit-content;
+    height: fit-content;
   }
 .payment-icons img {
     height: 30px;
 }
+.social-icons {
+    gap: 3px;
+    margin: 0;
+}
+
     }
   
 
@@ -1356,7 +1380,6 @@ section.steps {
   margin: auto;
   display: flex;
   overflow: hidden;
-  background: #f9f9f9;
 }
 
 .book-carousel-track {
@@ -1401,6 +1424,6 @@ section.steps {
   transform: scale(1);
 }
 #book-carousel-heading-container h2 {
-    font-size: 35px;
+    font-size: 2rem;
 }
 }
