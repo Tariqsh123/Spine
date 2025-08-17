@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#blog-teplate-header-container{
+    height: fit-content;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blog-template-header-inner-container{
+    height: fit-content;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#blog-template-header-inner-container h3{
+    color: #0cbf92;
+    text-align: center;
+    font-size: medium;
+}
+#blog-template-header-inner-container h1{
+    color: #000;
+    text-align: center;
+    max-width: 700px;
+    width: 90%;
+    font-family: serif;
+    font-size: 40px;
+}
+#blog-template-header-inner-container span {
+    color: #0cbf92;
+    text-align: center;
+    font-size: small;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; 
+}
+
+#blog-template-header-inner-container span::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("https://img.icons8.com/?size=100&id=GlEOr5x0aJpH&format=png&color=0fd8a4") no-repeat center;
+    background-size: contain;
+}
+#blog-template-header-inner-container img{
+    height: auto;
+    width: 90%;
+    max-width: 600px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+
+
+  @media (max-width: 600px) {
+#blog-template-header-inner-container h1 {
+    font-size: 25px;
+}
+#blog-template-header-inner-container h3 {
+    font-size: x-small;
+}
+#blog-template-header-inner-container span{
+    font-size: x-small;
+}
+  }
+
+  /* Blog Text */
+#blog-text-container{
+    height: fit-content;
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    margin: 50px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+#blog-text-container h2{
+    color: #0cbf92;
+    text-align: left;
+}
+#blog-text-container p{
+    color: gray;
+    text-align: left;
+}
+#blog-text-container li{
+    color: gray;
+    text-align: left;
+}

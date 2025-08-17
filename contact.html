@@ -3,19 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blogs</title>
+<title>Contact</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="blog.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="contact.css">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <body>
 
 <nav>
   <div id="nav-inner">
-    <a href="index.html">
+   <a href="index.html">
     <img
       src="https://cdn.spines.com/wp-content/uploads/2025/04/spines-logo-2025.svg"
       class="logo"
@@ -67,31 +65,103 @@
 
 
 <!-- Pricing Work -->
-<div id="blog-header">
-    <div id="blog-inner-header">
-        <h3>Blogs</h3>
-        <h1>Publishing Made Simple</h1>
-        <p>With the right knowledge, publishing your book is easy. Browse our blog to get the insights you need.</p>
+<div id="contact-header-main-container">
+    <h1>Contact Us</h1>
+    <p>We Would Be Happy to Help</p>
+</div>
+<div id="contact-box-container">
+    <div id="contact-box">
+        <img src="https://img.icons8.com/?size=100&id=nULzKoWMIRQw&format=png&color=0fd8a4" alt="">
+        <span>Customer Care</span>
+        <p>Already publishing with us? Your dedicated account manager is happy to help! Simply call our support team directly or fill out the form.</p>
+    </div>
+    <div id="contact-box">
+        <img src="https://img.icons8.com/?size=100&id=BBf95mK0q8NH&format=png&color=0fd8a4" alt="">
+        <span>Talk to our Publishing Expert</span>
+        <p>Our experts will guide you through the process, help you find the right plan, and answer any publishing-related inquiries.</p>
+    </div>
+    <div id="contact-box">
+        <img src="https://img.icons8.com/?size=100&id=AqxR8HVzKNDb&format=png&color=0fd8a4" alt="">
+        <span>General Inquiries</span>
+        <p>For partnership opportunities, job applications, media inquiries, or anything else, send us a message, and we’ll direct it to the right team.</p>
     </div>
 </div>
-<div id="blog-card-container">
-    
-    <div class="blog-card">
-            <img src="https://cdn.spines.com/wp-content/uploads/2025/01/illustration-3-600x338.png" alt="Blog 1">
-            <div class="blog-content">
-                <div class="blog-heading">How Does Spines Work? A Revolution in Book Publishing</div>
-                <div class="blog-subheading">Discover how Spines is transforming the publishing world.</div>
-                <div class="blog-description">
-                    In an age of digitization and rapid technological advancements, the literary world is undergoing a transformation...
-                </div>
-                <a href="Rising-Action-Example-blog.html">Read More</a>
-            </div>
-        </div>
-      
-</div>
-</div>
 
 
+<!-- Form -->
+
+<div id="support-form-container">
+  <div class="support-info">
+    <h2>Speak with Support</h2>
+    <p class="support-number">
+      <img src="https://img.icons8.com/?size=100&id=jShwZ2RCyPSO&format=png&color=0fd8a4" alt="phone">
+      +1 (561) 810-3364
+    </p>
+    <p class="support-hours">(10AM - 6PM ET Mon-Fri)</p>
+    <p class="divider">— OR —</p>
+    <h3>
+      <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=0fd8a4" alt="form">
+      Fill out the form, and we’ll get back to you:
+    </h3>
+  </div>
+
+  <form action="contact.php" method="POST" id="support-form">
+    <div class="form-row">
+      <div class="form-group">
+        <span class="icon">
+          <img src="https://img.icons8.com/?size=100&id=23264&format=png&color=0fd8a4" alt="user">
+        </span>
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+      </div>
+      <div class="form-group">
+        <span class="icon">
+          <img src="https://img.icons8.com/?size=20&id=23264&format=png&color=0fd8a4" alt="user">
+        </span>
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <span class="icon">
+        <img src="https://img.icons8.com/?size=20&id=12580&format=png&color=0fd8a4" alt="email">
+      </span>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+    </div>
+
+    <div class="form-group">
+      <span class="icon">
+        <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=0fd8a4" alt="phone">
+      </span>
+      <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+    </div>
+
+    <div class="form-group">
+      <span class="icon">
+        <img src="https://img.icons8.com/?size=20&id=59823&format=png&color=0fd8a4" alt="topic">
+      </span>
+      <select id="topic" name="topic" required>
+        <option value="">Support Topic</option>
+        <option value="Account">Account Issues</option>
+        <option value="Payment">Payment & Billing</option>
+        <option value="Publishing">Publishing Help</option>
+        <option value="Technical">Technical Support</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+     
+      <textarea id="message" name="message" rows="5" placeholder="Message (optional)"></textarea>
+    </div>
+
+    <div class="form-group checkbox">
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">I consent to the text messages agreement</label>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Request</button>
+  </form>
+</div>
 
 <!-- Pricing Work -->
 
