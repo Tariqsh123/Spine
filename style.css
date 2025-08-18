@@ -397,8 +397,11 @@ nav {
     }
      .hero h1 {
         font-size: 2rem;
+        width: 95%;
     }
-
+  .hero p {
+        font-size: x-small;
+    }
 
     .reviews img {
         height: 30px;
@@ -449,6 +452,19 @@ nav {
   width: auto;
   height: 30px;
   object-fit: contain; 
+}
+@media (max-width: 600px) {
+  .counting-box {
+    gap: 0px;
+    padding: 20px 0;
+  }
+  .counting-number {
+    font-size: 2rem;}
+  .counting-text {
+    font-size: small;
+  }
+  .counting-container {
+    gap: 0px;}
 }
   
 /* Why Spine */
@@ -552,6 +568,7 @@ nav {
     }
     .why-spines-title{
       font-size: 2rem;
+      width: 95%;
     }
 }
   @media (max-width: 520px) {
@@ -779,6 +796,7 @@ nav {
   section.how-it-works h2 {
     font-size: clamp(24px, 3vw, 40px);
     margin: 5px 0;
+    font-family: serif;
     font-weight: bold;
   }
   section.how-it-works h2 span{
@@ -871,6 +889,7 @@ section.steps {
 .text-block h2 {
   margin: 0 0 15px;
   font-size: clamp(22px, 3vw, 30px);
+  font-family: serif;
   line-height: 1.3;
   color: #0f172a;
 }
@@ -906,6 +925,12 @@ section.steps {
 }
 .btn:hover {
   background: #0d946b;
+}
+@media (max-width: 600px) {
+
+.text-block p,.text-block span {
+  font-size: small;
+}
 }
 /* Image block & overlay scroll effect */
 .image-block {
@@ -981,58 +1006,68 @@ section.steps {
     
         .review-heading-h2 {
         font-size: 2rem;
-        width: 100%;
+        width: 95%;
         padding: 0 10px;
     }
     .review-heading-p {
       font-size: 0.9rem;
     }
   }
-  .carousel-container {
+ .carousel-container {
     max-width: 1400px;
     margin: 50px auto;
     overflow: hidden;
     position: relative;
-  }
-  .carousel-track {
+}
+.carousel-track {
     display: flex;
-  }
-  .review-card {
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+.review-card {
     background: white;
     border-radius: 12px;
-    color: ;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
-    margin: 0 15px;
-    flex: 0 0 350px;
+    cursor: pointer;
+    margin: 0 10px;
+    flex: 0 0 calc(33.333% - 20px); /* 3 per row */
     box-sizing: border-box;
-  }
-  .review-text {
+}
+.review-text {
     font-size: 14px;
     color: #444;
     line-height: 1.4;
     margin-bottom: 15px;
-  }
-  .review-author {
+}
+.review-author {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  .review-author img {
+}
+.review-author img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-  }
-  .author-name {
+}
+.author-name {
     font-weight: bold;
     color: #222;
-  }
-  .stars {
+}
+.stars {
     color: #FFD700;
     font-size: 16px;
-  }
+}
 
+/* Mobile: 1 card */
+@media (max-width: 600px) {
+  .review-card {
+    flex: 0 0 95%;
+    margin: 0 5px;
+  }
+}
   /* blog Section */
    .blog-section {
     padding: 30px 0;
@@ -1061,7 +1096,7 @@ section.steps {
     .blog-card {
         background: white;
         border-radius: 10px;
-        width: 95%;
+        width: 90%;
         overflow: hidden;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         display: flex;
@@ -1113,6 +1148,9 @@ section.steps {
 .blog-title {
   font-size: 2rem;
 }
+ .blog-heading {
+        font-size: 1rem;
+    }
 }
 
     /* Faq */
@@ -1126,6 +1164,7 @@ section.steps {
   .faq-heading {
     text-align: center;
     font-size: 40px;
+    font-family: serif;
     color: #0cbf92;
     margin-bottom: 5px;
     font-weight: bold;
@@ -1372,58 +1411,74 @@ section.steps {
   font-family: serif;
   text-align: center;
 }
-#book-carousel-main-container {
-  height: 500px;
-  width: 95%;
-  padding: 40px 0;
-  max-width: 1400px;
-  margin: auto;
-  display: flex;
-  overflow: hidden;
-}
-
-.book-carousel-track {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.book-carousel-track img {
-  height: 95%;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
-  filter: blur(3px) brightness(0.8);
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-.book-carousel-track img.book-active {
-  transform: scale(1.15);
-  z-index: 1;
-  filter: blur(0) brightness(1);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.book-carousel-track img:not(.book-active):hover {
-  transform: scale(1.05);
-  filter: blur(2px) brightness(0.9);
-}
 
 @media (max-width: 768px) {
-  #book-carousel-main-container {
-    height: fit-content;
-  }
-  .book-carousel-track img {
-    filter: none !important;
-    width: 90%;
-    object-fit: contain;
-    height: auto;
-  }
-  .book-carousel-track img.book-active {
-  transform: scale(1);
-}
 #book-carousel-heading-container h2 {
     font-size: 2rem;
+    width: 95%;
 }
 }
+
+
+
+ #book-carousel-main-container {
+    height: 500px;
+    width: 95%;
+    padding: 40px 0;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s, filter 0.5s, z-index 0.5s;
+    flex-shrink: 0;
+    z-index: 1; /* base */
+  }
+
+  .swiper-slide img {
+    width: auto;
+    height: 90%;
+    border-radius: 12px;
+    transition: transform 0.5s, filter 0.5s;
+    filter: blur(3px);
+  }
+
+  /* Active (center) slide */
+  .swiper-slide-active {
+    z-index: 99 !important;
+  }
+  .swiper-slide-active img {
+    transform: scale(1.15);
+    filter: blur(0);
+  }
+
+  /* Left & right slides */
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    z-index: 5;
+  }
+  .swiper-slide-next img,
+  .swiper-slide-prev img {
+    filter: blur(2px);
+    transform: scale(1);
+  }
+
+  /* Responsive: below 600px → show only 1 slide */
+  @media (max-width: 600px) {
+       #book-carousel-main-container {
+        height: 350px;
+        padding: 20px 0;
+    }
+    .swiper-slide-active img {
+    transform: scale(1);
+  }
+  }

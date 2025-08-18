@@ -221,123 +221,392 @@ mobileDropdown.addEventListener("click", () => {
   <h2>Our Custom Illustration Books</h2>
 </div>
 
+<div id="book-carousel-main-container">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/banner-1.png" alt=""></div>
+      <div class="swiper-slide"><img src="images/banner-2.png" alt=""></div>
+      <div class="swiper-slide"><img src="images/banner-3.png" alt=""></div>
+      <div class="swiper-slide"><img src="images/banner-4.png" alt=""></div>
+    </div>
+  </div>
+</div>
 
-<div id="book-carousel-main-container" style="background: none;">
-  <div class="book-carousel-track">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-14-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-12-1-r4e6qi5yb9dzatyu6pzjlgzwoz2tp89l3xi4gnkf0g.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-17-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-19-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-16-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+ 
+</style>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: 15,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      601: {
+        slidesPerView: 3,
+      }
+    },
+    on: {
+      init: function () {
+        this.update();
+      }
+    }
+  });
+  swiper.on('slideChangeTransitionEnd', () => {
+    document.querySelectorAll('.swiper-slide').forEach(slide => slide.style.zIndex = 1);
+    const active = document.querySelector('.swiper-slide-active');
+    if (active) active.style.zIndex = 99;
+  });
+</script>
+
+<!-- Process Section -->
+ <section class="process-section">
+  <h2>Our Book Marketing Process</h2>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-number">01</div>
+      <h3>Crafting an Outline</h3>
+      <p>Following thorough research ... create an outline.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">02</div>
+      <h3>Writing Phase After Outline Approval</h3>
+      <p>Once the outline ... customer’s specific instructions.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">03</div>
+      <h3>Editing, Proofreading & Critical Review</h3>
+      <p>Upon completion ... accuracy, coherence, and quality.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">04</div>
+      <h3>Formatting, Designing & Typesetting</h3>
+      <p>After the editing ... finalized according to client preferences.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">05</div>
+      <h3>Promoting, Publishing, Branding & Marketing</h3>
+      <p>With client approval ... branding and marketing requirements.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Carousel -->
+ <section id="review-heading-section">
+  <div class="review-heading-container">
+   
+    <h2 class="review-heading-h2"> <span class="review-heading-span">2,800+ Authors</span> Have Published <br>Their Books on Their Own</h2>
+    <p class="review-heading-p">Without any technical or design expertise.</p>
+  </div>
+</section>
+
+<div class="carousel-container">
+  <div class="carousel-track">
+    <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Publishing with Spines was one of the best decisions I’ve made as an author. The process was straightforward, the team was patient, and my book came out even better than I imagined.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Emily Carter</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="review-card">
+      <p class="review-text">
+        What I loved most was how Spines made everything stress-free. From editing to design, they handled it all. I finally felt like my story was in the hands of true professionals.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author James Rodriguez</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="review-card">
+      <p class="review-text">
+        I never thought publishing could be this easy. The team at Spines guided me at every step and gave my book a professional finish that I am truly proud of.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Sophia Mitchell</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+     <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Publishing with Spines was one of the best decisions I’ve made as an author. The process was straightforward, the team was patient, and my book came out even better than I imagined.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Emily Carter</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="review-card">
+      <p class="review-text">
+        What I loved most was how Spines made everything stress-free. From editing to design, they handled it all. I finally felt like my story was in the hands of true professionals.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author James Rodriguez</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="review-card">
+      <p class="review-text">
+        I never thought publishing could be this easy. The team at Spines guided me at every step and gave my book a professional finish that I am truly proud of.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Sophia Mitchell</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+     <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Publishing with Spines was one of the best decisions I’ve made as an author. The process was straightforward, the team was patient, and my book came out even better than I imagined.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Emily Carter</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="review-card">
+      <p class="review-text">
+        What I loved most was how Spines made everything stress-free. From editing to design, they handled it all. I finally felt like my story was in the hands of true professionals.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author James Rodriguez</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="review-card">
+      <p class="review-text">
+        I never thought publishing could be this easy. The team at Spines guided me at every step and gave my book a professional finish that I am truly proud of.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Sophia Mitchell</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function(){
-  const $track = $(".book-carousel-track");
-  let slideWidth = $track.find("img").eq(0).outerWidth(true);
+$(function(){
+    const $track = $(".carousel-track");
+    let $cards = $(".review-card");
+    let cardWidth = $cards.outerWidth(true);
+    let index = 1; 
+    let isDragging = false, startX, startTranslate, currentX;
+    let animationFrame;
 
-  function setActiveInstant() {
-    let imgs = $track.find("img");
-    imgs.removeClass("book-active");
-    imgs.eq(3).addClass("book-active");
-  }
+    // Clone first & last for infinite effect
+    $track.prepend($cards.last().clone());
+    $track.append($cards.first().clone());
+    $cards = $(".review-card");
+    cardWidth = $cards.outerWidth(true);
 
-  function slideNext() {
-    // Clone first item before sliding to avoid gap
-    let $clone = $track.find("img").first().clone();
-    $track.append($clone);
+    // Initial offset
+    setTranslate(-cardWidth * index);
 
-    setActiveInstant();
+    // Helpers
+    function getTranslateX() {
+        const style = window.getComputedStyle($track[0]);
+        const matrix = new WebKitCSSMatrix(style.transform);
+        return matrix.m41;
+    }
 
-    $track.animate({ marginLeft: -slideWidth }, 500, function(){
-      $track.find("img").first().remove(); // remove old first
-      $track.css("margin-left", 0);
+    function setTranslate(x, withTransition = false) {
+        $track.css("transition", withTransition ? "transform 0.3s ease" : "none");
+        $track.css("transform", `translateX(${x}px)`);
+    }
+
+    function snapToCard() {
+        let moveX = getTranslateX();
+        let dragDistance = moveX - startTranslate;
+        let threshold = cardWidth / 4; // drag 25% se zyada hua toh agla card
+
+        if(dragDistance < -threshold) index++;
+        else if(dragDistance > threshold) index--;
+
+        setTranslate(-index * cardWidth, true);
+
+        $track.one("transitionend", function(){
+            if(index === 0){ 
+                index = $cards.length - 2;
+                setTranslate(-index * cardWidth);
+            } 
+            else if(index === $cards.length - 1){ 
+                index = 1;
+                setTranslate(-index * cardWidth);
+            }
+        });
+    }
+
+    // Drag start
+    $track.on("mousedown touchstart", function(e){
+        isDragging = true;
+        startX = e.pageX || e.originalEvent.touches[0].pageX;
+        startTranslate = getTranslateX();
+        cancelAnimationFrame(animationFrame);
     });
-  }
 
-  setInterval(slideNext, 2500);
-  $track.find("img").eq(2).addClass("book-active");
+    // Drag move (raf for smoothness)
+    $(document).on("mousemove touchmove", function(e){
+        if(!isDragging) return;
+        currentX = (e.pageX || e.originalEvent.touches[0].pageX) - startX;
+        e.preventDefault(); // prevent text/image selection
+
+        function update() {
+            setTranslate(startTranslate + currentX);
+            if(isDragging) animationFrame = requestAnimationFrame(update);
+        }
+        cancelAnimationFrame(animationFrame);
+        animationFrame = requestAnimationFrame(update);
+    });
+
+    // Drag end
+    $(document).on("mouseup touchend", function(){
+        if(!isDragging) return;
+        isDragging = false;
+        cancelAnimationFrame(animationFrame);
+        snapToCard();
+    });
+
+    // Resize handling
+    $(window).on("resize", function(){
+        cardWidth = $(".review-card").outerWidth(true);
+        setTranslate(-index * cardWidth);
+    });
 });
 </script>
+
+
 
 
 <!-- Form Section -->
  <div id="services-bottom-form-section">
   <div id="services-bottom-form-inner">
   <div id="service-form-container">
-  <div id="support-form-container">
-    <div class="support-info">
-      <h2>Speak with Support</h2>
-      <p class="support-number">
-        <img src="https://img.icons8.com/?size=100&id=jShwZ2RCyPSO&format=png&color=0fd8a4" alt="phone">
-        +1 (561) 810-3364
-      </p>
-      <p class="support-hours">(10AM - 6PM ET Mon-Fri)</p>
-      <p class="divider">— OR —</p>
-      <h3>
-        <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=0fd8a4" alt="form">
-        Fill out the form, and we’ll get back to you:
-      </h3>
-    </div>
-
-    <form action="contact.php" method="POST" id="support-form">
-      <div class="form-row">
-        <div class="form-group">
-          <span class="icon">
-            <img src="https://img.icons8.com/?size=100&id=23264&format=png&color=0fd8a4" alt="user">
-          </span>
-          <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
-        </div>
-        <div class="form-group">
-          <span class="icon">
-            <img src="https://img.icons8.com/?size=20&id=23264&format=png&color=0fd8a4" alt="user">
-          </span>
-          <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <span class="icon">
-          <img src="https://img.icons8.com/?size=20&id=12580&format=png&color=0fd8a4" alt="email">
-        </span>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-      </div>
-
-      <div class="form-group">
-        <span class="icon">
-          <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=0fd8a4" alt="phone">
-        </span>
-        <input type="tel" id="phone" name="phone" placeholder="Phone" required>
-      </div>
-
-      <div class="form-group">
-        <span class="icon">
-          <img src="https://img.icons8.com/?size=20&id=59823&format=png&color=0fd8a4" alt="topic">
-        </span>
-        <select id="topic" name="topic" required>
-          <option value="">Support Topic</option>
-          <option value="Account">Account Issues</option>
-          <option value="Payment">Payment & Billing</option>
-          <option value="Publishing">Publishing Help</option>
-          <option value="Technical">Technical Support</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <textarea id="message" name="message" rows="5" placeholder="Message (optional)"></textarea>
-      </div>
-
-      <div class="form-group checkbox">
-        <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent" class="consent-text">I consent to the text messages agreement</label>
-      </div>
-
-      <button type="submit" class="submit-btn">Submit Request</button>
-    </form>
+  
+<div id="support-form-container">
+  <div class="support-info">
+    <h2>Speak with Support</h2>
+    <p class="support-number">
+      <img src="https://img.icons8.com/?size=100&id=jShwZ2RCyPSO&format=png&color=0fd8a4" alt="phone">
+      +1 (561) 810-3364
+    </p>
+    <p class="support-hours">(10AM - 6PM ET Mon-Fri)</p>
+    <p class="divider">— OR —</p>
+    <h3>
+      <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=0fd8a4" alt="form">
+      Fill out the form, and we’ll get back to you:
+    </h3>
   </div>
+
+<form action="contact.php" method="POST" id="support-form" enctype="multipart/form-data">
+  <!-- Full Name -->
+  <div class="form-group">
+    <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <input type="email" id="email" name="email" placeholder="Email" required>
+  </div>
+
+  <!-- Phone -->
+  <div class="form-group">
+    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+  </div>
+
+  <!-- Genre Dropdown -->
+  <div class="form-group">
+    <select id="genre" name="genre" required>
+      <option value="">Select Genre</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+      <option value="Romance">Romance</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Biography">Biography</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <!-- File Upload -->
+  <div class="form-group">
+    <input type="file" id="file" name="file" required>
+  </div>
+
+  <!-- Book Title -->
+  <div class="form-group">
+    <input type="text" id="book_title" name="book_title" placeholder="Write a Book Title" required>
+  </div>
+
+  <!-- Details -->
+  <div class="form-group">
+    <textarea id="details" name="details" rows="5" placeholder="Details"></textarea>
+  </div>
+
+  <!-- Terms -->
+  <div class="form-group checkbox">
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms" class="consent-text">I agree to the terms and conditions</label>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="submit-btn">Submit Request</button>
+</form>
+
+</div>
 </div>
 <div id="service-form-right-image-container">
   <img src="https://authorpublishingexperts.com/assets/images/form-img.webp" alt="">

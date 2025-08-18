@@ -576,53 +576,66 @@ document.querySelectorAll('.step-nav div[data-step]').forEach(tab => {
 });
 </script>
 
-    <!-- <div><img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-14-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg" alt="Book 1"></div> -->
 
-
+<!-- Book Carousel -->
 <div id="book-carousel-heading-container">
   <h2>Your Book Deserves a Global Audience</h2>
 </div>
-
-
 <div id="book-carousel-main-container">
-  <div class="book-carousel-track">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-14-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-12-1-r4e6qi5yb9dzatyu6pzjlgzwoz2tp89l3xi4gnkf0g.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-17-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-19-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
-    <img src="https://spines.com/wp-content/uploads/elementor/thumbs/book-cover-16-r4e6rhvtiyqvk0iye5fd87zf9m6rtq7dwuakp63gg0.jpg">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/banner-1.png" alt=""></div>
+      <div class="swiper-slide"><img src="images/banner-2.png" alt=""></div>
+      <div class="swiper-slide"><img src="images/banner-3.png" alt=""></div>
+      <div class="swiper-slide"><img src="images/banner-4.png" alt=""></div>
+    </div>
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+ 
+</style>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-$(document).ready(function(){
-  const $track = $(".book-carousel-track");
-  let slideWidth = $track.find("img").eq(0).outerWidth(true);
-
-  function setActiveInstant() {
-    let imgs = $track.find("img");
-    imgs.removeClass("book-active");
-    imgs.eq(3).addClass("book-active");
-  }
-
-  function slideNext() {
-    // Clone first item before sliding to avoid gap
-    let $clone = $track.find("img").first().clone();
-    $track.append($clone);
-
-    setActiveInstant();
-
-    $track.animate({ marginLeft: -slideWidth }, 500, function(){
-      $track.find("img").first().remove(); // remove old first
-      $track.css("margin-left", 0);
-    });
-  }
-
-  setInterval(slideNext, 2500);
-  $track.find("img").eq(2).addClass("book-active");
-});
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: 15,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      601: {
+        slidesPerView: 3,
+      }
+    },
+    on: {
+      init: function () {
+        this.update();
+      }
+    }
+  });
+  swiper.on('slideChangeTransitionEnd', () => {
+    document.querySelectorAll('.swiper-slide').forEach(slide => slide.style.zIndex = 1);
+    const active = document.querySelector('.swiper-slide-active');
+    if (active) active.style.zIndex = 99;
+  });
 </script>
+
+
+
+
+
 
 <!-- Carousel -->
  <section id="review-heading-section">
@@ -635,91 +648,218 @@ $(document).ready(function(){
 
 <div class="carousel-container">
   <div class="carousel-track">
-    <!-- Review Cards -->
-     <!-- 1 -->
+    <!-- 1 -->
     <div class="review-card">
       <p class="review-text">
-        Spines can take the idea you are passionate about and facilitate bringing it into reality. Everyone was not only helpful but very encouraging in the entire creative process. I highly recommend Spines as the best publishing service available to all aspiring authors who would like to touch the world with their thoughts.
+        Publishing with Spines was one of the best decisions I’ve made as an author. The process was straightforward, the team was patient, and my book came out even better than I imagined.
       </p>
       <div class="review-author">
-        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" alt="Author Image">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Image">
         <div>
-          <div class="author-name">Author Deandre Jefferson</div>
+          <div class="author-name">Author Emily Carter</div>
           <div class="stars">★★★★★</div>
         </div>
       </div>
     </div>
-    <!-- end -->
-     <!-- 1 -->
+    <!-- 2 -->
     <div class="review-card">
       <p class="review-text">
-        Spines can take the idea you are passionate about and facilitate bringing it into reality. Everyone was not only helpful but very encouraging in the entire creative process. I highly recommend Spines as the best publishing service available to all aspiring authors who would like to touch the world with their thoughts.
+        What I loved most was how Spines made everything stress-free. From editing to design, they handled it all. I finally felt like my story was in the hands of true professionals.
       </p>
       <div class="review-author">
-        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" alt="Author Image">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Author Image">
         <div>
-          <div class="author-name">Author Deandre Jefferson</div>
+          <div class="author-name">Author James Rodriguez</div>
           <div class="stars">★★★★★</div>
         </div>
       </div>
     </div>
-    <!-- end -->
-     <!-- 1 -->
+    <!-- 3 -->
     <div class="review-card">
       <p class="review-text">
-        Spines can take the idea you are passionate about and facilitate bringing it into reality. Everyone was not only helpful but very encouraging in the entire creative process. I highly recommend Spines as the best publishing service available to all aspiring authors who would like to touch the world with their thoughts.
+        I never thought publishing could be this easy. The team at Spines guided me at every step and gave my book a professional finish that I am truly proud of.
       </p>
       <div class="review-author">
-        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" alt="Author Image">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author Image">
         <div>
-          <div class="author-name">Author Deandre Jefferson</div>
+          <div class="author-name">Author Sophia Mitchell</div>
           <div class="stars">★★★★★</div>
         </div>
       </div>
     </div>
-    <!-- end -->
-
-   
+     <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Publishing with Spines was one of the best decisions I’ve made as an author. The process was straightforward, the team was patient, and my book came out even better than I imagined.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Emily Carter</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="review-card">
+      <p class="review-text">
+        What I loved most was how Spines made everything stress-free. From editing to design, they handled it all. I finally felt like my story was in the hands of true professionals.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author James Rodriguez</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="review-card">
+      <p class="review-text">
+        I never thought publishing could be this easy. The team at Spines guided me at every step and gave my book a professional finish that I am truly proud of.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Sophia Mitchell</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+     <!-- 1 -->
+    <div class="review-card">
+      <p class="review-text">
+        Publishing with Spines was one of the best decisions I’ve made as an author. The process was straightforward, the team was patient, and my book came out even better than I imagined.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Emily Carter</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="review-card">
+      <p class="review-text">
+        What I loved most was how Spines made everything stress-free. From editing to design, they handled it all. I finally felt like my story was in the hands of true professionals.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author James Rodriguez</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="review-card">
+      <p class="review-text">
+        I never thought publishing could be this easy. The team at Spines guided me at every step and gave my book a professional finish that I am truly proud of.
+      </p>
+      <div class="review-author">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author Image">
+        <div>
+          <div class="author-name">Author Sophia Mitchell</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function(){
-    let track = $(".carousel-track");
-    let cardWidth = $(".review-card").outerWidth(true);
-    let defaultSpeed = 3000;
-    let hoverSpeed = 6000;
-    let currentSpeed = defaultSpeed;
-    let isHovering = false;
+$(function(){
+    const $track = $(".carousel-track");
+    let $cards = $(".review-card");
+    let cardWidth = $cards.outerWidth(true);
+    let index = 1; 
+    let isDragging = false, startX, startTranslate, currentX;
+    let animationFrame;
 
-    // Duplicate cards for smooth infinite effect
-    track.append(track.html());
-    track.css({ position: "relative", left: 0 });
+    // Clone first & last for infinite effect
+    $track.prepend($cards.last().clone());
+    $track.append($cards.first().clone());
+    $cards = $(".review-card");
+    cardWidth = $cards.outerWidth(true);
 
-    function scrollOnce() {
-        track.animate({ left: -cardWidth }, currentSpeed, "linear", function(){
-            track.append(track.children().first());
-            track.css("left", 0);
-            scrollOnce(); // loop
+    // Initial offset
+    setTranslate(-cardWidth * index);
+
+    // Helpers
+    function getTranslateX() {
+        const style = window.getComputedStyle($track[0]);
+        const matrix = new WebKitCSSMatrix(style.transform);
+        return matrix.m41;
+    }
+
+    function setTranslate(x, withTransition = false) {
+        $track.css("transition", withTransition ? "transform 0.3s ease" : "none");
+        $track.css("transform", `translateX(${x}px)`);
+    }
+
+    function snapToCard() {
+        let moveX = getTranslateX();
+        let dragDistance = moveX - startTranslate;
+        let threshold = cardWidth / 4; // drag 25% se zyada hua toh agla card
+
+        if(dragDistance < -threshold) index++;
+        else if(dragDistance > threshold) index--;
+
+        setTranslate(-index * cardWidth, true);
+
+        $track.one("transitionend", function(){
+            if(index === 0){ 
+                index = $cards.length - 2;
+                setTranslate(-index * cardWidth);
+            } 
+            else if(index === $cards.length - 1){ 
+                index = 1;
+                setTranslate(-index * cardWidth);
+            }
         });
     }
 
-    // Hover events — update speed for next scroll
-    $(".carousel-container").hover(
-        function(){
-            isHovering = true;
-            currentSpeed = hoverSpeed;
-        },
-        function(){
-            isHovering = false;
-            currentSpeed = defaultSpeed;
-        }
-    );
+    // Drag start
+    $track.on("mousedown touchstart", function(e){
+        isDragging = true;
+        startX = e.pageX || e.originalEvent.touches[0].pageX;
+        startTranslate = getTranslateX();
+        cancelAnimationFrame(animationFrame);
+    });
 
-    // Start
-    scrollOnce();
+    // Drag move (raf for smoothness)
+    $(document).on("mousemove touchmove", function(e){
+        if(!isDragging) return;
+        currentX = (e.pageX || e.originalEvent.touches[0].pageX) - startX;
+        e.preventDefault(); // prevent text/image selection
+
+        function update() {
+            setTranslate(startTranslate + currentX);
+            if(isDragging) animationFrame = requestAnimationFrame(update);
+        }
+        cancelAnimationFrame(animationFrame);
+        animationFrame = requestAnimationFrame(update);
+    });
+
+    // Drag end
+    $(document).on("mouseup touchend", function(){
+        if(!isDragging) return;
+        isDragging = false;
+        cancelAnimationFrame(animationFrame);
+        snapToCard();
+    });
+
+    // Resize handling
+    $(window).on("resize", function(){
+        cardWidth = $(".review-card").outerWidth(true);
+        setTranslate(-index * cardWidth);
+    });
 });
 </script>
+
+
 
 <!-- Blog Section -->
  

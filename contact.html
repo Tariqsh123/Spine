@@ -141,62 +141,61 @@ mobileDropdown.addEventListener("click", () => {
     </h3>
   </div>
 
-  <form action="contact.php" method="POST" id="support-form">
-    <div class="form-row">
-      <div class="form-group">
-        <span class="icon">
-          <img src="https://img.icons8.com/?size=100&id=23264&format=png&color=0fd8a4" alt="user">
-        </span>
-        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
-      </div>
-      <div class="form-group">
-        <span class="icon">
-          <img src="https://img.icons8.com/?size=20&id=23264&format=png&color=0fd8a4" alt="user">
-        </span>
-        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
-      </div>
-    </div>
+<form action="contact.php" method="POST" id="support-form" enctype="multipart/form-data">
+  <!-- Full Name -->
+  <div class="form-group">
+    <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+  </div>
 
-    <div class="form-group">
-      <span class="icon">
-        <img src="https://img.icons8.com/?size=20&id=12580&format=png&color=0fd8a4" alt="email">
-      </span>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-    </div>
+  <!-- Email -->
+  <div class="form-group">
+    <input type="email" id="email" name="email" placeholder="Email" required>
+  </div>
 
-    <div class="form-group">
-      <span class="icon">
-        <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=0fd8a4" alt="phone">
-      </span>
-      <input type="tel" id="phone" name="phone" placeholder="Phone" required>
-    </div>
+  <!-- Phone -->
+  <div class="form-group">
+    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+  </div>
 
-    <div class="form-group">
-      <span class="icon">
-        <img src="https://img.icons8.com/?size=20&id=59823&format=png&color=0fd8a4" alt="topic">
-      </span>
-      <select id="topic" name="topic" required>
-        <option value="">Support Topic</option>
-        <option value="Account">Account Issues</option>
-        <option value="Payment">Payment & Billing</option>
-        <option value="Publishing">Publishing Help</option>
-        <option value="Technical">Technical Support</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
+  <!-- Genre Dropdown -->
+  <div class="form-group">
+    <select id="genre" name="genre" required>
+      <option value="">Select Genre</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+      <option value="Romance">Romance</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Biography">Biography</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
 
-    <div class="form-group">
-     
-      <textarea id="message" name="message" rows="5" placeholder="Message (optional)"></textarea>
-    </div>
+  <!-- File Upload -->
+  <div class="form-group">
+    <input type="file" id="file" name="file" required>
+  </div>
 
-    <div class="form-group checkbox">
-      <input type="checkbox" id="consent" name="consent" required>
-      <label for="consent" class="consent-text">I consent to the text messages agreement</label>
-    </div>
+  <!-- Book Title -->
+  <div class="form-group">
+    <input type="text" id="book_title" name="book_title" placeholder="Write a Book Title" required>
+  </div>
 
-    <button type="submit" class="submit-btn">Submit Request</button>
-  </form>
+  <!-- Details -->
+  <div class="form-group">
+    <textarea id="details" name="details" rows="5" placeholder="Details"></textarea>
+  </div>
+
+  <!-- Terms -->
+  <div class="form-group checkbox">
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms" class="consent-text">I agree to the terms and conditions</label>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="submit-btn">Submit Request</button>
+</form>
+
 </div>
 
 <!-- Pricing Work -->

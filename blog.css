@@ -18,7 +18,7 @@ body {
 }
 #blog-inner-header{
     height: 100%;
-    width: 95%;
+    width: 90%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;

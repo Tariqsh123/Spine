@@ -82,9 +82,19 @@ body {
 }
 
 @media (max-width: 600px) {
-    #about-left h2{
-    font-size: 2rem;
-}
+    #about-main-container{
+        align-items: center;
+    }    
+    #about-left h2 {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    #about-left p{
+        font-size: small;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* The Team */
@@ -223,5 +233,6 @@ body {
     }
     #the-team-heading-container h2 {
     font-size: 2rem;
+    width: 95%;
 }
 }

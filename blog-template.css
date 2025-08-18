@@ -82,7 +82,7 @@ body {
   /* Blog Text */
 #blog-text-container{
     height: fit-content;
-    width: 95%;
+    width: 90%;
     max-width: 1200px;
     display: flex;
     margin: 50px auto;

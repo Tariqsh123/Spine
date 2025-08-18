@@ -65,4 +65,10 @@ body {
  h1.pricing-title {
     font-size: 2rem;
  }
+ .pricing-tab {
+    padding: 7px 10px;
+    font-size: small;
+}#pricing-wordCount{
+    font-size: small;
+}
 }
