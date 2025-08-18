@@ -581,7 +581,7 @@ nav {
 /* Responsive */
 @media (max-width: 768px) {
     .why-spines-section {
-    padding: 10px 30px;
+    padding: 10px ;
 }
     .why-spines-container {
       height: fit-content;
@@ -597,7 +597,8 @@ nav {
 }
   @media (max-width: 520px) {
 .why-spines-left img {
-    height: 400px;
+    height: auto;
+    width: 97%;
 }
 
 }
