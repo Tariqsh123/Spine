@@ -1482,3 +1482,43 @@ section.steps {
     transform: scale(1);
   }
   }
+
+  /* Header Logo Container` */
+#header-logo-wrapper {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 0 auto 30px;
+  margin-top: 30px;
+}
+
+#header-logo-container {
+  display: flex;
+  gap: 20px;
+  width: max-content; /* make container as wide as content */
+  animation: scroll 8s linear infinite;
+}
+
+#header-logo-container img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Keyframes for infinite scroll */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* only move half (since we doubled) */
+  }
+}
+
+
+  @media (max-width: 600px) {
+#header-logo-container img {
+  height: 30px;
+}
+  }
