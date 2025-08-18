@@ -267,12 +267,12 @@ nav {
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: medium;
     color: #777;
     width: 90%;
     max-width: 800px;
     margin: 0 auto 20px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .hero button {
@@ -926,8 +926,11 @@ section.steps {
 }
 .feature {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+  flex-direction: column;
+  text-align: center;
   margin-bottom: 12px;
   font-size: 15px;
   color: #334155;
@@ -992,7 +995,6 @@ section.steps {
 /* review Carousel */
  #review-heading-section {
     text-align: center;
-    font-family: serif;
   }
 
   .review-heading-container {
@@ -1005,6 +1007,7 @@ section.steps {
   }
 
   .review-heading-h2 {
+    font-family: serif;
     color: black;
     font-size: 40px;
     margin: 5px 0;
@@ -1094,9 +1097,11 @@ section.steps {
 /* Mobile: 1 card */
 @media (max-width: 600px) {
   .review-card {
-    flex: 0 0 95%;
+    flex: 0 0 340px;
     /* margin: 0 5px; */
   }
+  .carousel-track {
+    gap: 5px;}
 }
   /* blog Section */
    .blog-section {
@@ -1270,6 +1275,7 @@ section.steps {
  footer {
   padding: 20px;
   padding-bottom: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .footer-inner {
@@ -1297,7 +1303,8 @@ section.steps {
 }
 
 .footer-logo {
-  width: 150px;
+  width: auto;
+  height: 70px;
   margin-bottom: 15px;
 }
 
@@ -1360,8 +1367,8 @@ section.steps {
 .footer-middle {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin: 40px 0;
+  gap: 20px;
+  margin: 20px 0;
   flex-wrap: wrap;
 }
 
@@ -1369,8 +1376,8 @@ section.steps {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 220px;
-  width: 250px;
+  max-width: 400px;
+  width: 90%;
 
 }
 
@@ -1400,7 +1407,8 @@ section.steps {
   flex-wrap: wrap;
   gap: 15px;
   border-top: 1px solid #ddd;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .payment-icons {
