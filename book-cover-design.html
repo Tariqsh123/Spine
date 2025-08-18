@@ -113,37 +113,25 @@ mobileDropdown.addEventListener("click", () => {
     </div>
 </div>
 
-<!-- MArquee -->
- 
-<div class="marquee-container" style="padding: 30px 0;">
-  <div class="marquee" id="marquee">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/pw-logo-transparent-small.png" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Forbes-Black-1-1.svg" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/wsj-1.svg" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Startup-Rise-america-logo-black-1.png" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/SiliconANGLE-logo-1-1.png" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/fortune-1.svg" alt="">
-    <!-- duplicate images for continuous effect -->
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/pw-logo-transparent-small.png" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Forbes-Black-1-1.svg" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/wsj-1.svg" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/Startup-Rise-america-logo-black-1.png" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/SiliconANGLE-logo-1-1.png" alt="">
-    <img src="https://cdn.spines.com/wp-content/uploads/2024/10/fortune-1.svg" alt="">
-    
+ <!-- Logo Container -->
+        <div id="header-logo-wrapper">
+  <div id="header-logo-container">
+    <img src="images/amazon-kindle.webp" alt="amazon-kindle">
+    <img src="images/Barnes&Noble.png" alt="Barnes&Noble">
+    <img src="images/Rakuten_Kobo_logo.png" alt="Rakuten_Kobo_logo">
+    <img src="images/IngramSpark.jpg" alt="IngramSpark">
+    <img src="images/Google Books.png" alt="Google Books">
+    <img src="images/Lulu logo.png" alt="Lulu logo">
+
+    <!-- duplicate logos for seamless looping -->
+    <img src="images/amazon-kindle.webp" alt="amazon-kindle">
+    <img src="images/Barnes&Noble.png" alt="Barnes&Noble">
+    <img src="images/Rakuten_Kobo_logo.png" alt="Rakuten_Kobo_logo">
+    <img src="images/IngramSpark.jpg" alt="IngramSpark">
+    <img src="images/Google Books.png" alt="Google Books">
+    <img src="images/Lulu logo.png" alt="Lulu logo">
   </div>
 </div>
-
-<script>
-  // Pause on hover
-  const marquee = document.getElementById('marquee');
-  marquee.parentElement.addEventListener('mouseenter', () => {
-    marquee.style.animationPlayState = 'paused';
-  });
-  marquee.parentElement.addEventListener('mouseleave', () => {
-    marquee.style.animationPlayState = 'running';
-  });
-</script>
 
 
 <!-- About Service Section -->
@@ -196,25 +184,7 @@ mobileDropdown.addEventListener("click", () => {
     </div>
   </div>
 
- <!-- Logo Container -->
-        <div id="header-logo-wrapper">
-  <div id="header-logo-container">
-    <img src="images/amazon-kindle.webp" alt="amazon-kindle">
-    <img src="images/Barnes&Noble.png" alt="Barnes&Noble">
-    <img src="images/Rakuten_Kobo_logo.png" alt="Rakuten_Kobo_logo">
-    <img src="images/IngramSpark.jpg" alt="IngramSpark">
-    <img src="images/Google Books.png" alt="Google Books">
-    <img src="images/Lulu logo.png" alt="Lulu logo">
 
-    <!-- duplicate logos for seamless looping -->
-    <img src="images/amazon-kindle.webp" alt="amazon-kindle">
-    <img src="images/Barnes&Noble.png" alt="Barnes&Noble">
-    <img src="images/Rakuten_Kobo_logo.png" alt="Rakuten_Kobo_logo">
-    <img src="images/IngramSpark.jpg" alt="IngramSpark">
-    <img src="images/Google Books.png" alt="Google Books">
-    <img src="images/Lulu logo.png" alt="Lulu logo">
-  </div>
-</div>
   <!-- Book Carousel -->
    
 
@@ -274,7 +244,7 @@ mobileDropdown.addEventListener("click", () => {
 </script>
 
 <!-- Process Section -->
- <section class="process-section">
+ <!-- <section class="process-section">
   <h2>Our Book Marketing Process</h2>
   <div class="process-steps">
     <div class="step">
@@ -303,7 +273,51 @@ mobileDropdown.addEventListener("click", () => {
       <p>With client approval ... branding and marketing requirements.</p>
     </div>
   </div>
+</section> -->
+
+<section class="timeline-section">
+  <h2>5 Step Process of Marketing Research Project</h2>
+  <p>Here’s a step-by-step guide to handle marketing research efficiently for corporate success.</p>
+
+  <div class="timeline">
+    <div class="timeline-step">
+      <img src="https://img.icons8.com/?size=100&id=3buQveFp0BoL&format=png&color=0cbf92" alt="Identify Issues" class="step-img">
+      <h3>Identify the Issues</h3>
+      <p>Identify major issues such as market understanding, trend analysis, and add text here.</p>
+      <div class="step-number">01</div>
+    </div>
+
+    <div class="timeline-step">
+      <img src="https://img.icons8.com/?size=100&id=57711&format=png&color=0cbf92" alt="Research Strategy" class="step-img">
+      <h3>Develop Research Strategy</h3>
+      <p>Prepare budget, send surveys, collect feedback, and add text here.</p>
+      <div class="step-number">02</div>
+    </div>
+
+    <div class="timeline-step">
+      <img src="https://img.icons8.com/?size=100&id=dz75PhbB6Myd&format=png&color=0cbf92" alt="Research Tools" class="step-img">
+      <h3>Tools of Research</h3>
+      <p>Use primary and secondary research, business magazines, add text here.</p>
+      <div class="step-number">03</div>
+    </div>
+
+    <div class="timeline-step">
+      <img src="https://img.icons8.com/?size=100&id=hJecpPVXgZ5Y&format=png&color=0cbf92" alt="Report Findings" class="step-img">
+      <h3>Report Findings</h3>
+      <p>Analyze data collected, compile report, add text here.</p>
+      <div class="step-number">04</div>
+    </div>
+
+    <div class="timeline-step">
+      <img src="https://img.icons8.com/?size=100&id=8931&format=png&color=0cbf92" alt="Take Action" class="step-img">
+      <h3>Take Action</h3>
+      <p>Implement changes, track results, add text here.</p>
+      <div class="step-number">05</div>
+    </div>
+  </div>
 </section>
+
+
 
 
 
