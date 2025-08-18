@@ -987,8 +987,11 @@ section.steps {
   }
   .feature {
     justify-content: center;
-    text-align: left;
+    text-align: center;
   }
+  /* .feature div{
+    text-align: left;
+  } */
 }
 
 
@@ -1096,10 +1099,10 @@ section.steps {
 
 /* Mobile: 1 card */
 @media (max-width: 600px) {
-  .review-card {
-    flex: 0 0 340px;
-    /* margin: 0 5px; */
-  }
+     .review-card {
+        flex: 0 0 327px;
+        margin: 0;
+    }
   .carousel-track {
     gap: 5px;}
 }
