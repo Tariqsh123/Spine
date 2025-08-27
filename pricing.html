@@ -11,6 +11,13 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<!-- Font Family -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
 <body>
 
 <nav>
@@ -106,7 +113,7 @@ mobileDropdown.addEventListener("click", () => {
 <!-- Pricing Work -->
 
 
-<h1 class="pricing-title">Tailored Plans to Bring Your Book to Life</h1>
+<h1 class="pricing-title">Tailored Plans to <br><span> Bring Your Book to Life</span></h1>
 <p class="pricing-subtitle">All-inclusive packages with 7-day money-back guarantee.</p>
 
 <div class="pricing-tabs">
@@ -119,6 +126,34 @@ mobileDropdown.addEventListener("click", () => {
     <p id="pricing-wordCount">50,000 words</p>
     <input type="range" min="1" max="3" step="1" value="2" id="pricing-wordRange">
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".pricing-tab");
+  const rangeBox = document.querySelector(".pricing-range-box");
+
+  // Default state
+  rangeBox.style.display = "block";
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Remove active class from all
+      tabs.forEach((t) => t.classList.remove("pricing-active"));
+
+      // Add active to clicked tab
+      tab.classList.add("pricing-active");
+
+      // Show/hide range box
+      if (tab.textContent.trim() === "Fiction & Nonfiction") {
+        rangeBox.style.display = "block";
+      } else {
+        rangeBox.style.display = "none";
+      }
+    });
+  });
+});
+</script>
+
+
 
 <div class="pricing-plans">
     <div class="pricing-plan" data-step="3">
