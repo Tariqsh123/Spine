@@ -9,6 +9,11 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
+<!-- Font Family -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <body>
 
@@ -108,7 +113,7 @@ mobileDropdown.addEventListener("click", () => {
     
 
    <!-- Logo Container -->
-        <div id="header-logo-wrapper">
+        <div id="header-logo-wrapper" style="max-width: 900px;">
   <div id="header-logo-container">
     <img src="images/amazon-kindle.webp" alt="amazon-kindle">
     <img src="images/Barnes&Noble.png" alt="Barnes&Noble">
@@ -207,7 +212,7 @@ startCounterWhenVisible("counting-number-3", 20, 50, '%');
 
 <section class="why-spines-section">
     <h6 class="why-spines-subtitle">WHY SPINES</h6>
-    <h2 class="why-spines-title">Publishing Your Book Has Never Been Easier</h2>
+    <h2 class="why-spines-title">Publishing Your Book <br> <span> Has Never Been Easier</span></h2>
 
     <div class="why-spines-container">
         <!-- Left Side Image -->
@@ -249,6 +254,33 @@ startCounterWhenVisible("counting-number-3", 20, 50, '%');
         </div>
     </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll(".why-spines-box");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        boxes.forEach((box, index) => {
+          setTimeout(() => {
+            box.style.opacity = "1";
+            box.style.transform = "translateY(0)";
+            box.style.transition = "all 0.6s ease";
+          }, index * 300); // delay for one-by-one animation
+        });
+        observer.disconnect(); // run only once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  boxes.forEach((box) => {
+    box.style.opacity = "0";
+    box.style.transform = "translateY(50px)";
+    observer.observe(box);
+  });
+});
+</script>
+
 
 <!-- Box with BG Image Section -->
 
@@ -266,28 +298,35 @@ startCounterWhenVisible("counting-number-3", 20, 50, '%');
     <div class="did-you-know-inner-container">
         <h6>Did you know</h6>
         <h2>9 Out of 10 Fully Written Books Never Get Published</h2>
-        <p class="lead">This is because the publishing process is full of barriers: overcomplicated, time-consuming, and out of reach for most writers.</p>
+        <p class="lead">This is because the publishing process is full of barriers: overcomplicated, time-consuming, and out of reach for most writers. Frustrated and stuck, many give up before they even get the chance.</p>
         <p class="lead">Founded by authors and writers themselves, Spines understands the many challenges authors face, aims to democratize publishing for writers everywhere.</p>
         
         <!-- Testimonial Carousel -->
         <div class="testimonial-carousel">
             <button class="arrow left">&#10094;</button>
             <div class="testimonial-track">
-                <div class="testimonial-item">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC" alt="John Doe">
-                    <h4>John Doe</h4>
+                 <div class="testimonial-item">
                     <p>"Spines made publishing my book so simple! I went from draft to published in weeks."</p>
+                    <div>
+                    <img src="https://cdn.spines.com/wp-content/uploads/elementor/thumbs/Anais-Nin-e17464389322501-r8sf2t0rwbiu4b5x32bxvj2qcoo4rqjs43i7o9zby4.jpg" alt="John Doe">
+                    <h4>Anna Jhon</h4>
+                    </div>
                 </div>
                 <div class="testimonial-item">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC" alt="Sarah Lee">
-                    <h4>Sarah Lee</h4>
-                    <p>"The process was stress-free and empowering. I felt in control the entire time."</p>
+                    <p>"Spines made publishing my book so simple! I went from draft to published in weeks."</p>
+                    <div>
+                    <img src="https://cdn.spines.com/wp-content/uploads/elementor/thumbs/Anais-Nin-e17464389322501-r8sf2t0rwbiu4b5x32bxvj2qcoo4rqjs43i7o9zby4.jpg" alt="John Doe">
+                    <h4>Anna Jhon</h4>
+                    </div>
                 </div>
-                <div class="testimonial-item">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC" alt="Michael Smith">
-                    <h4>Michael Smith</h4>
-                    <p>"I recommend Spines to every writer who wants to see their work in print."</p>
+               <div class="testimonial-item">
+                    <p>"Spines made publishing my book so simple! I went from draft to published in weeks."</p>
+                    <div>
+                    <img src="https://cdn.spines.com/wp-content/uploads/elementor/thumbs/Anais-Nin-e17464389322501-r8sf2t0rwbiu4b5x32bxvj2qcoo4rqjs43i7o9zby4.jpg" alt="John Doe">
+                    <h4>Anna Jhon</h4>
+                    </div>
                 </div>
+                
             </div>
             <button class="arrow right">&#10095;</button>
         </div>
@@ -451,8 +490,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
 <section class="how-it-works">
   <h6>HOW IT WORKS</h6>
-  <h2><span>Publish with Spines</span></h2>
-  <h2>in Just Four Simple Steps</h2>
+  <h2>Publish with Spines <br> <span> in Just Four Simple Steps</span></h2>
   <p>
     Spines proofreads, designs covers, formats, publishes, and starts distributing your book
     in just a couple of weeks.
@@ -493,19 +531,14 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="step-content">
     <!-- STEP 1 -->
     <div class="text-block step step-1">
-      <h6>Step 1</h6>
       <h2>Upload Your Manuscript With A Few Clicks</h2>
-      <p>
-        Easily upload your manuscript using Spines’ user-friendly dashboard. Just fill in a few simple details,
-        like the book title, author’s name, and category.
-      </p>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=368&format=png&color=0cbf92" alt="Upload Icon">
-        <span>Easily upload your manuscript using Spines’ dashboard</span>
+        <span>Easily upload your manuscript using Spines’ user-friendly dashboard. Just fill in a few simple details, like the book title, author’s name, and category.</span>
       </div>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=57927&format=png&color=0cbf92" alt="Certificate Icon">
-        <span>Instantly receive a copyright certificate</span>
+        <span>Instantly receive a copyright certificate for your book.</span>
       </div>
       <a href="get-started.html" class="btn">Get Started</a>
     </div>
@@ -517,23 +550,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- STEP 2 -->
     <div class="text-block step step-2" style="display:none;">
-      <h6>Step 2</h6>
       <h2>AI-Powered Manuscript Scans for Smarter Editing</h2>
-      <p>
-        Spines scans your manuscript using built-in AI to understand your audience, genre, and writing style.  
-        It then automatically identifies grammar mistakes and areas for improvement—making the editing process faster and smarter.
-      </p>
-      <p>
-        If needed, you can also connect with professional editors for an added layer of refinement.
-      </p>
-
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=lquM93tYtWG0&format=png&color=0cbf92" alt="AI Scan Icon">
-        <span>AI-powered manuscript scanning for style and audience insights</span>
+        <span>Spines scans your manuscript using built-in AI to understand your audience, genre, and writing style. It then automatically identifies grammar mistakes and areas for improvement—making the editing process faster and smarter.</span>
       </div>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=23265&format=png&color=0cbf92" alt="Grammar Check Icon">
-        <span>Automatic grammar detection and smart editing suggestions</span>
+        <span>If needed, you can also connect with professional editors for an added layer of refinement.</span>
       </div>
 
       <a href="get-started.html" class="btn">Get Started</a>
@@ -545,23 +569,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- STEP 3 -->
     <div class="text-block step step-3" style="display:none;">
-      <h6>Step 3</h6>
       <h2>Custom Covers Tailored to Your Book & Style</h2>
-      <p>
-        Choose from a wide range of custom-made cover designs, tailored to your book and personal style preferences.  
-        If you already have a cover, we can enhance it with our cover tool — or simply upload and use your own.
-      </p>
-      <p>
-        Customize your book’s interior formatting in real time to match your style and genre.
-      </p>
-
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=PuuKD730WqLx&format=png&color=0cbf92" alt="Custom Cover Icon">
-        <span>Wide range of custom-made cover designs to fit your style</span>
+        <span>Choose from a wide range of custom-made cover designs, tailored to your book and personal style preferences. If you already have a cover, we can enhance it with our cover tool - or simply upload and use your own.</span>
       </div>
       <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=undefined&format=png&color=0cbf92" alt="Interior Formatting Icon">
-        <span>Real-time customization of interior formatting</span>
+        <img src="https://img.icons8.com/?size=100&id=47835&format=png&color=0cbf92" alt="Interior Formatting Icon">
+        <span>Customize your book’s interior formatting in real time to match your style and genre.</span>
       </div>
 
       <a href="get-started.html" class="btn">Get Started</a>
@@ -573,27 +588,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- STEP 4 -->
     <div class="text-block step step-4" style="display:none;">
-      <h6>Step 4</h6>
       <h2>Publish Easily & Reach Readers Worldwide</h2>
-      <p>
-        Hit publish, and Spines takes care of the rest. Your book will be distributed across major platforms, reaching readers worldwide.
-      </p>
-      <p>
-        Set up automatic ad campaigns on Amazon, Facebook, and Instagram, while having your own personalized author platform to showcase and sell your book.
-      </p>
 
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=13322&format=png&color=0cbf92" alt="Publish Icon">
-        <span>One-click publishing to global platforms</span>
+        <span>Hit publish, and Spines takes care of the rest. Your book will be distributed across major platforms, reaching readers worldwide.</span>
       </div>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=24525&format=png&color=0cbf92" alt="Distribution Icon">
-        <span>Global distribution in digital and print formats</span>
+        <span>Set up automatic ad campaigns on Amazon, Facebook, and Instagram, while having your own personalized author platform to showcase and sell your book.</span>
       </div>
-      <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=47835&format=png&color=0cbf92" alt="Ad Campaign Icon">
-        <span>Automatic ad campaigns & author platform</span>
-      </div>
+      
 
       <a href="get-started.html" class="btn">Get Started</a>
     </div>
@@ -683,7 +688,7 @@ document.querySelectorAll('.step-nav div[data-step]').forEach(tab => {
   <div class="review-heading-container">
    
     <h2 class="review-heading-h2"> <span class="review-heading-span">2,800+ Authors</span> Have Published <br>Their Books on Their Own</h2>
-    <p class="review-heading-p">Without any technical or design expertise.</p>
+    <p class="review-heading-p">All without needing tech or design expertise.</p>
   </div>
 </section>
 
@@ -729,11 +734,8 @@ $(function(){
     let isDragging = false, startX, startTranslate, currentX;
     let animationFrame;
     let cardWidth, containerWidth, offset, gap;
-
-    // Get gap between cards from CSS
     gap = parseInt($track.css('gap')) || 0;
 
-    // Clone first & last for infinite effect
     $track.prepend($cards.last().clone());
     $track.append($cards.first().clone());
     $cards = $(".review-card");
@@ -741,16 +743,12 @@ $(function(){
     function updateDimensions() {
         cardWidth = $cards.outerWidth(true);
         containerWidth = $(".carousel-container").width();
-        // center offset: consider container width, card width, and half gap
         offset = containerWidth > cardWidth ? (containerWidth - cardWidth) / 2 - gap/2 : 0;
     }
 
     updateDimensions();
 
-    // Initial position
     setTranslate(-index * cardWidth + offset);
-
-    // Helper functions
     function getTranslateX() {
         const style = window.getComputedStyle($track[0]);
         const matrix = new WebKitCSSMatrix(style.transform);
@@ -783,16 +781,12 @@ $(function(){
             }
         });
     }
-
-    // Drag start
     $track.on("mousedown touchstart", function(e){
         isDragging = true;
         startX = e.pageX || e.originalEvent.touches[0].pageX;
         startTranslate = getTranslateX();
         cancelAnimationFrame(animationFrame);
     });
-
-    // Drag move
     $(document).on("mousemove touchmove", function(e){
         if(!isDragging) return;
         currentX = (e.pageX || e.originalEvent.touches[0].pageX) - startX;
@@ -806,15 +800,12 @@ $(function(){
         animationFrame = requestAnimationFrame(update);
     });
 
-    // Drag end
     $(document).on("mouseup touchend", function(){
         if(!isDragging) return;
         isDragging = false;
         cancelAnimationFrame(animationFrame);
         snapToCard();
     });
-
-    // Window resize
     $(window).on("resize", function(){
         updateDimensions();
         setTranslate(-index * cardWidth + offset);
@@ -836,7 +827,6 @@ $(function(){
             <img src="https://cdn.spines.com/wp-content/uploads/2025/01/illustration-3-600x338.png" alt="Blog 1">
             <div class="blog-content">
                 <div class="blog-heading">How Does Spines Work? A Revolution in Book Publishing</div>
-                <div class="blog-subheading">Discover how Spines is transforming the publishing world.</div>
                 <div class="blog-description">
                     In an age of digitization and rapid technological advancements, the literary world is undergoing a transformation...
                 </div>
@@ -848,7 +838,6 @@ $(function(){
             <img src="https://cdn.spines.com/wp-content/uploads/2024/01/illustration-2-600x338.png" alt="Blog 2">
             <div class="blog-content">
                 <div class="blog-heading">How to Self Publish a Book: The Ultimate Guide</div>
-                <div class="blog-subheading">Your step-by-step guide to successful self-publishing.</div>
                 <div class="blog-description">
                     In recent years, the publishing industry has undergone a revolutionary transformation, giving authors more control...
                 </div>
@@ -860,7 +849,6 @@ $(function(){
             <img src="https://cdn.spines.com/wp-content/uploads/2024/08/illustration-1-600x338.png" alt="Blog 3">
             <div class="blog-content">
                 <div class="blog-heading">The Best-Selling Book Genres and Why They Succeed</div>
-                <div class="blog-subheading">Understand what makes book genres thrive in the market.</div>
                 <div class="blog-description">
                     Ever wonder what separates a blockbuster novel from a forgotten one gathering dust on a shelf? The secret often lies...
                 </div>

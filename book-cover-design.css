@@ -63,6 +63,7 @@
 }
 #service-header-inner-container p{
     font-size: large;
+  font-family: "DM Sans", sans-serif;
     color: #fff;
     width: 50%;
     text-align: center;
@@ -132,7 +133,7 @@
 }
 
 #about-services-text-container p{
-    font-size: large;
+    font-size: medium;
     text-align: center;
     color: gray;
 }
@@ -190,7 +191,7 @@
 
 #about-service-card-box h3 {
     font-size: 30px;
-    font-family: serif;
+  font-family: "DM Sans", sans-serif;
     text-align: left;
     color: #0cbf92;
 }
@@ -242,8 +243,9 @@
 }
 #why-services-left-container span{
     font-size: large;
-    font-weight: 700;
+    font-weight: 500;
     color: #0cbf92;
+  font-family: "DM Sans", sans-serif;
     text-align: left;
 }
 #why-services-left-container p{
@@ -306,7 +308,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px ;
-    padding: 0 10px;
+    padding: 0 ;
 }
 #services-bottom-form-inner{
     height: fit-content;
@@ -332,6 +334,7 @@
     height: 100%;
     width: 45%;
     display: flex;
+
     justify-content: center;
     align-items: center;
       position: relative;
@@ -383,16 +386,18 @@
 @media (max-width: 991px) {
 #services-bottom-form-inner {
     flex-direction: column;
-    margin-bottom: 50px ;
+    /* margin-bottom: 50px ; */
 }
 #service-form-container {
     height: fit-content;
     width: 100%;}
     #support-form-container {
     max-width: none;}
-
+#service-form-right-image-container
+{
+  display: none;
 }
-
+}
 /* Process Section */
 /* .process-section {
   max-width: 1200px;
@@ -580,8 +585,8 @@ font-size: 2rem;}
 
 .timeline-step h3 {
   font-size: 1.25rem;
-  font-weight: 700;
-  font-family: serif;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
   margin: 15px 0;
   color: #0cbf92;
 }
