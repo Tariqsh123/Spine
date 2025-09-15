@@ -3,10 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg,rgb(12, 191, 146,0.2),rgb(238, 238, 238,0.3),rgb(238, 238, 238,0.3),rgb(12, 191, 146,0.2));
-}
+} */
 
 #blog-header{
     height: fit-content;
@@ -27,8 +27,8 @@ body {
     gap: 10px;
 }
 #blog-inner-header h3{
-    color: #0cbf92;
-    text-decoration: underline #0cbf92;
+    color: #1a9ca8;
+    text-decoration: underline #1a9ca8;
     text-align: center;
 }
 

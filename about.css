@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg,rgb(12, 191, 146,0.2),rgb(238, 238, 238,0.3),rgb(238, 238, 238,0.3),rgb(12, 191, 146,0.2));
-}
+} */
 
 #about-main-container{
     height: fit-content;
@@ -130,7 +130,7 @@ body {
     box-shadow: 1px 1px 5px gainsboro;
     border-radius: 10px;
     overflow: hidden;
-    border: 2px solid #0cbf92;
+    border: 2px solid #1a9ca8;
     position: relative;
     cursor: pointer;
 }

@@ -1,18 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blogs</title>
+<title>Sitemap</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="blog.css">
+<link rel="stylesheet" href="contact.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Font Family -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    h1 {
+      text-align: center;
+      margin:  0;
+font-family: "serif";
+    }
+
+    h2 {
+      background-color: #1a9ca8;
+      color: #fff;
+      font-size: 1.5rem;
+      border-radius: 8px;
+      padding: 10px;
+      font-family: "serif";
+    }
+
+    .sitemap-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(200px, 1fr));
+      gap: 10px 30px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .sitemap-list {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+      }
+    }
+
+    @media (max-width: 992px) {
+      .sitemap-list {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 576px) {
+      .sitemap-list {
+        grid-template-columns: repeat(1, minmax(100%, 1fr));
+      }
+    }
+
+    .sitemap-list li {
+      display: flex;
+      align-items: center;
+    }
+
+    .sitemap-list li::before {
+      content: "✔";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-color: #1a9ca8;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .sitemap-list a {
+      color: black;
+      text-decoration: none;
+      font-weight:600;
+      font-size:16px;
+      font-family: Roboto, sans-serif;
+      white-space: nowrap;
+    }
+
+    .sitemap-list a:hover {
+      text-decoration: underline;
+    }
+    #sitemap-container {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    width: 95%;
+    max-width: 1400px;
+    margin: 50px auto;
+    gap: 20px;
+}
+  </style>
+</head>
 <body>
-
 <nav>
   <div id="nav-inner">
     <a href="index.html">
@@ -102,41 +192,37 @@ mobileDropdown.addEventListener("click", () => {
 </script>
 
 
+<body>
 
-<!-- Pricing Work -->
-<div id="blog-header">
-    <div id="blog-inner-header">
-        <h3>Blogs</h3>
-        <h1>Publishing Made Simple</h1>
-        <p>With the right knowledge, publishing your book is easy. Browse our blog to get the insights you need.</p>
-    </div>
+<div class="container" id='sitemap-container'>
+  <h1>SITEMAP OUR AGENCY</h1>
+
+  <!-- OUR COMPANY Section -->
+  <h2>OUR COMPANY</h2>
+  <ul class="sitemap-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="get-started.html">Get Started</a></li>
+    <li><a href="blog.html">Blogs</a></li>
+    <li><a href="terms.html">Terms And Conditions</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+
+  <!-- SERVICES PAGES Section -->
+  <h2>Services Pages</h2>
+  <ul class="sitemap-list">
+    <li><a href="kdp-publishing.html">KDP Publishing</a></li>
+    <li><a href="book-writing.html">Book Writing</a></li>
+    <li><a href="book-marketing.html">Book Markerting</a></li>
+    <li><a href="ghost-writing.html">Ghost Writing</a></li>
+    <li><a href="script-writing.html">Script Writing</a></li>
+    <li><a href="Audio-book.html">Audio Book</a></li>
+    <li><a href="Custom-illustration.html">Custom Illustration</a></li>
+    <li><a href="book-cover-design.html">Book Cover Design</a></li>
+  </ul>
 </div>
-<div id="blog-card-container">
-    
-    <div class="blog-card">
-            <img src="https://cdn.spines.com/wp-content/uploads/2025/01/illustration-3-600x338.png" alt="Blog 1">
-            <div class="blog-content">
-                <div class="blog-heading">How Does Spines Work? A Revolution in Book Publishing</div>
-                <div class="blog-subheading">Discover how Spines is transforming the publishing world.</div>
-                <div class="blog-description">
-                    In an age of digitization and rapid technological advancements, the literary world is undergoing a transformation...
-                </div>
-                <a href="Rising-Action-Example-blog.html">Read More</a>
-            </div>
-        </div>
-      
-</div>
-</div>
-
-
-
-<!-- Pricing Work -->
-
-
-
-
-
-
 
 
 

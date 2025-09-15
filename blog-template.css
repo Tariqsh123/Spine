@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg,rgb(12, 191, 146,0.2),rgb(238, 238, 238,0.3),rgb(238, 238, 238,0.3),rgb(12, 191, 146,0.2));
-}
+} */
 
 #blog-teplate-header-container{
     height: fit-content;
@@ -27,7 +27,7 @@ body {
     align-items: center;
 }
 #blog-template-header-inner-container h3{
-    color: #0cbf92;
+    color: #1a9ca8;
     text-align: center;
     font-size: medium;
 }
@@ -40,7 +40,7 @@ body {
     font-size: 40px;
 }
 #blog-template-header-inner-container span {
-    color: #0cbf92;
+    color: #1a9ca8;
     text-align: center;
     font-size: small;
     display: inline-flex;
@@ -92,7 +92,7 @@ body {
     gap: 10px;
 }
 #blog-text-container h2{
-    color: #0cbf92;
+    color: #1a9ca8;
     text-align: left;
 }
 #blog-text-container p{
