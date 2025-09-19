@@ -184,7 +184,7 @@
     box-shadow: none;
 }
 #about-service-card-box img{
-    height: 80px;
+    height: 60px;
     width: auto;
     margin: 0;
     padding: 0;
@@ -273,8 +273,8 @@
     align-items: center;
 }
 #why-services-right-container img{
-    height: 400px;
-    width: auto;
+    height: auto;
+    width: 90%;
     object-fit: contain;
 }
 #why-services-left-container h2 {
@@ -590,7 +590,7 @@ font-size: 2rem;}
 /* Step Images */
 .timeline-step .step-img {
   width: auto;
-  height: 80px;
+  height: 60px;
   object-fit: contain;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
