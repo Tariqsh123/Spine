@@ -313,7 +313,7 @@ nav {
 
 .center-laptop {
     width: auto;
-    height: 350px;
+    height: 500px;
     z-index: 2;
     transform-origin: center;
     animation: laptopCinematicWow 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -719,10 +719,11 @@ nav {
       gap: 10px;
     }
     .testimonial-item img {
-        width: auto;
+        width: 60px;
         height: 60px;
+        border: 1px solid #1a9ca8;
         border-radius: 50%;
-        margin-bottom: 8px;
+        margin-bottom: 0px;
         object-fit: contain;
     }
     .testimonial-item h4 {
@@ -1048,12 +1049,13 @@ padding: 20px;
 .image-block {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  box-shadow: 1px 1px 10px gray;
+  /* border-radius: 12px; */
 }
 .image-block img.bg {
   width: 100%;
   display: block;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 .image-block img.overlay {
   position: absolute;
@@ -1792,4 +1794,7 @@ footer {
     #support-form-container {
       margin-bottom: 0;
     }
+}
+#support-form-container {
+      margin: 20px auto !important;
 }

@@ -171,7 +171,7 @@ mobileDropdown.addEventListener("click", () => {
     
     <!-- Box -->
     <div id="about-service-card-box">
-        <img src="https://img.icons8.com/?size=100&id=8M6f7tXh4HeR&format=png&color=1a9ca8" alt="">
+        <img src="https://img.icons8.com/?size=100&id=Cgu81kzSlCZy&format=png&color=1a9ca8" alt="">
         <h3>Distribution Support</h3>
         <p>We guide you through publishing your audiobook on platforms like Audible, iTunes, and Google Play to reach a global audience.</p>
     </div>
@@ -215,56 +215,85 @@ mobileDropdown.addEventListener("click", () => {
   <h2>Our Audio Book Work</h2>
 </div>
 
-
-<div id="book-carousel-main-container">
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="images/banner-1.png" alt=""></div>
-      <div class="swiper-slide"><img src="images/banner-2.png" alt=""></div>
-      <div class="swiper-slide"><img src="images/banner-3.png" alt=""></div>
-      <div class="swiper-slide"><img src="images/banner-4.png" alt=""></div>
+<section class="home-bannrwrp">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- ✅ Swiper main container -->
+        <div class="swiper port-box">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a data-fancybox="port" href="images/banner-1.png">
+                <figure><img src="images/banner-1.png" alt="Prime Web Coders"></figure>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="port" href="images/banner-2.png">
+                <figure><img src="images/banner-2.png" alt="Prime Web Coders"></figure>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="port" href="images/banner-3.png">
+                <figure><img src="images/banner-3.png" alt="Prime Web Coders"></figure>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="port" href="images/banner-4.png">
+                <figure><img src="images/banner-4.png" alt="Prime Web Coders"></figure>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 <style>
- 
+.home-bannrwrp .swiper {
+  width: 100%;
+  padding: 40px 0;
+}
+.home-bannrwrp .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+.home-bannrwrp .swiper-slide img {
+  max-width: 100%;
+  border-radius: 8px;
+  transform: scale(0.90);
+  transition: transform 0.4s ease;
+}
+
+/* ✅ Enlarge active slide */
+.home-bannrwrp .swiper-slide-active img {
+  transform: scale(1);
+}
 </style>
 
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 3,
-    spaceBetween: 15,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    grabCursor: true,
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      601: {
-        slidesPerView: 3,
-      }
-    },
-    on: {
-      init: function () {
-        this.update();
-      }
-    }
-  });
-  swiper.on('slideChangeTransitionEnd', () => {
-    document.querySelectorAll('.swiper-slide').forEach(slide => slide.style.zIndex = 1);
-    const active = document.querySelector('.swiper-slide-active');
-    if (active) active.style.zIndex = 99;
-  });
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 3,
+  spaceBetween: 15,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  grabCursor: true,
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    601: { slidesPerView: 3 }
+  }
+});
 </script>
 
 <!-- Process Section -->
@@ -305,35 +334,35 @@ mobileDropdown.addEventListener("click", () => {
 
   <div class="timeline">
     <div class="timeline-step">
-      <img src="https://img.icons8.com/?size=100&id=7Rx6nQuqNfUy&format=png&color=1a9ca8" alt="Identify Issues" class="step-img">
+      <img src="https://img.icons8.com/?size=100&id=3XzuI2J8a6Wz&format=png&color=1a9ca8" alt="Identify Issues" class="step-img">
       <h3>Identify the Issues</h3>
       <p>Identify major issues such as market understanding, trend analysis, and add text here.</p>
       <div class="step-number">01</div>
     </div>
 
     <div class="timeline-step">
-      <img src="https://img.icons8.com/?size=100&id=VJlFFoarAfBc&format=png&color=1a9ca8" alt="Research Strategy" class="step-img">
+      <img src="https://img.icons8.com/?size=100&id=fiOOAOyKALvk&format=png&color=1a9ca8" alt="Research Strategy" class="step-img">
       <h3>Develop Research Strategy</h3>
       <p>Prepare budget, send surveys, collect feedback, and add text here.</p>
       <div class="step-number">02</div>
     </div>
 
     <div class="timeline-step">
-      <img src="https://img.icons8.com/?size=100&id=48409&format=png&color=1a9ca8" alt="Research Tools" class="step-img">
+      <img src="https://img.icons8.com/?size=100&id=NZIHaxOhFpue&format=png&color=1a9ca8" alt="Research Tools" class="step-img">
       <h3>Tools of Research</h3>
       <p>Use primary and secondary research, business magazines, add text here.</p>
       <div class="step-number">03</div>
     </div>
 
     <div class="timeline-step">
-      <img src="https://img.icons8.com/?size=100&id=112546&format=png&color=1a9ca8" alt="Report Findings" class="step-img">
+      <img src="https://img.icons8.com/?size=100&id=101114&format=png&color=1a9ca8" alt="Report Findings" class="step-img">
       <h3>Report Findings</h3>
       <p>Analyze data collected, compile report, add text here.</p>
       <div class="step-number">04</div>
     </div>
 
     <div class="timeline-step">
-      <img src="https://img.icons8.com/?size=100&id=7KFu0HrVmuYG&format=png&color=1a9ca8" alt="Take Action" class="step-img">
+      <img src="https://img.icons8.com/?size=100&id=91642&format=png&color=1a9ca8" alt="Take Action" class="step-img">
       <h3>Take Action</h3>
       <p>Implement changes, track results, add text here.</p>
       <div class="step-number">05</div>
