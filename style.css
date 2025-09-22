@@ -1395,7 +1395,7 @@ footer {
 
 .footer-inner {
   max-width: 1200px;
-  border: 2px solid gainsboro;
+  border: 2px solid #1a9ca8;
     background: linear-gradient(90deg,rgb(26, 156, 168,0.2),rgb(238, 238, 238,0.3),rgb(238, 238, 238,0.3),rgb(26, 156, 168,0.2));
   /* background: linear-gradient(90deg, rgba(12, 191, 146, 0.1), rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3), rgba(12, 191, 146, 0.1)); */
   padding: 20px;
