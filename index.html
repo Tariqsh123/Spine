@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Self Publish Books</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Self Publish Books UK | Book Publishing Services | Keep 100% Royalties</title>
 
+  <!-- SEO -->
+  <meta name="description" content="Professional self-publishing services for UK authors. Keep 100% royalties, full creative control, and publish in 8–12 weeks. Free consultation available.">
+  <meta name="keywords" content="self publishing, UK self publishing, book publishing services, keep 100% royalties, indie publishing, print on demand, ebook publishing">
+  <meta name="author" content="Self Publish Books UK">
+  <link rel="canonical" href="">
+  <meta name="robots" content="noindex,nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="Self Publish Books UK | Keep 100% Royalties">
+  <meta property="og:description" content="Professional self-publishing services for UK authors. Keep 100% royalties, full creative control, and publish in 8–12 weeks.">
+  <meta property="og:image" content="images/favicon.ico">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Self Publish Books UK | Keep 100% Royalties">
+  <meta name="twitter:description" content="Professional self-publishing services for UK authors. Keep 100% royalties and publish in 8–12 weeks.">
+  <meta name="twitter:image" content="images/favicon.ico">
+
+  <!-- Simple JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "",
+    "name": "Self Publish Books UK",
+    "description": "Professional self-publishing services for UK authors. Keep 100% royalties, full creative control, and publish in 8–12 weeks.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Self Publish Books UK"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="images/favicon.ico">
 
 <link rel="stylesheet" href="book-cover-design.css">
 <link rel="stylesheet" href="contact.css">
@@ -109,8 +145,9 @@ mobileDropdown.addEventListener("click", () => {
 <!-- Hero Section -->
  
 <div class="hero">
-    <h1>Your Words. Your Book. Your Way.</h1>
-    <p>Everything you need to publish your book professionally, from proofreading, design, printing, and distribution in one intuitive platform.</p>
+    <h1>Frustrated with Book Publishers in UK Closing Doors on Your Manuscript?</h1>
+    <p>Many authors struggle for years sending manuscripts to different England book publishers, only to face endless rejections. Others try DIY platforms and end up with unprofessional results. That’s where Self Publish Books UK steps in.</p>
+    <p>We combine the quality of professional publishing with the freedom that self-publishing allows authors to have. With us, you keep control of your story while gaining expert editing, design, and distribution support.</p>
 
     
 
@@ -135,7 +172,7 @@ mobileDropdown.addEventListener("click", () => {
 </div>
 
 
-    <a href="get-started.html" style="text-decoration: none;"> <button>Get Started →</button></a>
+    <a href="get-started.html" id="New-btn">Book Your Free Strategy Call - See Your Publishing Plan in 30 Minutes</a>
     <div class="book-section">
         <img src="images/home-header-animated-img.png" class="center-laptop" alt="Laptop">
     </div>
@@ -147,27 +184,25 @@ mobileDropdown.addEventListener("click", () => {
 </div>
 
 <!-- Counting Box -->
- 
 <div class="counting-container">
   <div class="counting-box">
     <img src="https://img.icons8.com/?size=100&id=9492&format=png&color=1a9ca8" class="counting-image" alt="Books">
     <div class="counting-number" id="counting-number-1">0</div>
-    <div class="counting-text">Books Published</div>
+    <div class="counting-text">Publish in just 8 – 12 weeks</div>
   </div>
 
   <div class="counting-box">
     <img src="https://img.icons8.com/?size=100&id=jZpTWAJNBgw3&format=png&color=1a9ca8" class="counting-image" alt="Authors">
     <div class="counting-number" id="counting-number-2">0</div>
-    <div class="counting-text">Authors Published a Second Book With Us</div>
+    <div class="counting-text">Earn more per sale</div>
   </div>
 
   <div class="counting-box">
     <img src="https://img.icons8.com/?size=100&id=8309&format=png&color=1a9ca8" class="counting-image" alt="Growth">
     <div class="counting-number" id="counting-number-3">0</div>
-    <div class="counting-text">Annual Growth in Royalty Payout</div>
+    <div class="counting-text">Full creative control</div>
   </div>
 </div>
-
 
 <script>
 function animateCounter(id, target, speed = 20, suffix = '') {
@@ -176,7 +211,9 @@ function animateCounter(id, target, speed = 20, suffix = '') {
 
   const updateCounter = () => {
     if (count < target) {
-      count += Math.ceil(target / 100);
+      // Ensure at least a step of 1 so small targets like 3 animate correctly
+      const step = Math.max(1, Math.ceil(target / 100));
+      count += step;
       if (count > target) count = target;
       element.textContent = count + suffix;
       setTimeout(updateCounter, speed);
@@ -192,29 +229,28 @@ function startCounterWhenVisible(id, target, speed, suffix) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !started) {
-        started = true; // Prevent multiple triggers
+        started = true;
         animateCounter(id, target, speed, suffix);
-        observer.unobserve(el); // Stop observing
+        observer.unobserve(el);
       }
     });
-  }, { threshold: 0.5 }); // Trigger when 50% visible
+  }, { threshold: 0.5 });
 
   observer.observe(el);
 }
 
-// Call for each counter
-startCounterWhenVisible("counting-number-1", 2800, 10, '+');
-startCounterWhenVisible("counting-number-2", 450, 15, '+');
-startCounterWhenVisible("counting-number-3", 20, 50, '%');
+// Start each counter
+startCounterWhenVisible("counting-number-1", 3, 400, 'x Faster');   // slower so you see 1 → 2 → 3
+startCounterWhenVisible("counting-number-2", 100, 15, '% Royalties');
+startCounterWhenVisible("counting-number-3", 100, 15, '% Control');
 </script>
 
 
 
 
-
 <section class="why-spines-section">
-    <h6 class="why-spines-subtitle">WHY SPINES</h6>
-    <h2 class="why-spines-title">Publishing Your Book <br> <span> Has Never Been Easier</span></h2>
+    <h6 class="why-spines-subtitle">AFFORDABLE LITERARY PUBLISHERS</h6>
+    <h2 class="why-spines-title">Professional Publishing Services <br> <span> That Go Beyond Ordinary UK Publishers</span></h2>
 
     <div class="why-spines-container">
         <!-- Left Side Image -->
@@ -224,7 +260,7 @@ startCounterWhenVisible("counting-number-3", 20, 50, '%');
 
         <!-- Right Side Boxes -->
         <div class="why-spines-right">
-            <div class="why-spines-box">
+            <!-- <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=37862&format=png&color=1a9ca8" alt="Icon">
                 <div>
                     <h4>High-Quality Printing</h4>
@@ -251,7 +287,13 @@ startCounterWhenVisible("counting-number-3", 20, 50, '%');
                     <h4>Flexible Publishing</h4>
                     <p>Choose between self-publishing or traditional publishing options.</p>
                 </div>
-            </div>
+            </div> -->
+            <p>When it comes to publishing your book, choosing the right partner makes all the difference. While many book publishing companies focus on volume over quality, we stand out by offering the professionalism of established publishers UK with the flexibility authors need.</p>
+            <p>Unlike traditional manuscript publishers, who control every decision, we empower you to stay in charge while still accessing expert editing, design, marketing, and distribution services.</p>
+            <p>Our publishing services cover everything from manuscript development and professional editing to book cover design, typesetting, global distribution, and promotional strategies.</p>
+            <p>This all-in-one approach ensures your work meets the same standards as top publishing houses UK, without the gatekeeping or loss of creative control. With a deep understanding of the UK market, we know what resonates with readers here and how to effectively position your book for success.</p>
+            <p>Your story stays yours; we simply give it the professional platform it deserves.</p>
+            <a href="get-started.html" id="New-btn">Explore Our Publishing Packages</a>
            
         </div>
     </div>
@@ -298,38 +340,72 @@ document.addEventListener("DOMContentLoaded", () => {
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC" alt="floating" />
 </div>
     <div class="did-you-know-inner-container">
-        <h6>Did you know</h6>
-        <h2>9 Out of 10 Fully Written Books Never Get Published</h2>
-        <p class="lead">This is because the publishing process is full of barriers: overcomplicated, time-consuming, and out of reach for most writers. Frustrated and stuck, many give up before they even get the chance.</p>
-        <p class="lead">Founded by authors and writers themselves, Spines understands the many challenges authors face, aims to democratize publishing for writers everywhere.</p>
+        <h6>OUR CUSTOMISED PACKAGES</h6>
+        <h2>Packages That Put Authors First, Unlike Many Publishers in UK</h2>
+        <p class="lead">Our packages are built on transparency and professionalism. While some publishers in England and other book publishing companies hide costs, we provide clear options that guarantee quality without compromise.</p>
+        <p class="lead">Through partnerships like Ingram Publisher Services UK, we ensure your book reaches a global audience while you retain full rights. Each package is prepared to meet professional publishing standards, offering authors clear and flexible options.</p>
         
         <!-- Testimonial Carousel -->
         <div class="testimonial-carousel">
             <button class="arrow left">&#10094;</button>
 <div class="testimonial-track">
+  <!-- 1 -->
     <div class="testimonial-item">
-        <p>"The Spines team guided me through every step—editing, design, and marketing. My debut novel looks amazing!"</p>
-        <div>
-            <img src="images/Jane-Smith.jpg" alt="Jane Smith">
-            <h4>Jane Smith</h4>
-        </div>
-    </div>
+    <h4>Essential Publishing Package</h4>
 
-    <div class="testimonial-item">
-        <p>"Publishing felt intimidating until I found Spines. Their platform made the whole process clear and stress-free."</p>
-        <div>
-            <img src="images/michale-lee.jpg" alt="Michael Lee">
-            <h4>Michael Lee</h4>
-        </div>
-    </div>
+    <p>Perfect for budget-conscious authors!</p>
 
+    <h4>299</h4>
+
+    <p>Includes:</p>
+    <ul>
+        <li>Manuscript preparation and editing</li>
+        <li>Professional cover design</li>
+        <li>ISBN registration</li>
+        <li>Global distribution</li>
+    </ul>
+
+    <p>We are committed to delivering everything required to enter the publishing market with confidence.</p>
+</div>
+
+  <!-- 2 -->
     <div class="testimonial-item">
-        <p>"From manuscript to marketplace, Spines handled everything so smoothly that I could focus on my writing."</p>
-        <div>
-            <img src="images/sophia-patel.jpg" alt="Sophia Patel">
-            <h4>Sophia Patel</h4>
-        </div>
-    </div>
+    <h4>Professional Publishing Package</h4>
+
+    <p>Designed authors looking for comprehensive solutions.</p>
+
+    <h4>350</h4>
+
+    <p>Includes:</p>
+    <ul>
+        <li>All of Essential Publishing Package</li>
+        <li>Marketing support</li>
+        <li>Ongoing guidance to increase book visibility</li>
+        <li>Personalised publicity strategies</li>
+    </ul>
+
+    <p>Committed to enhancing your book sales through competitive marketing strategies.</p>
+</div>
+  <!-- 3 -->
+    <div class="testimonial-item">
+    <h4>Premium Publishing Package</h4>
+
+    <p>Most popular and comprehensive service.</p>
+
+    <h4>450</h4>
+
+    <p>Includes:</p>
+    <ul>
+      <li>All of Professional Publishing Package</li>
+      <li>Advanced promotional </li>
+      <li>Extensive retail placement</li>
+      <li>Long-term marketing support</li>
+    </ul>
+
+    <p>
+        Offers professional publishing services with genuine reach and credibility.
+    </p>
+</div>
 </div>
 
             <button class="arrow right">&#10095;</button>
@@ -493,12 +569,11 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- How Its Work -->
  
 <section class="how-it-works">
-  <h6>HOW IT WORKS</h6>
-  <h2>Publish with Spines <br> <span> in Just Four Simple Steps</span></h2>
-  <p>
-    Spines proofreads, designs covers, formats, publishes, and starts distributing your book
-    in just a couple of weeks.
-  </p>
+  <h6>HOW WE WORK</h6>
+  <h2>The Best Path to Self Publish <br><span> Books in UK Successfully</span></h2>
+  <p>Our experts combine the professionalism and industry standards of book publishing UK with the creative freedom every author deserves.</p>
+  <p>Every step is designed to remove obstacles, provide expert support, and give you complete control while ensuring your book meets the same quality standards as traditional publishers.</p>
+
 </section>
 
 <script>
@@ -518,16 +593,16 @@ document.addEventListener("DOMContentLoaded", () => {
   <!-- Navigation -->
   <div class="step-nav">
     <div class="active" data-step="1">
-      Step 1<br><small>Upload Your Manuscript</small>
+      Step 1<br><small>Manuscript Evaluation & Publishing Strategy</small>
     </div>
     <div data-step="2">
-      Step 2<br><small>Edit & Perfect Your Book</small>
+      Step 2<br><small>Professional Production Services</small>
     </div>
     <div data-step="3">
-      Step 3<br><small>Design Your Cover & Layout</small>
+      Step 3<br><small>ISBN Registration & Legal Requirements</small>
     </div>
     <div data-step="4">
-      Step 4<br><small>Publish & Distribute</small>
+      STEP 4<br><small>Global Distribution & Marketing Support</small>
     </div>
   </div>
 
@@ -535,14 +610,18 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="step-content">
     <!-- STEP 1 -->
     <div class="text-block step step-1">
-      <h2>Upload Your Manuscript With A Few Clicks</h2>
+      <h2>Professional Assessment by Experienced Publishers UK</h2>
       <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=368&format=png&color=1a9ca8" alt="Upload Icon">
-        <span>Easily upload your manuscript using Spines’ user-friendly dashboard. Just fill in a few simple details, like the book title, author’s name, and category.</span>
+        <img src="https://img.icons8.com/?size=100&id=2886&format=png&color=1a9ca8" alt="Upload Icon">
+        <span>Your journey begins with a thorough manuscript evaluation. Our team of professionals carefully reviews your work, offering constructive feedback and a customised publishing strategy.</span>
       </div>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=57927&format=png&color=1a9ca8" alt="Certificate Icon">
-        <span>Instantly receive a copyright certificate for your book.</span>
+        <span>Unlike traditional publishers who often reject manuscripts outright, we focus on positioning your book for success in the UK market. By aligning your manuscript with audience expectations, we help you maximise reach and ensure it resonates with readers.</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=rmBpANiETlSq&format=png&color=1a9ca8" alt="Steps">
+        <span>This initial step lays the foundation for a professional publishing journey built on expertise, strategy, and a deep respect for your vision.</span>
       </div>
       <a href="get-started.html" class="btn">Get Started</a>
     </div>
@@ -554,14 +633,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- STEP 2 -->
     <div class="text-block step step-2" style="display:none;">
-      <h2>AI-Powered Manuscript Scans for Smarter Editing</h2>
+      <h2>Complete Book Publishing UK Production Standards</h2>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=lquM93tYtWG0&format=png&color=1a9ca8" alt="AI Scan Icon">
-        <span>Spines scans your manuscript using built-in AI to understand your audience, genre, and writing style. It then automatically identifies grammar mistakes and areas for improvement—making the editing process faster and smarter.</span>
+        <span>Once your manuscript is ready, we move into full-scale production. Our editorial team ensures comprehensive editing, from developmental edits to copyediting and proofreading.</span>
       </div>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=23265&format=png&color=1a9ca8" alt="Grammar Check Icon">
-        <span>If needed, you can also connect with professional editors for an added layer of refinement.</span>
+        <span>Next, our designers design a standout cover and format that matches industry standards. Quality assurance ensures your book meets the expectations of respected publishers based in Britain.</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=xYVcIgRIVyTz&format=png&color=1a9ca8" alt="Process">
+        <span>With our process, you receive the polished presentation typically expected from traditional publishing houses, while maintaining complete creative control. Every detail is carefully managed, ensuring your book looks and reads like it came from the best in the business.</span>
       </div>
 
       <a href="get-started.html" class="btn">Get Started</a>
@@ -573,14 +656,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- STEP 3 -->
     <div class="text-block step step-3" style="display:none;">
-      <h2>Custom Covers Tailored to Your Book & Style</h2>
+      <h2>UK Publishing Compliance & Distribution Setup</h2>
       <div class="feature">
         <img src="https://img.icons8.com/?size=100&id=PuuKD730WqLx&format=png&color=1a9ca8" alt="Custom Cover Icon">
-        <span>Choose from a wide range of custom-made cover designs, tailored to your book and personal style preferences. If you already have a cover, we can enhance it with our cover tool - or simply upload and use your own.</span>
+        <span>A professional book must meet legal and compliance standards. We handle ISBN registration in the UK, ensure legal deposit with the British Library, and protect your copyright.</span>
       </div>
       <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=47835&format=png&color=1a9ca8" alt="Interior Formatting Icon">
-        <span>Customize your book’s interior formatting in real time to match your style and genre.</span>
+        <img src="https://img.icons8.com/?size=100&id=MG0jMYGHw8bP&format=png&color=1a9ca8" alt="Interior Formatting Icon">
+        <span>Our experts guide you through all compliance requirements, removing confusion from the process. Beyond legal essentials, we also establish distribution channels to ensure your book is retail-ready.</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=lWtvFeHArC9D&format=png&color=1a9ca8" alt="Print">
+        <span>Whether in print or digital, your title is prepared to meet the highest professional publishing standards. This step secures your work, safeguards your rights, and ensures your book is positioned properly in the UK publishing industry.</span>
       </div>
 
       <a href="get-started.html" class="btn">Get Started</a>
@@ -592,15 +679,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- STEP 4 -->
     <div class="text-block step step-4" style="display:none;">
-      <h2>Publish Easily & Reach Readers Worldwide</h2>
+      <h2>Worldwide Reach Through Professional Publishing Networks</h2>
 
       <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=13322&format=png&color=1a9ca8" alt="Publish Icon">
-        <span>Hit publish, and Spines takes care of the rest. Your book will be distributed across major platforms, reaching readers worldwide.</span>
+        <img src="https://img.icons8.com/?size=100&id=IzYXNYBBP9ql&format=png&color=1a9ca8" alt="Publish Icon">
+        <span>The final step ensures your book doesn’t just sit on a shelf but reaches readers worldwide. Through our global distribution network, your title can be available in major bookstores and online retailers.</span>
       </div>
       <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=24525&format=png&color=1a9ca8" alt="Distribution Icon">
-        <span>Set up automatic ad campaigns on Amazon, Facebook, and Instagram, while having your own personalized author platform to showcase and sell your book.</span>
+        <img src="https://img.icons8.com/?size=100&id=QhyA42QEY4sy&format=png&color=1a9ca8" alt="Distribution Icon">
+        <span>We also provide marketing support customised to your goals, from launch campaigns to long-term promotion strategies. Our approach prioritises lasting author success, not just initial sales. By combining professional publishing infrastructure with personal support, we help you maximise visibility and reader engagement.</span>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/?size=100&id=qzdopbbwTbNd&format=png&color=1a9ca8" alt="Publishing">
+        <span>Your book gains the credibility of top-tier publishing while keeping your authorial voice at the centre.</span>
       </div>
       
 
@@ -628,7 +719,7 @@ document.querySelectorAll('.step-nav div[data-step]').forEach(tab => {
 
 <!-- Book Carousel -->
 <div id="book-carousel-heading-container">
-  <h2>Your Book Deserves a Global Audience</h2>
+  <h2>Following Professional Standards Matching Top Publishing Houses UK</h2>
 </div>
 
 <section class="home-bannrwrp">
@@ -721,8 +812,8 @@ const swiper = new Swiper('.swiper', {
  <section id="review-heading-section">
   <div class="review-heading-container">
    
-    <h2 class="review-heading-h2"> <span class="review-heading-span">2,800+ Authors</span> Have Published <br>Their Books on Their Own</h2>
-    <p class="review-heading-p">All without needing tech or design expertise.</p>
+    <h2 class="review-heading-h2"> How Authors Feel After Choosing <br> <span class="review-heading-span"> Self Publish Books UK</span></h2>
+    <p class="review-heading-p">Discover what sets our partnership apart.</p>
   </div>
 </section>
 
@@ -731,12 +822,12 @@ const swiper = new Swiper('.swiper', {
     <!-- 1 -->
     <div class="review-card">
       <p class="review-text">
-        Publishing with Spines was one of the best decisions I’ve made as an author. The process was straightforward, the team was patient, and my book came out even better than I imagined.
+        After researching top publishing houses UK, I found their quality unmatched. The guidance was exceptional from day one, making the entire process feel professional. Happiest with the finished book.
       </p>
       <div class="review-author">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Image">
+        <img src="images/Eleanor-Croshaw-img.jpg" alt="Eleanor-Croshaw-img">
         <div>
-          <div class="author-name">Author Emily Carter</div>
+          <div class="author-name">Eleanor Croshaw</div>
           <div class="stars">★★★★★</div>
         </div>
       </div>
@@ -744,12 +835,64 @@ const swiper = new Swiper('.swiper', {
     <!-- 2 -->
     <div class="review-card">
       <p class="review-text">
-        What I loved most was how Spines made everything stress-free. From editing to design, they handled it all. I finally felt like my story was in the hands of true professionals.
+        The book editorial process was thorough and supportive. Every edit improved my manuscript without losing my voice. I finally feel like my work has the polish of professional publishing.
       </p>
       <div class="review-author">
-        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Author Image">
+        <img src="images/Daniel-Harris-img.jpg" alt="Daniel-Harris-img">
         <div>
-          <div class="author-name">Author James Rodriguez</div>
+          <div class="author-name">Daniel Harris</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="review-card">
+      <p class="review-text">
+        Their seamless integration with Ingram Publisher Services UK ensured that my collection received global distribution. Seeing my book in an Edinburgh bookshop was a dream come true, all thanks to their expertise.
+      </p>
+      <div class="review-author">
+        <img src="images/Fiona-MacLeod-img.jpg" alt="Fiona-MacLeod-img">
+        <div>
+          <div class="author-name">Fiona MacLeod</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="review-card">
+      <p class="review-text">
+        As someone writing in the career space, finding expert employment book publishers was a challenge. This team understood my niche and delivered results that traditional publishers couldn’t match.
+      </p>
+      <div class="review-author">
+        <img src="images/James-Foster-img.jpg" alt="James Foster">
+        <div>
+          <div class="author-name">James Foster</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="review-card">
+      <p class="review-text">
+        The journey from manuscript to publication book was clear and supported every step of the way. Their understanding of the UK children's market ensured my book was perfectly positioned for success.
+      </p>
+      <div class="review-author">
+        <img src="images/Sophie-Williams-img.jpg" alt="Sophie Williams">
+        <div>
+          <div class="author-name">Sophie Williams</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- 6 -->
+    <div class="review-card">
+      <p class="review-text">
+        Among so many books and publishers, this company stood out. Personal support, professional standards, and transparency made the journey enjoyable. I finally feel like a real author with genuine backing.
+      </p>
+      <div class="review-author">
+        <img src="images/Michael-Turner-img.jpg" alt="Michael Turner">
+        <div>
+          <div class="author-name">Michael Turner</div>
           <div class="stars">★★★★★</div>
         </div>
       </div>
@@ -854,74 +997,57 @@ $(function(){
 
 <div class="faq-container">
   <h2 class="faq-heading">Frequently Asked Questions</h2>
-  <p class="faq-subheading">Everything you need to know about the product and billing.</p>
+  <p class="faq-subheading">Clear answers to common questions about publishing with us.</p>
   
   <div class="faq-item">
-    <div class="faq-question">Can I try Spines for free?</div>
-    <div class="faq-answer">
-      Yes! Anyone can sign up for a free account by clicking the “Get Started” button at the top of the page. Try out our platform tools and see how easy it is to proofread, design your cover, and publish your book with Spines.
-    </div>
+    <div class="faq-question">How quickly can I publish my book with you? </div>
+    <div class="faq-answer"> Our process is designed for speed. Unlike traditional methods, we complete publishing in 8–12 weeks. This means authors can publish in Britain market faster, without waiting years for approval.</div>
+  </div>
+
+
+  <div class="faq-item">
+    <div class="faq-question">Will I keep the rights to my book? </div>
+    <div class="faq-answer"> Yes, you always keep full rights. Unlike many traditional book publishing solutions, we ensure authors retain control, ownership, and royalties while still benefiting from professional services that meet publishing standards in the UK.</div>
+  </div>
+
+
+  <div class="faq-item">
+    <div class="faq-question">What editing support do you provide? </div>
+    <div class="faq-answer"> Our team offers developmental editing, copy-editing, and proofreading. This ensures every manuscript meets the highest professional standards. These services set us apart from other UK self book publishing companieswho often skip detailed editorial support.</div>
+  </div>
+
+
+  <div class="faq-item">
+    <div class="faq-question">Do you help with distribution across the UK? </div>
+    <div class="faq-answer">Yes, we arrange nationwide distribution. With our services, your book reaches bookshops, online retailers, and libraries across the country, giving authors a strong presence in theUK market. </div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question">How do you compare to traditional publishers? </div>
+    <div class="faq-answer">Traditional publishers often take 18–24 months to release books, keep most royalties, and control decisions. Our approach gives authors faster timelines, higher royalties, and independence, while still delivering professional UK publishing industry standards. </div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question"> What makes you different from self-publishing platforms?</div>
+    <div class="faq-answer"> Unlike DIY platforms, we offer professional editing, design, and distribution. We combine the credibility of a book publishing house with the freedom of self-publishing, ensuring authors enjoy both quality and control.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question">Do you work with authors outside London? </div>
+    <div class="faq-answer"> Absolutely. We support writers across the UK, including Manchester, Birmingham, Edinburgh, and Cardiff. Our nationwide presence helps authors anywhere enter the established UK publishers market with expert guidance and professional backing.</div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question">How long will it take to publish my book with Spines?</div>
-    <div class="faq-answer">
-      With Spines, the entire publishing process typically takes around 30 days, from the moment you choose your plan until your book appears on Amazon.<br><br>
-      Keep in mind, the timeline can vary depending on your needs. If you choose to work with our professional team for additional services—like translation, line editing, illustration, ghostwriting, and more—your publishing journey may take a bit longer to ensure top-quality results.
-    </div>
+    <div class="faq-question"> How much creative input will I have?</div>
+    <div class="faq-answer"> You remain in charge of all key decisions. While we provide expert advice, your vision guides the process. Many book companies remove such control, but we make sure you stay empowered.</div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question">How much does publishing with Spines cost?</div>
-    <div class="faq-answer">
-      Spines offers three standard publishing plans, as well as two specialized plans for authors focused on children’s literature. Our plans are designed to fit different publishing goals, budgets, and book formats.<br><br>
-      The cost varies depending on several factors, such as the length of your manuscript, the formats you choose to publish (eBook, audiobook, softcover, or hardcover), how much personal support you’d like along the way, and any additional services you may require.<br><br>
-      Some authors want a simple, streamlined path to get their book live on Amazon. Others want a full-service experience, including translation, multi-format publishing, and hands-on guidance from our team. Wherever you fall on that spectrum, there’s a plan built to meet you right where you are.<br><br>
-      To find the best fit for your book and your vision, explore our pricing page or connect with one of our publishing experts for personalized guidance.
-    </div>
+    <div class="faq-question">Can my book be sold internationally? </div>
+    <div class="faq-answer">Yes. We work with leading distribution partners so your book reaches global readers. By combining local UK expertise with international reach, our services extend England book publishers success worldwide. </div>
   </div>
 
-  <div class="faq-item">
-    <div class="faq-question">What payment methods can I use?</div>
-    <div class="faq-answer">
-      We accept major credit and debit cards, PayPal, and bank transfers. Payment options may vary depending on your location.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">What if I change my mind?</div>
-    <div class="faq-answer">
-      You can request a cancellation or plan change at any time. Refund eligibility depends on the stage of your publishing process and the services already provided.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">Does Spines support any languages other than English?</div>
-    <div class="faq-answer">
-      Yes! We offer publishing in multiple languages and can connect you with professional translators for both fiction and non-fiction works.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">How do royalties work?</div>
-    <div class="faq-answer">
-      Authors receive a percentage of each book sale, depending on the publishing plan and sales channel. You’ll have full transparency through your Spines dashboard to track your earnings in real-time.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">Before uploading my manuscript to Spines' platform, what format should it be in?</div>
-    <div class="faq-answer">
-      We recommend submitting your manuscript in Microsoft Word (.docx) or PDF format. This ensures the smoothest processing and editing experience.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">What other services do you offer?</div>
-    <div class="faq-answer">
-      In addition to publishing, we offer translation, editing, illustration, cover design, audiobook production, marketing campaigns, and more.
-    </div>
-  </div>
+  
 </div>
 
 <script>
@@ -941,7 +1067,7 @@ $(function(){
   
 <div id="support-form-container">
   <div class="support-info">
-    <h2>Speak with Support</h2>
+    <h2>Ready to Join Successful Authors Who Chose Professional Publishing? Contact Us Today</h2>
     <p class="support-number">
       <img src="https://img.icons8.com/?size=100&id=jShwZ2RCyPSO&format=png&color=1a9ca8" alt="phone">
       +1 (561) 810-3364
