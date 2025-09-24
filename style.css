@@ -590,6 +590,8 @@ nav {
     height: 120px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    height: fit-content;
+  padding: 20px;
 }
 
 .why-spines-box:hover {

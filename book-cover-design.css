@@ -34,7 +34,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 0;
 }
 
@@ -135,6 +135,7 @@
 #about-services-text-container p{
     font-size: large;
     text-align: center;
+    width: 80%;
     color: gray;
 }
 @media (max-width: 600px) {
@@ -643,12 +644,20 @@ font-size: 2rem;}
  #Extra-btn{
     font-size: small;
 } 
+.timeline-section h2{
+  font-size: 2rem;
+}
 }
 #service-card{
-  height: 280px;
+  height: 350px;
   width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+#service-card img{
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
