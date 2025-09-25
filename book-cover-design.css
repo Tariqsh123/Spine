@@ -661,3 +661,23 @@ font-size: 2rem;}
   width: auto;
   object-fit: contain;
 }
+/* Grid layout */
+.service-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on large screens */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Responsive breakpoints */
+@media (max-width: 992px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}

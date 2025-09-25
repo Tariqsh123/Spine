@@ -554,7 +554,8 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 .why-spines-left {
@@ -567,7 +568,7 @@ nav {
 
 .why-spines-left img {
     width: auto;
-    height: 400px;
+    height: 500px;
     border-radius: 20px;
     object-fit: fill;
 }
@@ -577,7 +578,7 @@ nav {
     min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .why-spines-box {
@@ -591,7 +592,7 @@ nav {
     border-radius: 10px;
     transition: transform 0.3s ease;
     height: fit-content;
-  padding: 20px;
+  padding: 10px;
 }
 
 .why-spines-box:hover {
@@ -615,6 +616,7 @@ nav {
 .why-spines-box p {
     margin: 5px 0 0;
     font-size: medium;
+    width: 95%;
     color: gray;
 }
 
@@ -648,6 +650,34 @@ nav {
   font-size: 14px;
 
 }
+  .why-spines-box {
+    flex-direction: column;   /* stack icon above text */
+    text-align: center;       /* center everything */
+    align-items: center;      /* center icon horizontally */
+  }
+  .why-spines-box img {
+    margin-bottom: 10px;      /* space between icon and text */
+  }
+}
+/* center button container */
+.why-spines-btn-wrap {
+    margin-top: 40px;          /* space above the button */
+    text-align: center;        /* center the link horizontally */
+}
+
+/* optional: style your button */
+#New-btn {
+    display: inline-block;
+    background: #1a9ca8;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+#New-btn:hover {
+    background: #14848f;
 }
 
 
@@ -663,7 +693,7 @@ nav {
         padding: 40px 0;
     }
     .did-you-know-inner-container{
-        max-width: 750px;
+        max-width: 1400px;
         width: 90%;
         border: 1px solid gainsboro;
         border-radius: 20px;
@@ -1066,7 +1096,7 @@ padding: 20px;
 .image-block {
   position: relative;
   overflow: hidden;
-  box-shadow: 1px 1px 10px gray;
+  /* box-shadow: 1px 1px 10px gray; */
   /* border-radius: 12px; */
 }
 .image-block img.bg {
@@ -1407,7 +1437,9 @@ padding: 20px;
 footer {
   padding: 10px;
   padding-bottom: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "DM Sans", sans-serif;
+
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 }
 
 .footer-inner {
@@ -1539,7 +1571,8 @@ footer {
   font-weight: 600;
   color: #1a9ca8;
   font-size: 1.5rem;
-  font-family: serif;
+    font-family: "DM Sans", sans-serif;
+
 }
 
 .footer-middle .feature p {
@@ -1837,3 +1870,9 @@ footer {
     padding: 10px 5px;
     font-size: 13px;
 }}
+
+.span-color{
+  color: #1a9ca8;
+  font-family: serif !important;
+  font-weight: 900 !important;
+}

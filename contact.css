@@ -83,19 +83,25 @@
   background: #ffffff;
   width: 90%;
   border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .support-info {
   text-align: center;
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: center; */
+  text-align: left;
 }
 
 .support-info h2 {
   font-size: 25px;
   font-family: "DM Sans", sans-serif;
   color: #1a9ca8;
+  /* text-align: center; */
   font-weight: 500;
   margin-bottom: 8px;
 }
@@ -104,24 +110,29 @@
   font-size: 18px;
   font-weight: 600;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+
+  /* align-items: center; */
+  gap: 15px;
 }
 
 .support-hours {
   font-size: 14px;
   color: gray;
-  margin-bottom: 15px;
+  margin: 10px 0;
+  /* margin-bottom: 15px; */
+  /* margin: 0; */
 }
 
 .support-info h3 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  /* align-items: center; */
   gap: 8px;
   font-size: 16px;
   font-family: "DM Sans", sans-serif;
+  align-items: center;
   color: #105c6d;
   margin-top: 10px;
 }
@@ -154,7 +165,7 @@
 .form-group textarea {
   width: 100%;
   padding: 14px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #a5a4a4;
   border-radius: 10px;
   font-size: 15px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;

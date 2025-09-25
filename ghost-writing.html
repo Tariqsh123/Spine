@@ -182,7 +182,7 @@ mobileDropdown.addEventListener("click", () => {
 
 <!-- About Service Section -->
 <div id="about-services-text-container">
-    <h2> Leading UK Ghostwriting Company Committed to Your Story</h2>
+    <h2> Leading  <span class="span-color">UK Ghostwriting Company</span> Committed to Your Story</h2>
     <p>As a premier collaborative writing service, we stand among the UK’s leading providers of bespoke manuscript creation. Our team of bestselling ghostwriters provides a comprehensive range of services, encompassing concept development and research, as well as full manuscript writing and editorial refinement.</p>
     <p>We specialise in both fiction and non-fiction, including seasoned business book ghostwriter expertise for executives and thought leaders.</p>
     <p>Collaboration is at the heart of our approach: we work closely with authors, celebrities, and business professionals to ensure every manuscript reflects their unique voice and vision.</p>
@@ -219,10 +219,11 @@ mobileDropdown.addEventListener("click", () => {
 
 
 <section class="timeline-section" >
-  <h2>Work with a Professional Ghostwriter Who Brings Your Story to Life</h2>
+  <h2>Work with a <span class="span-color"> Professional Ghostwriter</span> Who Brings Your Story to Life</h2>
   <p>Partnering with a ghostwriting agency ensures your manuscript is handled with expertise, collaboration, and industry insight. We transform ideas into polished, market-ready books while maintaining your voice and vision.</p>
 
-  <div class="timeline">
+    <div id="service-grid" class="service-grid">
+
     <div class="timeline-step" id="service-card">
       <img src="https://img.icons8.com/?size=100&id=10137&format=png&color=1a9ca8" alt="">
       <h3>Memoir Ghostwriter Services</h3>
@@ -264,7 +265,7 @@ mobileDropdown.addEventListener("click", () => {
 
 
  <!-- Why Section -->
-<div id="why-services-section">
+<!-- <div id="why-services-section"> -->
   <!-- <div id="why-services-left-container">
     <h2>Work with a Bestselling Ghostwriter Who Enhances Your Story</h2>
     
@@ -277,51 +278,68 @@ mobileDropdown.addEventListener("click", () => {
     
     <a href="get-started.html">See Why Authors Choose Our Ghostwriters</a>
   </div> -->
-  <div class="why-spines-right">
+  <!-- 
+
+  <div id="why-services-right-container">
+    <img src="images/ghost-writing-why-image.png" alt="Ghostwriting Services">
+  </div>
+</div> -->
+
+<section class="why-spines-section">
+    <h6 class="why-spines-subtitle">AFFORDABLE LITERARY PUBLISHERS</h6>
+    <h2 class="why-spines-title">Work with a <span class="span-color"> Bestselling Ghostwriter</span> Who Enhances Your Story</h2>
+
+    <div class="why-spines-container">
+        <!-- Left Side Image -->
+        <div class="why-spines-left">
+            <img src="images/ghost-writing-why-image.png" alt="Publishing Image">
+        </div>
+
+        <!-- Right Side Boxes -->
+        <div class="why-spines-right">
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=23546&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                    <h4>Quality That Speaks</h4>
+                    <!-- <h4>Quality That Speaks</h4> -->
     <p>Our team of manuscript ghostwriting experts delivers a proven track record of bestselling books, unlike untested writers. Every manuscript is designed to meet professional standards, ensuring your story resonates with readers and gains market recognition.</p>
                 </div>
             </div>
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=mBUZsi8BBR6a&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                  <h4>Industry Experience</h4>
+                  <!-- <h4>Industry Experience</h4> -->
     <p>We leverage extensive publishing connections, offering insight and guidance that isolated freelancers cannot match. Our experienced ghostwriter network brings credibility and strategic advice, positioning your book for maximum visibility and success in the UK market.</p>
                 </div>
             </div>
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=sTmFKAFphgrW&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                  <h4>Structured Process</h4>
+                  <!-- <h4>Structured Process</h4> -->
     <p>From initial consultation to final manuscript, our collaborative approach ensures clear communication, timely updates, and iterative feedback. Unlike traditional services with opaque processes, we guide you through every step, preserving your voice and vision throughout the process.</p>
                 </div>
             </div>
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=uuKd1xasneDk&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                  <h4>Results-Oriented Approach</h4>
+                  <!-- <h4>Results-Oriented Approach</h4> -->
     <p>Our focus is on publishing success, not just a completed manuscript. We ensure your book is market-ready, polished, and positioned for impact, maximising its potential for both commercial and critical success compared to traditional publishing routes.</p>
                 </div>
             </div>
-            <a href="get-started.html" id="New-btn">See Why Authors Choose Our Ghostwriters</a>
            
         </div>
+    </div>
 
-  <div id="why-services-right-container">
-    <img src="images/ghost-writing-why-image.png" alt="Ghostwriting Services">
-  </div>
-</div>
-
-
+    <!-- Button centered below both columns -->
+    <div class="why-spines-btn-wrap">
+        <a href="get-started.html" id="New-btn">See Why Authors Choose Our Ghostwriters</a>
+    </div>
+</section>
 
   <!-- Book Carousel -->
    
 
 <div id="book-carousel-heading-container">
-  <h2>Following Professional Standards Matching Top Publishing Houses UK</h2>
+  <h2>Following Professional Standards Matching <span class="span-color"> Top Publishing Houses UK</span></h2>
 </div>
 
 
@@ -408,7 +426,7 @@ const swiper = new Swiper('.swiper', {
 
 <!-- About Service Section -->
 <div id="about-services-text-container">
-  <h2>Top-Rated Ghostwriting Services UK for Bestselling Potential</h2>
+  <h2>Top-Rated <span class="span-color"> Ghostwriting Services UK</span> for Bestselling Potential</h2>
   <p>At Self Publish Books UK, our focus is on delivering bespoke ghostwriting solutions that resonate across the British literary landscape.</p>
   <p>Our ghostwriter UK team understands the nuances of the UK publishing industry, from market trends to regional preferences. We provide local support for authors throughout London, Manchester, Edinburgh, Birmingham, and beyond, ensuring guidance is accessible wherever you are in Britain.</p>
   <p>With extensive experience in UK-specific projects, we’ve helped numerous authors achieve publishing success while maintaining their unique voice. From concept to completed manuscript, our approach combines industry insight, collaborative writing, and customised strategies, positioning every book to thrive in the competitive UK market while reflecting the author’s vision and goals.</p>
@@ -447,7 +465,7 @@ const swiper = new Swiper('.swiper', {
   </div>
 </section> -->
 <section class="timeline-section">
-  <h2>The Process to Hire a Ghostwriter That Matches Your Vision</h2>
+  <h2>The Process to <span class="span-color"> Hire a Ghostwriter</span> That Matches Your Vision</h2>
   <p>Working with a professional manuscript writer ensures your ideas are transformed into a polished, market-ready book. From initial consultation to final manuscript, our step-by-step process guarantees clarity, collaboration, and bestselling quality. Each stage is designed to align your vision with our expertise, maximising the impact of your story.</p>
 
   <div class="timeline">
@@ -681,6 +699,47 @@ $(function(){
 });
 </script>
 
+<div class="faq-container">
+  <h2 class="faq-heading">Frequently Asked Questions</h2>
+  <p class="faq-subheading">Clear answers to common questions about publishing with us.</p>
+  
+  <div class="faq-item">
+  <div class="faq-question">What is ghostwriting?</div>
+  <div class="faq-answer">It’s when a professional writer creates content for you while you remain the credited author.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">Will I own the rights to the book?</div>
+  <div class="faq-answer">Yes, you receive full copyright and ownership of the completed manuscript.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">How do you capture my voice and ideas?</div>
+  <div class="faq-answer">We conduct interviews and review notes to match your style and ensure the story reflects your vision.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">Is the process confidential?</div>
+  <div class="faq-answer">Absolutely. We sign NDAs and keep all details and drafts private.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">How long does a ghostwriting project take?</div>
+  <div class="faq-answer">Depending on length and complexity, most books are completed in 3–6 months.</div>
+</div>
+
+
+</div>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
 
 
 <!-- Form Section -->

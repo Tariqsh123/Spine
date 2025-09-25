@@ -182,7 +182,7 @@ mobileDropdown.addEventListener("click", () => {
 
 <!-- About Service Section -->
 <div id="about-services-text-container">
-    <h2>Premium Book Illustration Services UK for Authors and Publishers</h2>
+    <h2>Premium <span class="span-color"> Book Illustration Services UK </span> for Authors and Publishers</h2>
     <p>At Self Publish Books UK, our established UK creative professionals stand apart from ordinary freelance offerings.</p>
     <p>As leading book illustrators UK, we combine creative artistry with publishing expertise, delivering illustrations that truly enhance your manuscript. Unlike one-off freelance platforms, our illustrators are professional partners who guide you through every stage of the creative journey.</p>
     <p>Our services cover everything from children's book illustration to complex visual storytelling for non-fiction, ensuring every project finds its perfect artistic match. We collaborate closely with authors, tailoring concepts, characters, and styles to align with the story’s voice and genre. By working with British book artists who understand publishing standards, your illustrations are crafted not only for beauty but also for seamless integration into professional book layouts.</p>
@@ -218,12 +218,13 @@ mobileDropdown.addEventListener("click", () => {
 
 
 <section class="timeline-section" >
-  <h2>Versatile Artistry from Leading Children's Book Illustrators UK and Beyond</h2>
+  <h2>Versatile Artistry from Leading <span class="span-color"> Children's Book Illustrators UK</span> and Beyond</h2>
   <p>At Self Publish Books UK, we work with authors across multiple genres, delivering illustrations that resonate with their target audiences. Our team goes beyond visuals, blending storytelling, publishing expertise, and market awareness to create illustrations that sell.</p>
   <p>By offering British illustration services commissioning, we guarantee professional, culturally relevant designs. Every book artist UK we partner with brings specialist skills, allowing us to adapt styles for children, teens, or adults.</p>
   <p>From playful characters to sophisticated covers, our customised approach ensures your illustrations enhance storytelling, strengthen market appeal, and align perfectly with your publishing goals.</p>
 
-  <div class="timeline">
+    <div id="service-grid" class="service-grid">
+
     <div class="timeline-step" id="service-card">
       <img src="https://img.icons8.com/?size=100&id=2808&format=png&color=1a9ca8" alt="">
       <h3>Children’s Picture Books</h3>
@@ -259,7 +260,7 @@ mobileDropdown.addEventListener("click", () => {
 </section>
 
  <!-- Why Section -->
-<div id="why-services-section">
+<!-- <div id="why-services-section"> -->
   <!-- <div id="why-services-left-container">
     <h2>Why Choose Our Professional Book Illustrators Over Freelance Alternatives</h2>
     <p>At Self Publish Books UK, we don’t just create images, we build lasting author partnerships. From cover design to graphic novel illustrations, our approach ensures that every project receives professional attention, seamless publishing integration, and customised creative direction, setting us apart from traditional UK providers.</p>
@@ -271,49 +272,67 @@ mobileDropdown.addEventListener("click", () => {
     
     <a href="get-started.html">Get Started</a>
   </div> -->
-  <div class="why-spines-right">
+  <!-- 
+
+  <div id="why-services-right-container">
+    <img src="images/custom-illustration-why-image.png" alt="Custom Illustration Services">
+  </div>
+</div> -->
+<section class="why-spines-section">
+    <h6 class="why-spines-subtitle">AFFORDABLE LITERARY PUBLISHERS</h6>
+    <h2 class="why-spines-title">Why Choose Our Professional  <span class="span-color"> Book Illustrators</span> Over Freelance Alternatives</h2>
+
+    <div class="why-spines-container">
+        <!-- Left Side Image -->
+        <div class="why-spines-left">
+            <img src="images/custom-illustration-why-image.png" alt="Publishing Image">
+        </div>
+
+        <!-- Right Side Boxes -->
+        <div class="why-spines-right">
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                    <h4>Quality That Sets Standards</h4>
+                    <!-- <h4>Quality That Sets Standards</h4> -->
     <p>Unlike amateurs or traditional book art marketplaces, we maintain industry-level quality across every project. Our illustrators undergo rigorous checks to ensure accuracy, creativity, and depth of storytelling. Authors trust us for consistent results that enhance both narrative flow and publishing appeal.</p>
                 </div>
             </div>
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=4GTHphupoCLt&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                  <h4>Reliability You Can Count On</h4>
+                  <!-- <h4>Reliability You Can Count On</h4> -->
     <p>Freelancers often disappear or miss deadlines. Our dedicated team ensures stability, timely delivery, and accountability. We treat storybook illustrations as a professional commitment, providing structured project management and dependable support throughout the creative journey.</p>
                 </div>
             </div>
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=2886&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                  <h4>Integration with Publishing Expertise</h4>
+                  <!-- <h4>Integration with Publishing Expertise</h4> -->
     <p>We combine illustration with complete publishing knowledge. Unlike standalone services, our illustrators understand the integration of layout, printing, and design. This means educational book illustrations and every genre-specific artwork are crafted for seamless compatibility with publishing workflows and retail distribution.</p>
                 </div>
             </div>
             <div class="why-spines-box">
                 <img src="https://img.icons8.com/?size=100&id=11218&format=png&color=1a9ca8" alt="Icon">
                 <div>
-                  <h4>Support Beyond Completion</h4>
+                  <!-- <h4>Support Beyond Completion</h4> -->
     <p>Where most stop at final delivery, we continue providing guidance and support. Whether you need adjustments, marketing materials, or illustrations for sequels, our collaboration doesn’t end. Authors value the ongoing creative relationship we build for long-term publishing success.</p>
                 </div>
             </div>
-            <a href="get-started.html" id="New-btn">Explore Our Publishing Packages</a>
            
         </div>
+    </div>
 
-  <div id="why-services-right-container">
-    <img src="images/custom-illustration-why-image.png" alt="Custom Illustration Services">
-  </div>
-</div>
+    <!-- Button centered below both columns -->
+    <div class="why-spines-btn-wrap">
+        <a href="get-started.html" id="New-btn">Explore Our Book Illustration Service</a>
+    </div>
+</section>
 
   <!-- Book Carousel -->
    
 
 <div id="book-carousel-heading-container">
-  <h2>Following Professional Standards Matching Top Publishing Houses UK</h2>
+  <h2>Following Professional Standards Matching <span class="span-color"> Top Publishing Houses UK</span></h2>
 </div>
 
 <section class="home-bannrwrp">
@@ -429,7 +448,7 @@ const swiper = new Swiper('.swiper', {
   </div>
 </section> -->
 <section class="timeline-section">
-  <h2>The Journey When You Hire Book Illustrator UK Professionals</h2>
+  <h2>The Journey When You Hire <span class="span-color"> Book Illustrator UK</span> Professionals</h2>
   <p>Our UK book artist engagement professionals don't just provide work; they consider each project as their personal one. With us, you’re investing in creativity that sells!</p>
   <p>Our process ensures book design illustrations are designed to resonate with your readers while meeting publishing standards. Every step is structured, collaborative, and focused on excellence.</p>
 
@@ -439,7 +458,7 @@ const swiper = new Swiper('.swiper', {
       <h3> Creative Brief & Style Development</h3>
       <p>Our process begins with a detailed manuscript review and the development of a creative brief. We work with you to explore illustration styles, build mood boards, and establish a strong visual language. </p>
       <p>Character concepts are designed to reflect your story’s unique tone and message. At the same time, we consider market positioning to ensure the artwork appeals to your target readers.</p>
-      <p>This collaborative foundation ensures authentic, professional illustrations that enhance your book, aligning perfectly with publishing and audience expectations.</p>
+      <p>This collaboration delivers authentic, professional illustrations that perfectly match your book and audience expectations.</p>
       <div class="step-number">01</div>
     </div>
 
@@ -456,8 +475,8 @@ const swiper = new Swiper('.swiper', {
       <img src="https://img.icons8.com/?size=100&id=NZIHaxOhFpue&format=png&color=1a9ca8" alt="Research Tools" class="step-img">
       <h3> Professional Illustration Creation</h3>
       <p>This stage focuses on transforming approved concepts into polished, high-resolution illustrations using both digital and traditional techniques. Each artwork is crafted to professional standards, supported by strict quality checks at every stage.</p>
-      <p>Authors are consistently updated through scheduled collaboration checkpoints, ensuring creative transparency and alignment with their vision. Our picture book illustrators bring characters, worlds, and emotions to life with exceptional detail.</p>
-      <p>The goal is to deliver artwork that resonates deeply with readers while elevating the overall storytelling impact of your manuscript.</p>
+      <p>Authors receive regular updates for creative alignment, while our illustrators bring characters, worlds, and emotions to life with rich detail.</p>
+      <p>The goal is to create artwork that resonates with readers and elevates your story’s impact.</p>
       <div class="step-number">03</div>
     </div>
 
@@ -475,7 +494,7 @@ const swiper = new Swiper('.swiper', {
       <h3>Publishing Integration & Support</h3>
       <p>The final stage ensures your illustrations integrate seamlessly into the publishing process. We prepare files to strict industry standards, ensuring they are ready for both print and digital platforms.</p>
       <p>Our team also develops marketing visuals and promotional artwork to enhance the visibility of your book. For authors creating sequels or ongoing series, we provide consistent illustration support that maintains continuity across projects.</p>
-      <p>This comprehensive approach ensures that your artwork remains engaging, professional, and effective, helping your book stand out while enhancing its long-term publishing success.</p>
+      <p>This approach keeps your artwork engaging and professional, helping your book stand out and achieve lasting success.</p>
       <div class="step-number">05</div>
     </div>
   </div>
@@ -483,7 +502,7 @@ const swiper = new Swiper('.swiper', {
 
 <!-- About Service Section -->
 <div id="about-services-text-container">
-  <h2>Nurturing Young Minds with Expert Children's Book Illustration</h2>
+  <h2>Nurturing Young Minds with Expert <span class="span-color"> Children's Book Illustration</span></h2>
   <p>Creating books for children requires more than drawing skill, it calls for sensitivity, imagination, and a strong grasp of child psychology. Our illustrators craft images that not only capture attention but also nurture learning and curiosity.</p>
   <p>Through carefully designed children's story illustrations, we create visuals that align with developmental needs, cultural awareness, and age-appropriate engagement. Parents value our ability to balance educational value with playful creativity, ensuring every page delivers lasting impact.</p>
   <p>With the expertise of children's book illustrators in Cardiff and London, we bring both local insight and international quality to every project. We aim to spark imagination, encourage reading, and give children stories they’ll treasure for years to come.</p>
