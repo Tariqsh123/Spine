@@ -94,14 +94,14 @@
   flex-direction: column;
   justify-content: flex-start;
   /* align-items: center; */
-  text-align: left;
+  text-align: center;
 }
 
 .support-info h2 {
   font-size: 25px;
   font-family: "DM Sans", sans-serif;
   color: #1a9ca8;
-  /* text-align: center; */
+  text-align: center;
   font-weight: 500;
   margin-bottom: 8px;
 }
@@ -110,10 +110,10 @@
   font-size: 18px;
   font-weight: 600;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
-  /* align-items: center; */
+  align-items: center;
   gap: 15px;
 }
 
@@ -127,7 +127,7 @@
 
 .support-info h3 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   /* align-items: center; */
   gap: 8px;
   font-size: 16px;
