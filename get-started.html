@@ -1,14 +1,18 @@
 <!Doctype html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Get Started</title>
-
+<link rel="icon" href="images/favicon.ico">
   <!-- SEO -->
-  <meta name="description" content="Professional self-publishing services for UK authors. Keep 100% royalties, full creative control, and publish in 8–12 weeks. Free consultation available.">
-  <meta name="keywords" content="self publishing, UK self publishing, book publishing services, keep 100% royalties, indie publishing, print on demand, ebook publishing">
+  <meta name="description"
+    content="Professional self-publishing services for UK authors. Keep 100% royalties, full creative control, and publish in 8–12 weeks. Free consultation available.">
+  <meta name="keywords"
+    content="self publishing, UK self publishing, book publishing services, keep 100% royalties, indie publishing, print on demand, ebook publishing">
   <meta name="author" content="Self Publish Books UK">
+  <meta name="publisher" content="Self Publish Books UK">
   <link rel="canonical" href="">
   <meta name="robots" content="noindex,nofollow">
 
@@ -16,13 +20,15 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="">
   <meta property="og:title" content="Self Publish Books UK | Keep 100% Royalties">
-  <meta property="og:description" content="Professional self-publishing services for UK authors. Keep 100% royalties, full creative control, and publish in 8–12 weeks.">
+  <meta property="og:description"
+    content="Professional self-publishing services for UK authors. Keep 100% royalties, full creative control, and publish in 8–12 weeks.">
   <meta property="og:image" content="images/favicon.ico">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Self Publish Books UK | Keep 100% Royalties">
-  <meta name="twitter:description" content="Professional self-publishing services for UK authors. Keep 100% royalties and publish in 8–12 weeks.">
+  <meta name="twitter:description"
+    content="Professional self-publishing services for UK authors. Keep 100% royalties and publish in 8–12 weeks.">
   <meta name="twitter:image" content="images/favicon.ico">
 
   <!-- Simple JSON-LD Schema -->
@@ -40,295 +46,303 @@
   }
   </script>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
 
 
 
 <body>
 
-<nav>
-  <div id="nav-inner">
-    <a href="index.html" title="Home Page">
-      <img
-        src="images/logo.webp"
-        class="logo"
-        alt="logo"
-        title="Logo"
-      />
-    </a>
+  <nav>
+    <div id="nav-inner">
+      <a href="index.html" title="Home Page">
+        <img src="images/logo.webp" class="logo" loading="lazy" alt="logo" title="Logo" />
+      </a>
 
-    <ul class="nav-links">
-      <li><a href="pricing.html" title="Pricing">Pricing</a></li>
-      <li><a href="about.html" title="About Us">About Us</a></li>
+      <ul class="nav-links">
+        <li><a href="pricing.html" title="Pricing">Pricing</a></li>
+        <li><a href="about.html" title="About Us">About Us</a></li>
 
-      <!-- Services Dropdown -->
-      <li class="dropdown">
-        <a href="#" class="dropbtn" title="Services">Services ▾</a>
-        <ul class="dropdown-content">
-          <li><a title="KDP Publishing" href="kdp-publishing.html">KDP Publishing</a></li>
-          <li><a title="Book Writing" href="book-writing.html">Book Writing</a></li>
-          <li><a title="Book Marketing" href="book-marketing.html">Book Marketing</a></li>
-          <li><a title="Ghost Writing" href="ghost-writing.html">Ghost Writing</a></li>
-          <li><a title="eBook Publishing" href="eBook-Publishing.html">eBook Publishing</a></li>
-          <li><a title="Audio Book" href="Audio-book.html">Audio Book</a></li>
-          <li><a title="Script Writing" href="script-writing.html">Script Writing</a></li>
-          <li><a title="Custom Illustration" href="Custom-illustration.html">Custom Illustration</a></li>
-          <li><a title="Book Cover Design" href="book-cover-design.html">Book Cover Design</a></li>
-          <li><a title="Childrens Book Publishing" href="childrens-book-publishing.html">Childrens Book Publishing</a></li>
-        </ul>
-      </li>
+        <!-- Services Dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn" title="Services">Services ▾</a>
+          <ul class="dropdown-content">
+            <li><a title="KDP Publishing" href="kdp-publishing.html">KDP Publishing</a></li>
+            <li><a title="Book Writing" href="book-writing.html">Book Writing</a></li>
+            <li><a title="Book Marketing" href="book-marketing.html">Book Marketing</a></li>
+            <li><a title="Ghost Writing" href="ghost-writing.html">Ghost Writing</a></li>
+            <li><a title="eBook Publishing" href="eBook-Publishing.html">eBook Publishing</a></li>
+            <li><a title="Audio Book" href="Audio-book.html">Audio Book</a></li>
+            <li><a title="Script Writing" href="script-writing.html">Script Writing</a></li>
+            <li><a title="Custom Illustration" href="Custom-illustration.html">Custom Illustration</a></li>
+            <li><a title="Book Cover Design" href="book-cover-design.html">Book Cover Design</a></li>
+            <li><a title="Childrens Book Publishing" href="childrens-book-publishing.html">Childrens Book Publishing</a>
+            </li>
+          </ul>
+        </li>
 
-      <li><a href="contact.html" title="Contact US">Contact Us</a></li>
-    </ul>
+        <li><a href="contact.html" title="Contact US">Contact Us</a></li>
+      </ul>
 
-    <div class="auth-buttons">
-      <a href="get-started.html" title="Get Started" class="get-started">Get Started</a>
+      <div class="auth-buttons">
+        <a href="get-started.html" title="Get Started" class="get-started">Get Started</a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="pricing.html" title="Pricing Page">Pricing</a>
+    <a href="about.html" title="About Us">About Us</a>
+
+    <!-- Mobile Services Dropdown -->
+    <div class="mobile-dropdown">
+      <a href="#">Services ▾</a>
+      <div class="mobile-dropdown-content">
+        <a title="KDP Publishing" href="kdp-publishing.html">KDP Publishing</a>
+        <a title="Book Writing" href="book-writing.html">Book Writing</a>
+        <a title="Book Marketing" href="book-marketing.html">Book Marketing</a>
+        <a title="Ghost Writing" href="ghost-writing.html">Ghost Writing</a>
+        <a title="eBook Publishing" href="eBook-Publishing.html">eBook Publishing</a>
+        <a title="Script Writing" href="script-writing.html">Script Writing</a>
+        <a title="Audio Book" href="Audio-book.html">Audio Book</a>
+        <a title="Custom Illustration" href="Custom-illustration.html">Custom Illustration</a>
+        <a title="Book Cover Design" href="book-cover-design.html">Book Cover Design</a>
+        <a title="Children Book Publishing" href="childrens-book-publishing.html">Children Book Publishing</a>
+      </div>
     </div>
 
-    <!-- Hamburger Button -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <a href="contact.html" title="Contact Us">Contact Us</a>
+    <a href="get-started.html" title="Get Started" class="get-started">Get Started</a>
+  </div>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileDropdown = document.querySelector(".mobile-dropdown");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+      hamburger.classList.toggle("active");
+    });
+
+    // Toggle mobile services dropdown
+    mobileDropdown.addEventListener("click", () => {
+      mobileDropdown.classList.toggle("active");
+    });
+
+  </script>
+
+  <!-- Pricing Work -->
+  <!-- Form -->
+
+  <div id="support-form-container">
+    <div class="support-info">
+      <h2>Speak with Support</h2>
+      <p class="support-number">
+        <img loading="lazy" src="https://img.icons8.com/?size=100&id=jShwZ2RCyPSO&format=png&color=1a9ca8" alt="phone"
+          title="phone">
+        +1 (561) 810-3364
+      </p>
+      <p class="support-hours">(10AM - 6PM ET Mon-Fri)</p>
+      <p class="divider">— OR —</p>
+      <h3>
+        <img loading="lazy" src="https://img.icons8.com/?size=100&id=12623&format=png&color=1a9ca8" alt="form"
+          title="form">
+        Fill out the form, and we’ll get back to you:
+      </h3>
     </div>
+
+    <form action="contact.php" method="POST" id="support-form" enctype="multipart/form-data">
+      <!-- Full Name -->
+      <div class="form-group">
+        <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+      </div>
+
+      <!-- Genre Dropdown -->
+      <div class="form-group">
+        <select id="genre" name="genre" required>
+          <option value="">Select Genre</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Romance">Romance</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Biography">Biography</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Historical Fiction">Historical Fiction</option>
+          <option value="Horror">Horror</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Self-Help">Self-Help</option>
+          <option value="Poetry">Poetry</option>
+          <option value="Young Adult">Young Adult</option>
+          <option value="Children">Children</option>
+          <option value="Graphic Novel">Graphic Novel</option>
+          <option value="Drama">Drama</option>
+          <option value="Humor">Humor</option>
+          <option value="Classic">Classic</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- File Upload -->
+      <div class="form-group">
+        <input type="file" id="file" name="file" required>
+      </div>
+
+      <!-- Book Title -->
+      <div class="form-group">
+        <input type="text" id="book_title" name="book_title" placeholder="Write a Book Title" required>
+      </div>
+
+      <!-- Details -->
+      <div class="form-group">
+        <textarea id="details" name="details" rows="5" placeholder="Details"></textarea>
+      </div>
+
+      <!-- Terms -->
+      <div class="form-group checkbox">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms" class="consent-text">I agree to the terms and conditions</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+
   </div>
-</nav>
+  <!-- Pricing Work -->
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="pricing.html" title="Pricing Page">Pricing</a>
-  <a href="about.html" title="About Us">About Us</a>
-
-  <!-- Mobile Services Dropdown -->
-  <div class="mobile-dropdown">
-    <a href="#">Services ▾</a>
-    <div class="mobile-dropdown-content">
-      <a title="KDP Publishing" href="kdp-publishing.html">KDP Publishing</a>
-      <a title="Book Writing" href="book-writing.html">Book Writing</a>
-      <a title="Book Marketing" href="book-marketing.html">Book Marketing</a>
-      <a title="Ghost Writing" href="ghost-writing.html">Ghost Writing</a>
-      <a title="eBook Publishing" href="eBook-Publishing.html">eBook Publishing</a>
-      <a title="Script Writing" href="script-writing.html">Script Writing</a>
-      <a title="Audio Book" href="Audio-book.html">Audio Book</a>
-      <a title="Custom Illustration" href="Custom-illustration.html">Custom Illustration</a>
-      <a title="Book Cover Design" href="book-cover-design.html">Book Cover Design</a>
-      <a title="Children Book Publishing" href="childrens-book-publishing.html">Children Book Publishing</a>
-    </div>
-  </div>
-
-  <a href="contact.html" title="Contact Us">Contact Us</a>
-  <a href="get-started.html" title="Get Started" class="get-started">Get Started</a>
-</div>
-<script>
-  const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileDropdown = document.querySelector(".mobile-dropdown");
-
-hamburger.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active");
-  hamburger.classList.toggle("active");
-});
-
-// Toggle mobile services dropdown
-mobileDropdown.addEventListener("click", () => {
-  mobileDropdown.classList.toggle("active");
-});
-
-</script>
-
-<!-- Pricing Work -->
-<!-- Form -->
-
-<div id="support-form-container">
-  <div class="support-info">
-    <h2>Speak with Support</h2>
-    <p class="support-number">
-      <img src="https://img.icons8.com/?size=100&id=jShwZ2RCyPSO&format=png&color=1a9ca8" alt="phone" title="phone">
-      +1 (561) 810-3364
-    </p>
-    <p class="support-hours">(10AM - 6PM ET Mon-Fri)</p>
-    <p class="divider">— OR —</p>
-    <h3>
-      <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=1a9ca8" alt="form" title="form">
-      Fill out the form, and we’ll get back to you:
-    </h3>
-  </div>
-
-<form action="contact.php" method="POST" id="support-form" enctype="multipart/form-data">
-  <!-- Full Name -->
-  <div class="form-group">
-    <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
-  </div>
-
-  <!-- Email -->
-  <div class="form-group">
-    <input type="email" id="email" name="email" placeholder="Email" required>
-  </div>
-
-  <!-- Phone -->
-  <div class="form-group">
-    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
-  </div>
-
-  <!-- Genre Dropdown -->
-  <div class="form-group">
-    <select id="genre" name="genre" required>
-  <option value="">Select Genre</option>
-  <option value="Fiction">Fiction</option>
-  <option value="Non-Fiction">Non-Fiction</option>
-  <option value="Romance">Romance</option>
-  <option value="Thriller">Thriller</option>
-  <option value="Fantasy">Fantasy</option>
-  <option value="Biography">Biography</option>
-  <option value="Mystery">Mystery</option>
-  <option value="Science Fiction">Science Fiction</option>
-  <option value="Historical Fiction">Historical Fiction</option>
-  <option value="Horror">Horror</option>
-  <option value="Adventure">Adventure</option>
-  <option value="Self-Help">Self-Help</option>
-  <option value="Poetry">Poetry</option>
-  <option value="Young Adult">Young Adult</option>
-  <option value="Children">Children</option>
-  <option value="Graphic Novel">Graphic Novel</option>
-  <option value="Drama">Drama</option>
-  <option value="Humor">Humor</option>
-  <option value="Classic">Classic</option>
-  <option value="Other">Other</option>
-</select>
-  </div>
-
-  <!-- File Upload -->
-  <div class="form-group">
-    <input type="file" id="file" name="file" required>
-  </div>
-
-  <!-- Book Title -->
-  <div class="form-group">
-    <input type="text" id="book_title" name="book_title" placeholder="Write a Book Title" required>
-  </div>
-
-  <!-- Details -->
-  <div class="form-group">
-    <textarea id="details" name="details" rows="5" placeholder="Details"></textarea>
-  </div>
-
-  <!-- Terms -->
-  <div class="form-group checkbox">
-    <input type="checkbox" id="terms" name="terms" required>
-    <label for="terms" class="consent-text">I agree to the terms and conditions</label>
-  </div>
-
-  <!-- Submit -->
-  <button type="submit" class="submit-btn">Submit Request</button>
-</form>
-
-</div>
-<!-- Pricing Work -->
-
-
-
-
-
-
-
-
-
-<!-- Footer -->
+  <!-- Footer -->
   <footer>
-  <div class="footer-inner">
-    <!-- Top Section -->
-    <div class="footer-top">
+    <div class="footer-inner">
+      <!-- Top Section -->
+      <div class="footer-top">
 
-      <!-- Column 1: Logo + Text -->
-      <div class="footer-col">
-        <img src="images/logo.webp" alt="Spines Logo" title="Spines Logo" class="footer-logo">
-        <p>Your trusted partner in publishing. Helping authors succeed with expert book services and global reach.</p>
+        <!-- Column 1: Logo + Text -->
+        <div class="footer-col">
+          <img src="images/logo.webp" alt="Self Publish Books Logo" title="Self Publish Books Logo" class="footer-logo" loading="lazy">
+          <p>Your trusted partner in publishing. Helping authors succeed with expert book services and global reach.</p>
+        </div>
+
+        <!-- Column 2: Company -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a title="About Us" href="about.html">About Us</a></li>
+            <li><a title="Pricing" href="pricing.html">Pricing</a></li>
+            <li><a title="Get Started" href="get-started.html">Get Started</a></li>
+            <li><a title="Contact Us" href="contact.html">Contact Us</a></li>
+            <li><a title="Sitemap" href="sitemap.html">Sitemap</a></li>
+            <li><a title="Terms" href="terms.html">Terms And Conditions</a></li>
+            <li><a title="Privacy" href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a title="KDP Publishing" href="kdp-publishing.html">KDP Publishing</a></li>
+            <li><a title="Book Writing" href="book-writing.html">Book Writing</a></li>
+            <li><a title="Book Marketing" href="book-marketing.html">Book Marketing</a></li>
+            <li><a title="Ghost Writing" href="ghost-writing.html">Ghost Writing</a></li>
+            <li><a title="eBook Publishing" href="eBook-Publishing.html">eBook Publishing</a></li>
+            <li><a title="Audio Book" href="Audio-book.html">Audio Book</a></li>
+            <li><a title="Script Writing" href="script-writing.html">Script Writing</a></li>
+            <li><a title="Custom Illustration" href="Custom-illustration.html">Custom Illustration</a></li>
+            <li><a title="Book Cover Design" href="book-cover-design.html">Book Cover Design</a></li>
+            <li><a title="Childrens Book Publishing" href="childrens-book-publishing.html">Childrens Book Publishing</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Get in Touch -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p>Email: abc@gmail.com</p>
+          <p>Main: +92 123 456 789</p>
+          <p>Support: +92 123 456 789</p>
+          <p>Karachi, Pakistan</p>
+          <div class="social-icons">
+            <a href="#" title="Fb"><img loading="lazy"
+                src="https://img.icons8.com/?size=100&id=60440&format=png&color=737373" alt="Facebook"
+                title="Facebook"></a>
+            <a href="#" title="Twitter"><img loading="lazy"
+                src="https://img.icons8.com/?size=100&id=32309&format=png&color=737373" alt="Twitter"
+                title="Twitter"></a>
+            <a href="#" title="Instagram"><img loading="lazy"
+                src="https://img.icons8.com/?size=100&id=8808&format=png&color=737373" alt="Instagram"
+                title="Instagram"></a>
+            <a href="#" title="LinkedIn"><img loading="lazy"
+                src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=737373" alt="LinkedIn"
+                title="Linkedin"></a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Column 2: Company -->
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a title="About Us" href="about.html">About Us</a></li>
-          <li><a title="Pricing" href="pricing.html">Pricing</a></li>
-          <li><a title="Get Started" href="get-started.html">Get Started</a></li>
-          <li><a title="Contact Us" href="contact.html">Contact Us</a></li>
-          <li><a title="Sitemap" href="sitemap.html">Sitemap</a></li>
-          <li><a title="Terms" href="terms.html">Terms And Conditions</a></li>
-          <li><a title="Privacy" href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Services -->
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a title="KDP Publishing" href="kdp-publishing.html">KDP Publishing</a></li>
-          <li><a title="Book Writing" href="book-writing.html">Book Writing</a></li>
-          <li><a title="Book Marketing" href="book-marketing.html">Book Marketing</a></li>
-          <li><a title="Ghost Writing" href="ghost-writing.html">Ghost Writing</a></li>
-          <li><a title="eBook Publishing" href="eBook-Publishing.html">eBook Publishing</a></li>
-          <li><a title="Audio Book" href="Audio-book.html">Audio Book</a></li>
-          <li><a title="Script Writing" href="script-writing.html">Script Writing</a></li>
-          <li><a title="Custom Illustration" href="Custom-illustration.html">Custom Illustration</a></li>
-          <li><a title="Book Cover Design" href="book-cover-design.html">Book Cover Design</a></li>
-          <li><a title="Childrens Book Publishing" href="childrens-book-publishing.html">Childrens Book Publishing</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Get in Touch -->
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <p>Email: abc@gmail.com</p>
-        <p>Main: +92 123 456 789</p>
-        <p>Support: +92 123 456 789</p>
-        <p>Karachi, Pakistan</p>
-        <div class="social-icons">
-          <a href="#" title="Fb"><img src="https://img.icons8.com/?size=100&id=60440&format=png&color=737373" alt="Facebook" title="Facebook" ></a>
-          <a href="#" title="Twitter"><img src="https://img.icons8.com/?size=100&id=32309&format=png&color=737373" alt="Twitter" title="Twitter"></a>
-          <a href="#" title="Instagram"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=737373" alt="Instagram" title="Instagram"></a>
-          <a href="#" title="LinkedIn"><img src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=737373" alt="LinkedIn" title="Linkedin"></a>
+      <!-- Middle Section -->
+      <div class="footer-middle">
+        <div class="feature">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=Zx9AHZpUAdVf&format=png&color=1a9ca8"
+            alt="Hassle-Free" title="Hassle-Free">
+          <div>
+            <span>Fully Hassle-Free</span>
+            <p>7-Day Refund Policy</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=XaQbCrLkk4qv&format=png&color=1a9ca8"
+            alt="Secure" title="Secure">
+          <div>
+            <span>SSL Secure Pay</span>
+            <p>Protected by SSL Encryption</p>
+          </div>
         </div>
       </div>
 
-    </div>
-
-    <!-- Middle Section -->
-    <div class="footer-middle">
-      <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=Zx9AHZpUAdVf&format=png&color=1a9ca8" alt="Hassle-Free" title="Hassle-Free">
-        <div>
-          <span>Fully Hassle-Free</span>
-          <p>7-Day Refund Policy</p>
+      <!-- Bottom Section -->
+      <div class="footer-bottom">
+        <div class="payment-icons">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=SuYRJWCg1Sdz&format=png&color=000000"
+            title="Apple Pay" alt="Apple Pay">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=mbVEgwzMo6fs&format=png&color=000000"
+            title="Discover" alt="Discover">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000"
+            title="Google Pay" alt="Google Pay">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=So6jK8i6jddZ&format=png&color=000000"
+            title="American Express" alt="American Express">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=13611&format=png&color=000000" alt="PayPal"
+            title="Paypar">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=dqPuxjOVdLOE&format=png&color=000000" alt="Visa"
+            title="Visa">
+        </div>
+        <div class="copyright">
+          HTML Sitemap | © 2025 Self Publish Books
         </div>
       </div>
-      <div class="feature">
-        <img src="https://img.icons8.com/?size=100&id=XaQbCrLkk4qv&format=png&color=1a9ca8" alt="Secure" title="Secure">
-        <div>
-          <span>SSL Secure Pay</span>
-          <p>Protected by SSL Encryption</p>
-        </div>
-      </div>
     </div>
-
-    <!-- Bottom Section -->
-    <div class="footer-bottom">
-      <div class="payment-icons">
-        <img src="https://img.icons8.com/?size=100&id=SuYRJWCg1Sdz&format=png&color=000000" title="Apple Pay" alt="Apple Pay">
-        <img src="https://img.icons8.com/?size=100&id=mbVEgwzMo6fs&format=png&color=000000" title="Discover" alt="Discover">
-        <img src="https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000" title="Google Pay" alt="Google Pay">
-        <img src="https://img.icons8.com/?size=100&id=So6jK8i6jddZ&format=png&color=000000" title="American Express" alt="American Express">
-        <img src="https://img.icons8.com/?size=100&id=13611&format=png&color=000000" alt="PayPal" title="Paypar">
-        <img src="https://img.icons8.com/?size=100&id=dqPuxjOVdLOE&format=png&color=000000" alt="Visa" title="Visa">
-      </div>
-      <div class="copyright">
-        HTML Sitemap | © 2025 Spines
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
 </body>
+
 </html>
