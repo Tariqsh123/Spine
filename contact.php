@@ -43,11 +43,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $headers = "From: $email\r\nReply-To: $email\r\n";
 
-    // Send email
+    // Send email and show alert
     if (mail($to, $subject, $body, $headers)) {
         echo "<script>alert('✅ Your submission has been sent successfully!'); window.location.href='contact.php';</script>";
     } else {
         echo "<script>alert('❌ Failed to send. Please try again later.'); window.location.href='contact.php';</script>";
     }
 }
-?>
+?> 
+
+<?php
+// ✅ Extra redirect to go back to the previous page
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header("Location: " . $_SERVER["HTTP_REFERER"]);
+    exit;
+}
